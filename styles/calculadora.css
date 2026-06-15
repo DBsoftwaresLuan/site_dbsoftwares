@@ -1555,32 +1555,9 @@ body #beneficios .section-title-clean {
     color: var(--white) !important;
 }
 
-body #beneficios .section-title-clean::after,
-body #como-funciona .section-title-clean::after,
-body #casos .section-title-clean::after,
-body .roi-section .section-title-clean::after {
-    content: '';
-    display: block;
-    width: 72px;
-    height: 3px;
-    border-radius: 999px;
-    margin: 18px auto 0;
-    background: var(--gold);
-}
-
-body #beneficios .section-title-clean::after {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 @media (max-width: 768px) {
     body .section-title-clean {
         max-width: 100%;
         text-align: center;
-    }
-
-    body #beneficios .section-title-clean::after {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
