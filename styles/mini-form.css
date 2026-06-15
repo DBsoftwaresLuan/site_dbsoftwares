@@ -1,0 +1,294 @@
+/* ══════════════════════════════════════════════════════
+   MINI FORM — SEÇÃO DE CONTATO REUTILIZÁVEL
+   Aparece ao final de: sobre, atuacao, capacidades,
+   db-board, db-hyper, db-noc, case-nbs, case-sisdev
+══════════════════════════════════════════════════════ */
+
+.mini-form-section {
+  background: linear-gradient(135deg, #1a2550 0%, #243068 55%, #1e285c 100%);
+  padding: 80px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decoração de grade de fundo (mesmo padrão do produto-cta) */
+.mini-form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+/* Brilho decorativo */
+.mini-form-section::after {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(189,160,126,.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mini-form-section__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+/* ── Coluna esquerda: copy ── */
+.mini-form-section__copy {
+  flex: 0 0 340px;
+  max-width: 340px;
+}
+
+.mini-form-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.mini-form-section__eyebrow svg {
+  flex-shrink: 0;
+}
+
+.mini-form-section__title {
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin: 0 0 16px;
+  text-shadow: 0 2px 18px rgba(10,16,40,.45);
+}
+
+.mini-form-section__title em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.mini-form-section__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255,255,255,.70);
+  margin: 0 0 28px;
+}
+
+.mini-form-section__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mini-form-section__channel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,.82);
+  text-decoration: none;
+  transition: color .18s;
+}
+
+.mini-form-section__channel:hover {
+  color: var(--gold);
+}
+
+.mini-form-section__channel svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── Coluna direita: form ── */
+.mini-form-section__form-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.mini-form {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 18px;
+  padding: 36px 32px 32px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mini-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.mini-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.mini-form__group--full {
+  grid-column: 1 / -1;
+}
+
+.mini-form__label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.65);
+}
+
+.mini-form__label span {
+  color: var(--gold);
+  margin-left: 2px;
+}
+
+.mini-form__input,
+.mini-form__textarea {
+  width: 100%;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #fff;
+  outline: none;
+  transition: border-color .18s, background .18s;
+  box-sizing: border-box;
+}
+
+.mini-form__input::placeholder,
+.mini-form__textarea::placeholder {
+  color: rgba(255,255,255,.30);
+}
+
+.mini-form__input:focus,
+.mini-form__textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255,255,255,.12);
+}
+
+.mini-form__textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.mini-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.mini-form__legal {
+  font-size: 11.5px;
+  color: rgba(255,255,255,.42);
+  line-height: 1.5;
+}
+
+.mini-form__legal a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.mini-form__submit {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  border: none;
+  background: var(--gold);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: background .18s, transform .12s;
+  white-space: nowrap;
+}
+
+.mini-form__submit:hover {
+  background: var(--gold-lt);
+  transform: translateY(-1px);
+}
+
+.mini-form__submit:active {
+  transform: translateY(0);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 960px) {
+  .mini-form-section__inner {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 28px;
+  }
+
+  .mini-form-section__copy {
+    flex: none;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .mini-form-section__channels {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mini-form-section__form-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .mini-form-section {
+    padding: 60px 0 68px;
+  }
+
+  .mini-form-section__inner {
+    padding: 0 20px;
+  }
+
+  .mini-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-form {
+    padding: 26px 18px 22px;
+  }
+
+  .mini-form__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mini-form__submit {
+    width: 100%;
+    justify-content: center;
+  }
+}

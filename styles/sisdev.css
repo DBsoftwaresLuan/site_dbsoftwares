@@ -1,0 +1,567 @@
+
+    /* Hero Section */
+    .case-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 50%, var(--blue-dk) 100%);
+      padding: 140px 24px 100px;
+      overflow: hidden;
+    }
+
+    .case-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .case-hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+
+    .case-hero-glow--1 {
+      top: -200px;
+      right: -100px;
+      background: rgba(189,160,126,.15);
+    }
+
+    .case-hero-glow--2 {
+      bottom: -200px;
+      left: -100px;
+      background: rgba(58,90,138,.2);
+    }
+
+    .case-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .case-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(189,160,126,.1);
+      border: 1px solid rgba(189,160,126,.25);
+      padding: 8px 20px;
+      border-radius: var(--r-full);
+      margin-bottom: 24px;
+    }
+
+    .case-hero-tag-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: dot-pulse 2s ease-in-out infinite;
+    }
+
+    .case-hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .case-hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .case-hero-subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,.7);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .case-hero-client {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 24px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--r-md);
+      color: rgba(255,255,255,.8);
+      font-size: 14px;
+    }
+
+    .case-hero-client strong {
+      color: var(--white);
+    }
+
+    /* Metrics Section */
+    .case-metrics-section {
+      padding: 80px 24px;
+      background: var(--off-white);
+    }
+
+    .case-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .case-metric-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--r-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all .3s var(--ease);
+    }
+
+    .case-metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(189,160,126,.3);
+    }
+
+    .case-metric-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .case-metric-label {
+      font-size: 14px;
+      color: var(--gray-600);
+    }
+
+    /* Content Sections */
+    .case-section {
+      padding: 100px 24px;
+    }
+
+    .case-section--alt {
+      background: var(--off-white);
+    }
+
+    .case-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .case-section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dk);
+      background: rgba(189,160,126,.08);
+      border: 1px solid rgba(189,160,126,.2);
+      padding: 6px 16px;
+      border-radius: var(--r-full);
+      margin-bottom: 20px;
+    }
+
+    .case-section h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--blue);
+      margin-bottom: 24px;
+    }
+
+    .case-section p {
+      font-size: 17px;
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .case-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Challenge/Solution Layout */
+    .case-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 48px;
+    }
+
+    .case-col h3 {
+      font-size: 22px;
+      color: var(--gold-dk);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .case-col h3 svg {
+      color: var(--gold);
+    }
+
+    .case-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .case-col li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .case-col li svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    /* Quote Section */
+    .case-quote-section {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dk) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-quote-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .case-quote-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .case-quote-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--gold);
+      opacity: .5;
+      margin-bottom: 24px;
+    }
+
+    .case-quote-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .case-quote-author-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .case-quote-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .case-quote-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .case-quote-author-info {
+      text-align: left;
+    }
+
+    .case-quote-author {
+      color: rgba(255,255,255,.9);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .case-quote-role {
+      color: rgba(255,255,255,.6);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Benefits Grid */
+    .case-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .case-benefit-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--r-lg);
+      padding: 32px 24px;
+      transition: all .3s var(--ease);
+    }
+
+    .case-benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(189,160,126,.3);
+    }
+
+    .case-benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(189,160,126,.1);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--gold-dk);
+    }
+
+    .case-benefit-card h4 {
+      font-size: 18px;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .case-benefit-card p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* CTA Section */
+    .case-cta-section {
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .case-cta-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .case-cta-container h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .case-cta-container p {
+      font-size: 17px;
+      color: var(--gray-600);
+      margin-bottom: 32px;
+    }
+
+    .case-cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--gold);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: var(--r-full);
+      text-decoration: none;
+      transition: all .3s var(--ease);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-lt);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: transparent;
+      color: var(--blue);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--r-full);
+      text-decoration: none;
+      transition: all .3s var(--ease);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    /* Contact Buttons Section */
+    .case-contact-section {
+      padding: 60px 24px;
+      background: var(--off-white);
+    }
+
+    .case-contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .case-contact-container h3 {
+      font-size: 24px;
+      color: var(--gold-dk);
+      margin-bottom: 24px;
+    }
+
+    .case-contact-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--r-full);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all .3s var(--ease);
+    }
+
+    .contact-btn--whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .contact-btn--whatsapp:hover {
+      background: #1da851;
+      transform: translateY(-2px);
+    }
+
+    .contact-btn--email {
+      background: var(--blue);
+      color: white;
+    }
+
+    .contact-btn--email:hover {
+      background: var(--blue-dk);
+      transform: translateY(-2px);
+    }
+
+    .contact-btn--linkedin {
+      background: #0077B5;
+      color: white;
+    }
+
+    .contact-btn--linkedin:hover {
+      background: #005e93;
+      transform: translateY(-2px);
+    }
+
+    .contact-btn--phone {
+      background: var(--gray-700);
+      color: white;
+    }
+
+    .contact-btn--phone:hover {
+      background: var(--gray-800);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .case-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-two-col {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .case-benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .case-hero {
+        padding: 120px 20px 80px;
+        min-height: auto;
+      }
+
+      .case-metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-section {
+        padding: 60px 20px;
+      }
+
+      .case-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .case-contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }

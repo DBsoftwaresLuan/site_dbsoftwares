@@ -1,0 +1,241 @@
+/* ============================================================
+   DB Softwares — Páginas Legais (Termos e Política)
+   Estilos compartilhados para termos.html e politica.html
+   ============================================================ */
+
+/* ── Legal Hero Section ──────────────────────────────────────── */
+.legal-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px;
+  background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%);
+  overflow: hidden;
+}
+
+.legal-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.legal-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.legal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 8px 20px;
+  border-radius: var(--r-full);
+  margin-bottom: 28px;
+}
+
+.legal-badge__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: dot-pulse 2.2s ease-in-out infinite;
+}
+
+.legal-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.legal-hero-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,.7);
+  line-height: 1.6;
+}
+
+/* ── Legal Content Section ───────────────────────────────────── */
+.legal-content {
+  padding: 100px 24px;
+  background: var(--white);
+}
+
+.legal-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-article {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--gray-700);
+}
+
+.legal-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.legal-section h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.legal-section p {
+  margin-bottom: 16px;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section strong {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+/* ── Legal Lists ─────────────────────────────────────────────── */
+.legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.legal-list li {
+  padding-left: 28px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.legal-list li:last-child {
+  margin-bottom: 0;
+}
+
+.legal-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ── Links dentro do conteúdo legal ──────────────────────────── */
+.legal-section a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s var(--ease);
+}
+
+.legal-section a:hover {
+  color: var(--blue-dk);
+  text-decoration: underline;
+}
+
+/* ── Animações de reveal ─────────────────────────────────────── */
+.legal-section:nth-child(1) { animation-delay: 0.1s; }
+.legal-section:nth-child(2) { animation-delay: 0.2s; }
+.legal-section:nth-child(3) { animation-delay: 0.3s; }
+.legal-section:nth-child(4) { animation-delay: 0.4s; }
+.legal-section:nth-child(5) { animation-delay: 0.5s; }
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .legal-hero {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+
+  .legal-hero-title {
+    font-size: clamp(32px, 4vw, 48px);
+  }
+
+  .legal-content {
+    padding: 60px 20px;
+  }
+
+  .legal-section {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px;
+  }
+
+  .legal-section h3 {
+    font-size: 16px;
+  }
+
+  .legal-article {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-hero {
+    padding: 60px 16px;
+  }
+
+  .legal-badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .legal-content {
+    padding: 40px 16px;
+  }
+
+  .legal-section {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+
+  .legal-section h2 {
+    font-size: 18px;
+  }
+
+  .legal-list li {
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,3108 @@
+/* ============================================================
+   DB Softwares — Página Perfis de Serviço
+   Estilos específicos para perfis-de-servico.html
+   ============================================================ */
+
+/* ── Reveal Animations ────────────────────────────────────────── */
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity .85s var(--ease-out), transform .85s var(--ease-out);
+}
+
+.reveal--from-right { transform: translateX(44px); }
+.reveal--from-left  { transform: translateX(-44px); }
+.reveal--from-scale { transform: scale(0.95); }
+.reveal--delay-1 { transition-delay: .10s; }
+.reveal--delay-2 { transition-delay: .22s; }
+.reveal--delay-3 { transition-delay: .36s; }
+.reveal--delay-4 { transition-delay: .50s; }
+.reveal--delay-5 { transition-delay: .64s; }
+
+/* ── Page Hero ───────────────────────────────────────────────── */
+.page-hero {
+  position: relative;
+  padding: 160px 224px 100px;
+  background: var(--off-white);
+  overflow: hidden;
+}
+
+.page-hero .hero-glow--1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(189,160,126,.08);
+  border-radius: 50%;
+  filter: blur(120px);
+  top: -150px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.page-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-hero__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--dark-text);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.page-hero__subtitle {
+  font-size: 17px;
+  color: var(--gray-600);
+  line-height: 1.75;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ── Section Header ──────────────────────────────────────────── */
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--dark-text);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 17px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Comparison Section ──────────────────────────────────────── */
+.perfis-comparison {
+  background: var(--white);
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.comparison-table thead {
+  background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%);
+}
+
+.comparison-table th {
+  padding: 24px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.comparison-table th:first-child {
+  border-radius: var(--r-lg) 0 0 0;
+}
+
+.comparison-table th:last-child {
+  border-radius: 0 var(--r-lg) 0 0;
+}
+
+.comparison-table th.featured {
+  background: rgba(189,160,126,.15);
+}
+
+.th-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.th-level {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  opacity: .7;
+}
+
+.th-name {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.th-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--white);
+  background: var(--gold);
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  margin-bottom: 6px;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--gray-100);
+  transition: background .2s;
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparison-table td {
+  padding: 18px 20px;
+  color: var(--gray-700);
+  vertical-align: middle;
+}
+
+.comparison-table td:first-child {
+  font-weight: 500;
+  color: var(--dark-text);
+}
+
+.comparison-table td.featured {
+  background: rgba(189,160,126,.04);
+  font-weight: 500;
+  color: var(--dark-text);
+}
+
+.icon-check {
+  color: var(--gray-400);
+}
+
+.icon-check--gold {
+  color: var(--gold);
+}
+
+.icon-x {
+  color: var(--gray-300);
+}
+
+/* ── Perfil Detail Section ───────────────────────────────────── */
+.perfil-detail {
+  position: relative;
+}
+
+.perfil-detail__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.perfil-detail__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.perfil-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--r-lg);
+  margin-bottom: 24px;
+}
+
+.perfil-badge--essencial {
+  background: rgba(107,114,128,.1);
+  border: 1px solid rgba(107,114,128,.2);
+  color: var(--gray-600);
+}
+
+.perfil-badge--profissional {
+  background: rgba(62,86,158,.1);
+  border: 1px solid rgba(62,86,158,.2);
+  color: var(--blue);
+}
+
+.perfil-badge--enterprise {
+  background: rgba(189,160,126,.15);
+  border: 1px solid rgba(189,160,126,.3);
+  color: var(--gold);
+}
+
+.enterprise-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--dark-text);
+  background: var(--gold);
+  padding: 6px 16px;
+  border-radius: var(--r-full);
+  margin-bottom: 16px;
+}
+
+.perfil-level {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+}
+
+.perfil-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+.perfil-slogan {
+  font-size: 18px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.perfil-detail__content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.perfil-description h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+.perfil-description h3:first-child {
+  margin-top: 0;
+}
+
+.perfil-description p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.feature-list li svg {
+  flex-shrink: 0;
+  color: var(--gold);
+  margin-top: 2px;
+}
+
+.feature-list--enterprise li {
+  color: rgba(255,255,255,.8);
+}
+
+.feature-list--enterprise li svg {
+  color: var(--gold);
+}
+
+.perfil-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 16px 20px;
+  background: rgba(189,160,126,.08);
+  border: 1px solid rgba(189,160,126,.15);
+  border-radius: var(--r-md);
+  font-size: 14px;
+  color: var(--gray-700);
+}
+
+.perfil-highlight svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.perfil-highlight--pro {
+  background: rgba(62,86,158,.06);
+  border-color: rgba(62,86,158,.12);
+}
+
+.perfil-highlight--pro svg {
+  color: var(--blue);
+}
+
+.perfil-highlight--enterprise {
+  background: rgba(189,160,126,.12);
+  border-color: rgba(189,160,126,.25);
+  color: rgba(255,255,255,.85);
+}
+
+.perfil-use-cases h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.use-case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.use-case-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.use-case-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.use-case-list--enterprise li {
+  color: rgba(255,255,255,.7);
+}
+
+/* ── Enterprise Section ──────────────────────────────────────── */
+.bg-blue-gradient {
+  background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%);
+}
+
+.perfil-detail__inner--enterprise .perfil-use-cases h3 {
+  color: var(--white);
+}
+
+/* ── CTA Section ─────────────────────────────────────────────── */
+.perfis-cta {
+  position: relative;
+  padding: 100px 24px;
+  background: var(--off-white);
+  text-align: center;
+}
+
+.perfis-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.perfis-cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 16px;
+}
+
+.perfis-cta-desc {
+  font-size: 17px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.perfis-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px 32px;
+  background: var(--gold);
+  color: var(--white);
+  border-radius: var(--r-full);
+  text-decoration: none;
+  transition: all .3s var(--ease);
+}
+
+.perfis-cta-btn:hover {
+  background: var(--gold-lt);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+}
+
+.perfis-cta-btn svg {
+  transition: transform .3s var(--ease-spring);
+}
+
+.perfis-cta-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .perfil-detail__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 20px 80px;
+  }
+  
+  .comparison-table-wrapper {
+    margin: 0 -20px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+  
+  .comparison-table th:first-child,
+  .comparison-table th:last-child {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero__title {
+    font-size: 28px;
+  }
+  
+  .perfil-name {
+    font-size: 28px;
+  }
+  
+  .perfil-badge {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ── Contact Buttons ─────────────────────────────────────────── */
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-100);
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--r-full);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .3s var(--ease);
+  background: var(--white);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+}
+
+.contact-btn:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+  transform: translateY(-2px);
+}
+
+.contact-btn--primary {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+.contact-btn--primary:hover {
+  background: var(--gold-lt);
+  border-color: var(--gold-lt);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ── Modal ───────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gray-50);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-500);
+  transition: all .2s;
+}
+
+.modal-close:hover {
+  background: var(--gray-100);
+  color: var(--dark-text);
+}
+
+.modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 24px;
+}
+
+/* ── Form ────────────────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-sm);
+  background: var(--white);
+  color: var(--dark-text);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(189,160,126,.15);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--gold);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--r-full);
+  cursor: pointer;
+  transition: all .3s var(--ease);
+}
+
+.form-submit:hover {
+  background: var(--gold-lt);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    padding: 0 20px;
+  }
+  
+    display: none;
+  }
+  
+    display: none;
+  }
+  
+    display: flex;
+  }
+  
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 24px 36px;
+  }
+}
+
+@media (max-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+    padding: 20px 24px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+    display: none;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+  }
+  
+  .contact-btn {
+    justify-content: center;
+  }
+  
+  .modal-content {
+    padding: 28px 24px;
+  }
+
+
+/* ============================================================
+   ETAPA 7 — Padronização visual da página Perfis de Serviço
+   ============================================================ */
+.page-hero {
+  background:
+    linear-gradient(135deg, rgba(15,23,42,.82) 0%, rgba(62,86,158,.78) 58%, rgba(15,23,42,.88) 100%),
+    url('../assets/img-hero-bg.jpg') center/cover no-repeat !important;
+  padding: 150px 24px 105px !important;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size: 38px 38px;
+  opacity: .28;
+  pointer-events: none;
+}
+.page-hero__content { position: relative; z-index: 2; }
+.page-hero__title {
+  color: #fff !important;
+  font-size: clamp(34px, 5vw, 56px) !important;
+}
+.page-hero__subtitle {
+  color: rgba(255,255,255,.82) !important;
+}
+.section-title,
+.perfil-detail__header h2,
+.perfil-detail__title,
+.comparison-table td:first-child,
+.perfil-content h3,
+.cta-title {
+  color: var(--blue) !important;
+}
+.th-name,
+.bg-blue-gradient .section-title,
+.bg-blue-gradient .perfil-detail__header h2,
+.bg-blue-gradient .perfil-detail__title,
+.bg-blue-gradient .perfil-content h3,
+.cta-section .cta-title {
+  color: #fff !important;
+}
+.section-subtitle,
+.perfil-detail__subtitle,
+.perfil-content p {
+  color: var(--gray-700);
+}
+.perfil-badge--enterprise,
+.th-badge,
+.icon-check--gold {
+  color: var(--gold) !important;
+}
+.comparison-table thead {
+  background: linear-gradient(135deg, var(--blue) 0%, #2f437d 100%) !important;
+}
+@media (max-width: 768px) {
+  .page-hero { min-height: 440px; padding: 130px 20px 80px !important; }
+}
+
+/* ============================================================
+   ETAPA 11 — Hero Perfis de Serviço no padrão da Home
+   ============================================================ */
+.perfis-hero {
+  position: relative;
+  min-height: 62vh;
+  min-height: 62dvh;
+  padding: 80px 24px 70px !important;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, #0e1726 0%, var(--blue) 55%, #0e1726 100%) !important;
+}
+
+.perfis-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(135deg, rgba(14,23,38,.82) 0%, rgba(62,86,158,.72) 55%, rgba(14,23,38,.88) 100%),
+    url('../assets/img-hero-bg.jpg') center/cover no-repeat;
+  opacity: 1;
+}
+
+.perfis-hero__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.perfis-hero__glow {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.perfis-hero__glow--1 {
+  width: 620px;
+  height: 620px;
+  top: -210px;
+  right: -100px;
+  background: rgba(189,160,126,.10);
+}
+
+.perfis-hero__glow--2 {
+  width: 460px;
+  height: 460px;
+  left: -120px;
+  bottom: -120px;
+  background: rgba(62,86,158,.24);
+}
+
+.perfis-hero__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.perfis-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 !important;
+  color: #fff;
+  text-align: center;
+}
+
+.perfis-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 6px 16px;
+  border-radius: var(--r-full);
+  border: 1px solid rgba(189,160,126,.38);
+  background: rgba(189,160,126,.18);
+  color: #f0d8b4;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+
+.perfis-hero__tag-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+.perfis-hero__title {
+  max-width: 760px;
+  margin: 0 auto 20px !important;
+  color: #fff !important;
+  font-size: clamp(34px, 5.5vw, 66px) !important;
+  font-weight: 700 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.03em;
+  text-shadow: 0 4px 24px rgba(0,0,0,.28);
+}
+
+.perfis-hero__title span {
+  color: var(--gold) !important;
+}
+
+.perfis-hero__subtitle {
+  max-width: 640px !important;
+  margin: 0 auto 36px !important;
+  color: rgba(255,255,255,.90) !important;
+  font-size: clamp(14px, 1.6vw, 16.5px) !important;
+  line-height: 1.72 !important;
+  font-weight: 500;
+  text-shadow: 0 2px 14px rgba(0,0,0,.42);
+}
+
+.perfis-hero__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.perfis-hero__btn {
+  min-width: 180px;
+  justify-content: center;
+}
+
+.perfis-hero .btn-gold {
+  background: var(--gold) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 28px rgba(189,160,126,.30);
+}
+
+.perfis-hero .btn-gold:hover {
+  background: var(--gold-lt) !important;
+  box-shadow: 0 14px 44px rgba(189,160,126,.40);
+}
+
+.perfis-hero .btn-ghost {
+  background: transparent !important;
+  color: #fff !important;
+  border: 1.5px solid rgba(255,255,255,.28) !important;
+}
+
+.perfis-hero .btn-ghost:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.48) !important;
+}
+
+@media (max-width: 900px) {
+  .perfis-hero {
+    min-height: auto;
+    padding: 100px 20px 64px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .perfis-hero {
+    min-height: auto;
+    padding: 90px 18px 56px !important;
+  }
+
+  .perfis-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .perfis-hero__btn {
+    width: 100%;
+  }
+}
+
+
+/* Etapa 11.2 - tabela de comparativo sem níveis/selo de destaque */
+.comparison-table .th-level,
+.comparison-table .th-badge {
+  display: none !important;
+}
+
+.comparison-table th.featured {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* ============================================================
+   ETAPA 11.3 — Perfis com UX revisada e Dourado DB padronizado
+   ============================================================ */
+.perfil-level,
+.enterprise-badge {
+  display: none !important;
+}
+
+.perfil-detail {
+  scroll-margin-top: 96px;
+}
+
+.perfil-detail.section {
+  padding: 96px 24px;
+}
+
+.perfil-detail__inner {
+  max-width: 1120px;
+}
+
+.perfil-detail__header {
+  margin-bottom: 44px;
+}
+
+.perfil-badge {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+}
+
+.perfil-name {
+  color: var(--blue) !important;
+  letter-spacing: -.025em;
+}
+
+.perfil-slogan {
+  color: var(--gold) !important;
+  font-weight: 600;
+}
+
+.perfil-detail__content {
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: 48px;
+  padding: 34px;
+  background: rgba(255,255,255,.74);
+  border: 1px solid rgba(62,86,158,.10);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(15,23,42,.06);
+}
+
+.perfil-description h3,
+.perfil-use-cases h3 {
+  color: #111111 !important;
+  font-weight: 700;
+}
+
+.perfil-description p,
+.use-case-list li,
+.feature-list li {
+  color: #4b5563;
+}
+
+.perfil-highlight {
+  background: rgba(189,160,126,.10);
+  border-color: rgba(189,160,126,.24);
+}
+
+.perfil-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 32px auto 0;
+  padding: 18px;
+  max-width: 760px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(62,86,158,.10);
+  box-shadow: 0 18px 52px rgba(15,23,42,.08);
+}
+
+.perfil-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(62,86,158,.16);
+  background: #fff;
+  color: var(--blue);
+  font: 700 14px/1 'Montserrat', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+}
+
+.perfil-action:hover {
+  transform: translateY(-2px);
+  border-color: rgba(62,86,158,.28);
+  box-shadow: 0 12px 28px rgba(62,86,158,.13);
+}
+
+.perfil-action--primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(189,160,126,.25);
+}
+
+.perfil-action--primary:hover {
+  background: var(--gold-lt);
+  border-color: var(--gold-lt);
+}
+
+.perfil-action--ghost {
+  background: rgba(62,86,158,.06);
+}
+
+.perfil-detail--enterprise {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.08), transparent 30%),
+    linear-gradient(135deg, #0e1726 0%, var(--blue) 54%, #0e1726 100%) !important;
+  color: #fff;
+}
+
+.enterprise-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.enterprise-orb--one {
+  width: 460px;
+  height: 460px;
+  top: -180px;
+  right: -100px;
+  background: rgba(189,160,126,.16);
+}
+
+.enterprise-orb--two {
+  width: 520px;
+  height: 520px;
+  left: -160px;
+  bottom: -220px;
+  background: rgba(255,255,255,.08);
+}
+
+.perfil-detail--enterprise .container {
+  position: relative;
+  z-index: 1;
+}
+
+.perfil-detail__header--enterprise {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.perfil-detail--enterprise .perfil-badge--enterprise {
+  background: rgba(189,160,126,.16) !important;
+  border: 1px solid rgba(189,160,126,.34) !important;
+  color: var(--gold) !important;
+}
+
+.perfil-detail--enterprise .perfil-name {
+  color: #fff !important;
+}
+
+.perfil-detail--enterprise .perfil-slogan {
+  color: var(--gold) !important;
+}
+
+.perfil-intro {
+  max-width: 720px;
+  margin: 18px auto 0;
+  color: rgba(255,255,255,.86);
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.enterprise-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 36px 0 28px;
+}
+
+.enterprise-feature-card,
+.enterprise-delivery,
+.enterprise-callout {
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.07);
+  box-shadow: 0 22px 60px rgba(0,0,0,.14);
+  backdrop-filter: blur(14px);
+}
+
+.enterprise-feature-card {
+  padding: 24px;
+  border-radius: 22px;
+  min-height: 168px;
+}
+
+.enterprise-feature-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: var(--gold);
+  box-shadow: 0 0 0 8px rgba(189,160,126,.12);
+}
+
+.enterprise-feature-card h3,
+.enterprise-callout h3,
+.enterprise-delivery h3 {
+  color: #fff !important;
+  font-size: 18px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.enterprise-feature-card p,
+.enterprise-callout p {
+  color: rgba(255,255,255,.78);
+  line-height: 1.65;
+  font-size: 14.5px;
+}
+
+.enterprise-callout {
+  max-width: 920px;
+  margin: 34px auto;
+  padding: 30px 34px;
+  border-radius: 24px;
+  border-color: rgba(189,160,126,.42);
+  background: rgba(189,160,126,.10);
+  text-align: center;
+}
+
+.enterprise-delivery {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 24px;
+}
+
+.enterprise-delivery .feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 22px;
+}
+
+.enterprise-delivery .feature-list li {
+  color: rgba(255,255,255,.86) !important;
+}
+
+.enterprise-delivery .feature-list li svg,
+.feature-list--enterprise li svg,
+.icon-check--gold {
+  color: var(--gold) !important;
+}
+
+.perfil-actions--dark {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.14);
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+
+.perfil-actions--dark .perfil-action {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+  color: #fff;
+}
+
+.perfil-actions--dark .perfil-action--primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.perfil-actions--dark .perfil-action--ghost {
+  background: transparent;
+}
+
+@media (max-width: 1024px) {
+  .perfil-detail__content,
+  .enterprise-features,
+  .enterprise-delivery .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-detail__content {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .perfil-detail.section {
+    padding: 72px 18px;
+  }
+
+  .perfil-actions,
+  .perfil-actions--dark {
+    border-radius: 24px;
+    align-items: stretch;
+  }
+
+  .perfil-action {
+    width: 100%;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.4 — Perfis com layout mais equilibrado e UX clara
+   ============================================================ */
+:root {
+  --db-blue: #3E569E;
+  --db-gold: #BDA07E;
+  --db-ink: #111111;
+}
+
+/* Mantém as três seções com a mesma linguagem visual */
+.perfil-detail.section,
+.perfil-detail--enterprise.section {
+  padding: 96px 24px !important;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+  color: var(--db-ink) !important;
+}
+
+.perfil-detail:nth-of-type(even):not(.perfil-detail--enterprise) {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%) !important;
+}
+
+.perfil-detail__inner,
+.perfil-detail__inner--enterprise {
+  max-width: 1060px !important;
+  margin: 0 auto !important;
+}
+
+.perfil-detail__header,
+.perfil-detail__header--enterprise {
+  max-width: 760px !important;
+  margin: 0 auto 34px !important;
+  text-align: center !important;
+}
+
+.perfil-badge {
+  width: 58px !important;
+  height: 58px !important;
+  margin: 0 auto 16px !important;
+  border-radius: 18px !important;
+  background: #eef2fb !important;
+  border: 1px solid rgba(62,86,158,.14) !important;
+  color: var(--db-blue) !important;
+  box-shadow: 0 12px 30px rgba(62,86,158,.08) !important;
+}
+
+.perfil-badge--enterprise {
+  background: rgba(189,160,126,.14) !important;
+  border-color: rgba(189,160,126,.30) !important;
+  color: var(--db-gold) !important;
+}
+
+.perfil-name,
+.perfil-detail--enterprise .perfil-name {
+  color: var(--db-blue) !important;
+  font-size: clamp(30px, 3.2vw, 44px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.03em !important;
+}
+
+.perfil-slogan,
+.perfil-detail--enterprise .perfil-slogan {
+  color: var(--db-gold) !important;
+  font-weight: 700 !important;
+  margin-top: 8px !important;
+}
+
+.perfil-intro {
+  color: #4b5563 !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+
+.perfil-detail__content {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr) !important;
+  gap: 42px !important;
+  padding: 38px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(62,86,158,.12) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 24px 70px rgba(15,23,42,.08) !important;
+}
+
+.perfil-description h3,
+.perfil-use-cases h3,
+.enterprise-delivery h3,
+.enterprise-feature-card h3,
+.enterprise-callout h3 {
+  color: var(--db-ink) !important;
+  font-weight: 800 !important;
+}
+
+.perfil-description p,
+.use-case-list li,
+.feature-list li,
+.enterprise-feature-card p,
+.enterprise-callout p {
+  color: #4b5563 !important;
+}
+
+.feature-list li svg,
+.perfil-highlight svg,
+.enterprise-delivery .feature-list li svg,
+.feature-list--enterprise li svg,
+.icon-check--gold {
+  color: var(--db-gold) !important;
+}
+
+.perfil-highlight,
+.perfil-highlight--pro,
+.perfil-highlight--enterprise {
+  background: rgba(189,160,126,.08) !important;
+  border: 1px solid rgba(189,160,126,.22) !important;
+  color: #4b5563 !important;
+  border-radius: 16px !important;
+}
+
+/* Botões: agora ficam dentro do fluxo, com ícones e leitura clara */
+.perfil-actions,
+.perfil-actions--dark {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  max-width: 860px !important;
+  margin: 24px auto 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.perfil-action,
+.perfil-actions--dark .perfil-action {
+  min-height: 52px !important;
+  padding: 14px 18px !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(62,86,158,.16) !important;
+  background: #ffffff !important;
+  color: var(--db-blue) !important;
+  font: 800 14px/1.1 'Montserrat', sans-serif !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 12px 30px rgba(15,23,42,.05) !important;
+}
+
+.perfil-action__icon {
+  flex: 0 0 auto !important;
+  opacity: .95 !important;
+}
+
+.perfil-action--primary,
+.perfil-actions--dark .perfil-action--primary {
+  background: var(--db-gold) !important;
+  border-color: var(--db-gold) !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 34px rgba(189,160,126,.26) !important;
+}
+
+.perfil-action--ghost,
+.perfil-actions--dark .perfil-action--ghost {
+  background: rgba(62,86,158,.05) !important;
+}
+
+.perfil-action:hover,
+.perfil-actions--dark .perfil-action:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(62,86,158,.28) !important;
+  box-shadow: 0 18px 38px rgba(15,23,42,.10) !important;
+}
+
+/* Enterprise: mais premium, mas sem fugir do padrão dos outros perfis */
+.perfil-detail--enterprise {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.enterprise-orb {
+  display: none !important;
+}
+
+.perfil-detail__inner--enterprise {
+  position: relative !important;
+  padding: 0 !important;
+}
+
+.perfil-detail__inner--enterprise::before {
+  content: '';
+  position: absolute;
+  inset: 88px -18px auto;
+  height: calc(100% - 48px);
+  border-radius: 34px;
+  background: linear-gradient(135deg, rgba(62,86,158,.08), rgba(189,160,126,.08));
+  border: 1px solid rgba(189,160,126,.20);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.perfil-detail--enterprise .perfil-detail__header,
+.perfil-detail--enterprise .enterprise-features,
+.perfil-detail--enterprise .enterprise-callout,
+.perfil-detail--enterprise .enterprise-delivery,
+.perfil-detail--enterprise .perfil-actions {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.enterprise-features {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin: 28px auto 18px !important;
+  max-width: 980px !important;
+}
+
+.enterprise-feature-card,
+.enterprise-callout,
+.enterprise-delivery {
+  background: #ffffff !important;
+  border: 1px solid rgba(62,86,158,.12) !important;
+  box-shadow: 0 18px 48px rgba(15,23,42,.07) !important;
+  backdrop-filter: none !important;
+}
+
+.enterprise-feature-card {
+  min-height: auto !important;
+  padding: 22px !important;
+  border-radius: 22px !important;
+}
+
+.enterprise-feature-dot {
+  width: 8px !important;
+  height: 8px !important;
+  margin-bottom: 14px !important;
+  background: var(--db-gold) !important;
+  box-shadow: 0 0 0 8px rgba(189,160,126,.12) !important;
+}
+
+.enterprise-callout {
+  max-width: 980px !important;
+  margin: 20px auto !important;
+  padding: 24px 30px !important;
+  border-radius: 24px !important;
+  background: linear-gradient(135deg, rgba(62,86,158,.07), rgba(189,160,126,.08)) !important;
+  text-align: center !important;
+}
+
+.enterprise-delivery {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 30px !important;
+  border-radius: 24px !important;
+}
+
+.enterprise-delivery .feature-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px 22px !important;
+}
+
+.enterprise-delivery .feature-list li {
+  color: #4b5563 !important;
+}
+
+@media (max-width: 1024px) {
+  .perfil-detail__content,
+  .enterprise-features,
+  .enterprise-delivery .feature-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .perfil-detail.section,
+  .perfil-detail--enterprise.section {
+    padding: 76px 18px !important;
+  }
+
+  .perfil-detail__content {
+    padding: 26px !important;
+  }
+
+  .perfil-actions,
+  .perfil-actions--dark {
+    grid-template-columns: 1fr !important;
+  }
+
+  .perfil-detail__inner--enterprise::before {
+    inset: 78px -8px auto !important;
+  }
+}
+
+/* ============================================================
+   ETAPA 11.5 — DB Enterprise redesenhado no padrão DB
+   Sessão premium, chamativa e coerente com Essencial/Profissional
+   ============================================================ */
+.perfil-detail--enterprise.section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 116px 20px !important;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(189, 160, 126, .20), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(255, 255, 255, .10), transparent 26%),
+    linear-gradient(135deg, #0b1735 0%, #162a63 44%, #3E569E 100%) !important;
+  color: #ffffff !important;
+}
+
+.perfil-detail--enterprise.section::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px) !important;
+  background-size: 54px 54px !important;
+  opacity: .22 !important;
+  pointer-events: none !important;
+}
+
+.perfil-detail--enterprise.section::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 98px !important;
+  width: min(960px, 78vw) !important;
+  height: min(960px, 78vw) !important;
+  transform: translateX(-50%) !important;
+  border-radius: 999px !important;
+  background: radial-gradient(circle, rgba(62, 86, 158, .34), transparent 65%) !important;
+  filter: blur(8px) !important;
+  pointer-events: none !important;
+}
+
+.perfil-detail--enterprise .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.perfil-detail__inner--enterprise {
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+.perfil-detail__inner--enterprise::before {
+  display: none !important;
+}
+
+.perfil-detail__header--enterprise {
+  max-width: 780px !important;
+  margin: 0 auto 42px !important;
+  text-align: center !important;
+  color: #ffffff !important;
+}
+
+.perfil-detail--enterprise .perfil-badge--enterprise {
+  width: 70px !important;
+  height: 70px !important;
+  margin: 0 auto 18px !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(189,160,126,.95), rgba(189,160,126,.68)) !important;
+  border: 1px solid rgba(255,255,255,.28) !important;
+  box-shadow: 0 22px 52px rgba(0,0,0,.22), 0 0 0 10px rgba(189,160,126,.10) !important;
+  border-radius: 22px !important;
+}
+
+.perfil-detail--enterprise .perfil-name {
+  color: #ffffff !important;
+  font-size: clamp(2.35rem, 4.8vw, 4.9rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.055em !important;
+  margin: 0 0 12px !important;
+  text-shadow: 0 16px 45px rgba(0,0,0,.26) !important;
+}
+
+.perfil-detail--enterprise .perfil-slogan {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: auto !important;
+  margin: 0 auto 18px !important;
+  padding: 9px 18px !important;
+  color: #BDA07E !important;
+  background: rgba(189,160,126,.12) !important;
+  border: 1px solid rgba(189,160,126,.34) !important;
+  border-radius: 999px !important;
+  font-size: .82rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+}
+
+.perfil-detail--enterprise .perfil-slogan::before {
+  content: '' !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #BDA07E !important;
+  box-shadow: 0 0 0 6px rgba(189,160,126,.14) !important;
+}
+
+.perfil-detail--enterprise .perfil-intro {
+  max-width: 660px !important;
+  margin: 0 auto !important;
+  color: rgba(255,255,255,.86) !important;
+  font-size: 1.06rem !important;
+  line-height: 1.82 !important;
+  font-weight: 500 !important;
+}
+
+.perfil-detail--enterprise .enterprise-features {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin: 0 auto 22px !important;
+  max-width: 1080px !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card {
+  position: relative !important;
+  min-height: 174px !important;
+  padding: 28px 26px !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  background: rgba(255,255,255,.095) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,.18) !important;
+  backdrop-filter: blur(18px) !important;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(189,160,126,.58) !important;
+  background: rgba(255,255,255,.14) !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: auto 0 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #BDA07E, transparent) !important;
+  opacity: .75 !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-dot {
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 0 18px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 14px !important;
+  background: rgba(189,160,126,.18) !important;
+  border: 1px solid rgba(189,160,126,.34) !important;
+  box-shadow: none !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-dot::before {
+  content: '' !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: #BDA07E !important;
+  box-shadow: 0 0 0 7px rgba(189,160,126,.15) !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card h3 {
+  color: #ffffff !important;
+  font-size: 1.02rem !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+  margin: 0 0 10px !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card p {
+  color: rgba(255,255,255,.78) !important;
+  font-size: .92rem !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout {
+  position: relative !important;
+  max-width: 1080px !important;
+  margin: 22px auto !important;
+  padding: 30px 34px !important;
+  border-radius: 26px !important;
+  text-align: left !important;
+  background: linear-gradient(135deg, rgba(189,160,126,.22), rgba(255,255,255,.09)) !important;
+  border: 1px solid rgba(189,160,126,.42) !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,.18) !important;
+  overflow: hidden !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout::before {
+  content: 'Perfil mais completo' !important;
+  display: inline-flex !important;
+  margin-bottom: 12px !important;
+  padding: 7px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.12) !important;
+  border: 1px solid rgba(255,255,255,.20) !important;
+  color: #BDA07E !important;
+  font-size: .72rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout h3 {
+  color: #ffffff !important;
+  font-size: clamp(1.35rem, 2.3vw, 2rem) !important;
+  margin: 0 0 10px !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout p {
+  max-width: 820px !important;
+  color: rgba(255,255,255,.82) !important;
+  font-size: 1rem !important;
+  line-height: 1.78 !important;
+  margin: 0 !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery {
+  max-width: 1080px !important;
+  margin: 22px auto 0 !important;
+  padding: 34px !important;
+  border-radius: 28px !important;
+  background: rgba(255,255,255,.96) !important;
+  border: 1px solid rgba(255,255,255,.38) !important;
+  box-shadow: 0 26px 70px rgba(0,0,0,.20) !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery h3 {
+  color: #3E569E !important;
+  font-size: 1.35rem !important;
+  margin: 0 0 22px !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px 26px !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list li {
+  color: #374151 !important;
+  font-size: .96rem !important;
+  line-height: 1.55 !important;
+  align-items: flex-start !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list li svg,
+.perfil-detail--enterprise .feature-list--enterprise li svg {
+  color: #BDA07E !important;
+  stroke: #BDA07E !important;
+  flex: 0 0 auto !important;
+  margin-top: 2px !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark {
+  max-width: 1080px !important;
+  margin: 28px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: 1.15fr 1fr 1fr !important;
+  gap: 14px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action {
+  min-height: 56px !important;
+  justify-content: center !important;
+  border-radius: 16px !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  box-shadow: 0 18px 42px rgba(0,0,0,.14) !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action--primary {
+  color: #ffffff !important;
+  background: #BDA07E !important;
+  border-color: #BDA07E !important;
+  box-shadow: 0 18px 44px rgba(189,160,126,.24) !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(189,160,126,.60) !important;
+}
+
+@media (max-width: 1024px) {
+  .perfil-detail--enterprise .enterprise-features,
+  .perfil-detail--enterprise .enterprise-delivery .feature-list,
+  .perfil-detail--enterprise .perfil-actions--dark {
+    grid-template-columns: 1fr !important;
+  }
+
+  .perfil-detail--enterprise.section {
+    padding: 92px 18px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .perfil-detail--enterprise .perfil-name {
+    font-size: clamp(2.1rem, 12vw, 3.4rem) !important;
+  }
+
+  .perfil-detail--enterprise .enterprise-feature-card,
+  .perfil-detail--enterprise .enterprise-callout,
+  .perfil-detail--enterprise .enterprise-delivery {
+    padding: 24px !important;
+  }
+}
+
+/* ============================================================
+   ETAPA 11.6 — REFINO UX DB ENTERPRISE
+   Ajuste visual para deixar a sessão Enterprise premium,
+   chamativa e consistente com o padrão DB.
+   ============================================================ */
+.perfil-detail--enterprise.section {
+  position: relative !important;
+  background: linear-gradient(180deg, #f7f9fd 0%, #eef3fb 55%, #f8fafc 100%) !important;
+  padding: 110px 24px !important;
+  overflow: hidden !important;
+}
+
+.perfil-detail--enterprise.section::before,
+.perfil-detail--enterprise.section::after,
+.perfil-detail--enterprise .enterprise-orb,
+.perfil-detail__inner--enterprise::before {
+  display: none !important;
+  content: none !important;
+}
+
+.perfil-detail--enterprise .container {
+  max-width: 1240px !important;
+}
+
+.perfil-detail__inner--enterprise {
+  max-width: 1160px !important;
+  margin: 0 auto !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.985) 0%, rgba(245,248,255,.985) 100%) !important;
+  border: 1px solid rgba(62, 86, 158, 0.14) !important;
+  border-radius: 34px !important;
+  padding: 44px 38px 34px !important;
+  box-shadow: 0 24px 70px rgba(17, 38, 87, 0.10) !important;
+}
+
+.perfil-detail__header--enterprise {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 12px !important;
+  margin: 0 auto 34px !important;
+  max-width: 760px !important;
+}
+
+.perfil-detail--enterprise .perfil-badge--enterprise {
+  width: 68px !important;
+  height: 68px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 22px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,255,1) 100%) !important;
+  border: 1px solid rgba(189,160,126,.55) !important;
+  color: #BDA07E !important;
+  box-shadow: 0 14px 30px rgba(189,160,126,.16) !important;
+}
+
+.perfil-detail--enterprise .perfil-name {
+  margin: 0 !important;
+  color: #3E569E !important;
+  font-size: clamp(2.6rem, 4.4vw, 4rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.perfil-detail--enterprise .perfil-slogan {
+  margin: 0 !important;
+  color: #BDA07E !important;
+  font-size: 1.08rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+.perfil-detail--enterprise .perfil-slogan::before {
+  display: none !important;
+}
+
+.perfil-detail--enterprise .perfil-intro {
+  margin: 0 !important;
+  color: #5B657E !important;
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+  max-width: 700px !important;
+}
+
+.perfil-detail--enterprise .enterprise-features {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin: 0 auto 26px !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card {
+  position: relative !important;
+  min-height: 184px !important;
+  padding: 24px 22px 22px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(62, 86, 158, 0.12) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 14px 36px rgba(17, 38, 87, 0.08) !important;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 22px !important;
+  right: 22px !important;
+  top: 0 !important;
+  height: 4px !important;
+  border-radius: 0 0 999px 999px !important;
+  background: linear-gradient(90deg, #BDA07E 0%, rgba(189,160,126,.12) 100%) !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 42px rgba(17, 38, 87, 0.12) !important;
+  border-color: rgba(62, 86, 158, .24) !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-dot {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 0 18px !important;
+  border-radius: 999px !important;
+  background: rgba(189,160,126,.18) !important;
+  border: 1px solid rgba(189,160,126,.35) !important;
+  display: inline-grid !important;
+  place-items: center !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-dot::before {
+  width: 5px !important;
+  height: 5px !important;
+  background: #BDA07E !important;
+  border-radius: 50% !important;
+  content: "" !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card h3 {
+  margin: 0 0 10px !important;
+  color: #101828 !important;
+  font-size: 1.12rem !important;
+  line-height: 1.35 !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card p {
+  margin: 0 !important;
+  color: #667085 !important;
+  font-size: .95rem !important;
+  line-height: 1.65 !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout {
+  margin: 0 auto 26px !important;
+  padding: 24px 26px !important;
+  border-radius: 24px !important;
+  background: linear-gradient(135deg, rgba(62,86,158,.08) 0%, rgba(255,255,255,.96) 60%, rgba(189,160,126,.12) 100%) !important;
+  border: 1px solid rgba(62,86,158,.14) !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout h3 {
+  margin: 0 0 10px !important;
+  color: #3E569E !important;
+  font-size: 1.25rem !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout p {
+  margin: 0 auto !important;
+  max-width: 760px !important;
+  color: #667085 !important;
+  font-size: .97rem !important;
+  line-height: 1.7 !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery {
+  padding: 28px 28px 26px !important;
+  background: #ffffff !important;
+  border-radius: 26px !important;
+  border: 1px solid rgba(62, 86, 158, 0.12) !important;
+  box-shadow: 0 14px 34px rgba(17, 38, 87, 0.08) !important;
+  margin: 0 auto 26px !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery h3 {
+  margin: 0 0 18px !important;
+  color: #3E569E !important;
+  font-size: 1.35rem !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px 28px !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list li {
+  color: #5B657E !important;
+  font-size: .96rem !important;
+  line-height: 1.65 !important;
+  align-items: flex-start !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list li svg,
+.perfil-detail--enterprise .feature-list--enterprise li svg {
+  color: #BDA07E !important;
+  stroke: #BDA07E !important;
+  margin-top: 2px !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action {
+  min-height: 58px !important;
+  border-radius: 18px !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  font-weight: 700 !important;
+  background: #ffffff !important;
+  color: #3E569E !important;
+  border: 1px solid rgba(62, 86, 158, 0.18) !important;
+  box-shadow: 0 12px 28px rgba(17, 38, 87, 0.06) !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action .perfil-action__icon {
+  color: currentColor !important;
+  flex: 0 0 auto !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action--primary {
+  background: #BDA07E !important;
+  border-color: #BDA07E !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 32px rgba(189,160,126,.22) !important;
+}
+
+.perfil-detail--enterprise .perfil-actions--dark .perfil-action:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(62, 86, 158, 0.3) !important;
+}
+
+@media (max-width: 1024px) {
+  .perfil-detail__inner--enterprise {
+    padding: 34px 24px 28px !important;
+  }
+
+  .perfil-detail--enterprise .enterprise-features,
+  .perfil-detail--enterprise .enterprise-delivery .feature-list,
+  .perfil-detail--enterprise .perfil-actions--dark {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .perfil-detail--enterprise.section {
+    padding: 82px 16px !important;
+  }
+
+  .perfil-detail__inner--enterprise {
+    border-radius: 28px !important;
+    padding: 28px 18px 22px !important;
+  }
+
+  .perfil-detail--enterprise .perfil-name {
+    font-size: clamp(2.1rem, 11vw, 3rem) !important;
+  }
+
+  .perfil-detail--enterprise .enterprise-feature-card,
+  .perfil-detail--enterprise .enterprise-callout,
+  .perfil-detail--enterprise .enterprise-delivery {
+    padding: 20px 18px !important;
+    border-radius: 20px !important;
+  }
+}
+
+/* ============================================================
+   ETAPA 11.7 — Ajustes finos nos perfis
+   - Título DB Enterprise no Azul DB
+   - Remoção dos ícones superiores dos perfis
+   ============================================================ */
+.perfil-detail .perfil-badge {
+  display: none !important;
+}
+
+.perfil-detail--enterprise .perfil-name,
+.perfil-detail--enterprise #enterprise-title {
+  color: #3E569E !important;
+  text-shadow: none !important;
+}
+
+.perfil-detail__header,
+.perfil-detail__header--enterprise {
+  gap: 10px !important;
+}
+
+
+/* ============================================================
+   ETAPA 11.8 — HERO COM ESCOLHA RÁPIDA + ENTERPRISE REFINADO
+   ============================================================ */
+
+.perfis-hero__quick {
+  width: min(980px, 100%);
+  margin: 34px auto 0;
+  text-align: center;
+}
+
+.perfis-hero__quick-title {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.76);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0,0,0,.28);
+}
+
+.perfis-hero__quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.perfis-hero__quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 116px;
+  padding: 20px 18px;
+  border-radius: 22px;
+  text-decoration: none;
+  text-align: left;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 18px 45px rgba(0,0,0,.16);
+  backdrop-filter: blur(10px);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.perfis-hero__quick-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,.12);
+  border-color: rgba(189,160,126,.58);
+}
+
+.perfis-hero__quick-card strong {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+.perfis-hero__quick-card span {
+  color: rgba(255,255,255,.82);
+  font-size: .86rem;
+  line-height: 1.45;
+}
+
+.perfis-hero__quick-card--enterprise {
+  background: linear-gradient(135deg, rgba(189,160,126,.22), rgba(255,255,255,.08));
+  border-color: rgba(189,160,126,.55);
+}
+
+.perfis-hero__quick-card--enterprise strong {
+  color: #BDA07E;
+}
+
+/* DB Enterprise: textos menores e botões fora do card */
+.perfil-detail--enterprise .perfil-detail__inner--enterprise {
+  padding-bottom: 30px !important;
+}
+
+.perfil-detail--enterprise .perfil-name {
+  color: #3E569E !important;
+  font-size: clamp(2.2rem, 3.4vw, 3.25rem) !important;
+  line-height: 1.05 !important;
+}
+
+.perfil-detail--enterprise .perfil-slogan {
+  font-size: .88rem !important;
+  letter-spacing: .07em !important;
+  text-transform: uppercase !important;
+}
+
+.perfil-detail--enterprise .perfil-intro {
+  font-size: .94rem !important;
+  line-height: 1.65 !important;
+  max-width: 650px !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card {
+  min-height: 150px !important;
+  padding: 20px 20px 18px !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card h3 {
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 8px !important;
+}
+
+.perfil-detail--enterprise .enterprise-feature-card p {
+  font-size: .86rem !important;
+  line-height: 1.55 !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout {
+  padding: 20px 24px !important;
+  margin-bottom: 22px !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout h3 {
+  font-size: 1.08rem !important;
+}
+
+.perfil-detail--enterprise .enterprise-callout p {
+  font-size: .88rem !important;
+  line-height: 1.62 !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery {
+  padding: 24px 26px !important;
+  margin-bottom: 0 !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery h3 {
+  font-size: 1.16rem !important;
+}
+
+.perfil-detail--enterprise .enterprise-delivery .feature-list li {
+  font-size: .88rem !important;
+  line-height: 1.52 !important;
+}
+
+.perfil-detail--enterprise > .container > .perfil-actions--dark {
+  max-width: 1080px !important;
+  margin: 28px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.perfil-detail--enterprise > .container > .perfil-actions--dark .perfil-action {
+  min-height: 58px !important;
+  border-radius: 18px !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 1024px) {
+  .perfis-hero__quick-grid,
+  .perfil-detail--enterprise > .container > .perfil-actions--dark {
+    grid-template-columns: 1fr !important;
+  }
+
+  .perfis-hero__quick-card {
+    min-height: auto;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .perfis-hero__quick {
+    margin-top: 26px;
+  }
+
+  .perfis-hero__quick-card {
+    padding: 17px 16px;
+    border-radius: 18px;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.9 — BOTÃO E SEÇÃO PARA CALCULADORA DE PERFIL
+   ============================================================ */
+
+.perfis-hero__actions {
+  flex-wrap: wrap;
+}
+
+.btn-outline-gold.perfis-hero__btn--calc {
+  color: #ffffff;
+  background: rgba(189, 160, 126, 0.10);
+  border: 1px solid rgba(189, 160, 126, 0.62);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.btn-outline-gold.perfis-hero__btn--calc:hover {
+  color: #ffffff;
+  background: rgba(189, 160, 126, 0.22);
+  border-color: #BDA07E;
+  transform: translateY(-3px);
+}
+
+.perfil-calculator-cta {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(62, 86, 158, 0.10), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
+  padding: 84px 0 28px;
+}
+
+.perfil-calculator-cta__box {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+  align-items: center;
+  gap: 36px;
+  padding: 38px 42px;
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(62, 86, 158, 0.98), rgba(15, 31, 67, 0.98)),
+    #3E569E;
+  border: 1px solid rgba(189, 160, 126, 0.32);
+  box-shadow: 0 26px 70px rgba(17, 38, 87, 0.18);
+}
+
+.perfil-calculator-cta__box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: .75;
+  pointer-events: none;
+}
+
+.perfil-calculator-cta__box::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -100px;
+  border-radius: 50%;
+  background: rgba(189, 160, 126, 0.18);
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.perfil-calculator-cta__content,
+.perfil-calculator-cta__actions {
+  position: relative;
+  z-index: 1;
+}
+
+.perfil-calculator-cta__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: #BDA07E;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(189,160,126,.34);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.perfil-calculator-cta h2 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.3vw, 3.05rem);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+
+.perfil-calculator-cta p {
+  margin: 0;
+  max-width: 760px;
+  color: rgba(255,255,255,.84);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.perfil-calculator-cta__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.perfil-calculator-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 0 28px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #BDA07E;
+  border: 1px solid #BDA07E;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 18px 42px rgba(189,160,126,.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.perfil-calculator-cta__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 52px rgba(189,160,126,.32);
+}
+
+.perfil-calculator-cta__note {
+  color: rgba(255,255,255,.70);
+  font-size: .86rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 920px) {
+  .perfil-calculator-cta__box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 34px 24px;
+  }
+
+  .perfil-calculator-cta p {
+    margin-inline: auto;
+  }
+
+  .perfil-calculator-cta__actions {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .perfil-calculator-cta {
+    padding: 64px 0 22px;
+  }
+
+  .perfil-calculator-cta__box {
+    border-radius: 24px;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.11 — AJUSTE DO TAMANHO DO TÍTULO DO HERO
+   Mantém a ideia do texto novo, mas reduz o peso visual para
+   ficar no padrão dos outros heros do site.
+   ============================================================ */
+
+.perfis-hero__title {
+  max-width: 780px !important;
+  font-size: clamp(2.9rem, 4.2vw, 4.35rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.045em !important;
+}
+
+.perfis-hero__subtitle {
+  max-width: 640px !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+@media (min-width: 1100px) {
+  .perfis-hero__title {
+    font-size: clamp(3rem, 4.15vw, 4.45rem) !important;
+    line-height: 1.08 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .perfis-hero__title {
+    max-width: 680px !important;
+    font-size: clamp(2.45rem, 8vw, 3.5rem) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .perfis-hero__title {
+    font-size: clamp(2.15rem, 11vw, 3rem) !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .perfis-hero__subtitle {
+    font-size: .95rem !important;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.12 — HERO COM IMAGEM + ANIMAÇÕES DA PÁGINA PERFIS
+   ============================================================ */
+
+/* Imagem de fundo no hero da página Perfis */
+.perfis-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #0f1f43 !important;
+}
+
+.perfis-hero__bg {
+  position: absolute !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(90deg, rgba(8, 20, 45, 0.92) 0%, rgba(30, 55, 110, 0.82) 48%, rgba(15, 31, 67, 0.94) 100%),
+    url("../assets/img-hero-bg.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  opacity: 1 !important;
+  transform: scale(1.03) !important;
+  z-index: 0 !important;
+}
+
+.perfis-hero__grid,
+.perfis-hero__glow,
+.perfis-hero__container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.perfis-hero__grid {
+  opacity: .42 !important;
+}
+
+.perfis-hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: auto 0 0 0 !important;
+  height: 34% !important;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 20, 45, 0.58) 100%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* Animações de entrada e rolagem */
+.reveal,
+.perfis-hero .reveal,
+.perfil-detail.reveal,
+.perfis-comparison .reveal,
+.perfil-calculator-cta .reveal,
+.enterprise-feature-card.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22, 1, .36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible,
+.reveal.visible,
+.perfil-detail.reveal.is-visible,
+.perfil-detail.reveal.visible,
+.enterprise-feature-card.reveal.is-visible,
+.enterprise-feature-card.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--delay-1 { transition-delay: .08s; }
+.reveal--delay-2 { transition-delay: .16s; }
+.reveal--delay-3 { transition-delay: .24s; }
+.reveal--delay-4 { transition-delay: .32s; }
+.reveal--delay-5 { transition-delay: .40s; }
+.reveal--delay-6 { transition-delay: .48s; }
+
+.perfis-hero__tag.reveal.is-visible,
+.perfis-hero__tag.reveal.visible {
+  animation: perfis-soft-pop .75s ease both;
+}
+
+.perfis-hero__quick-card.reveal.is-visible,
+.perfis-hero__quick-card.reveal.visible,
+.enterprise-feature-card.reveal.is-visible,
+.enterprise-feature-card.reveal.visible {
+  animation: perfis-card-rise .75s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes perfis-soft-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes perfis-card-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Microinterações para deixar a página mais viva */
+.comparison-table-wrapper,
+.perfil-detail__inner,
+.perfil-calculator-cta__box,
+.perfil-detail__inner--enterprise {
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.comparison-table-wrapper:hover,
+.perfil-detail__inner:hover,
+.perfil-calculator-cta__box:hover,
+.perfil-detail__inner--enterprise:hover {
+  transform: translateY(-4px);
+}
+
+/* Evita animação desconfortável para usuários com redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .perfis-hero .reveal,
+  .perfil-detail.reveal,
+  .perfis-comparison .reveal,
+  .perfil-calculator-cta .reveal,
+  .enterprise-feature-card.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.13 — CORREÇÃO DO HERO
+   Mantém a imagem de fundo, mas devolve o posicionamento do hero
+   ao padrão anterior. Não altera a posição dos textos.
+   ============================================================ */
+
+.perfis-hero {
+  background: #0f1f43 !important;
+}
+
+.perfis-hero__bg {
+  position: absolute !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(90deg, rgba(8, 20, 45, 0.82) 0%, rgba(30, 55, 110, 0.72) 48%, rgba(15, 31, 67, 0.86) 100%),
+    url("../assets/img-hero-bg.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Remove camada extra que mudou a percepção/altura do hero */
+.perfis-hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Mantém o conteúdo na posição original da etapa anterior */
+.perfis-hero__container {
+  min-height: inherit !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.perfis-hero__content {
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+/* Mantém os cards rápidos sem empurrar o hero para fora do padrão */
+.perfis-hero__quick {
+  margin-top: 28px !important;
+}
+
+/* Ajuste de respiro para a imagem não interferir na composição */
+@media (min-width: 1025px) {
+  .perfis-hero {
+    min-height: 92vh !important;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.14 — HERO PERFIS CENTRALIZADO + IMAGEM REAL NO FUNDO
+   Correção final: imagem no fundo sem deslocar textos.
+   ============================================================ */
+
+.perfis-hero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  min-height: 92vh !important;
+  display: flex !important;
+  align-items: center !important;
+  background: #0f1f43 !important;
+}
+
+.perfis-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  background-image: url("../assets/img-hero-bg.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: .58 !important;
+  transform: none !important;
+}
+
+.perfis-hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  display: block !important;
+  background:
+    linear-gradient(90deg, rgba(8,20,45,.88) 0%, rgba(31,58,118,.72) 48%, rgba(8,20,45,.90) 100%),
+    radial-gradient(circle at 50% 34%, rgba(62,86,158,.34), transparent 46%) !important;
+  pointer-events: none !important;
+}
+
+.perfis-hero__bg {
+  display: none !important;
+}
+
+.perfis-hero__grid {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  opacity: .26 !important;
+  pointer-events: none !important;
+}
+
+.perfis-hero__glow {
+  display: none !important;
+}
+
+.perfis-hero__container {
+  width: 100% !important;
+  min-height: 92vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 112px !important;
+  padding-bottom: 76px !important;
+  margin-inline: auto !important;
+}
+
+.perfis-hero__content,
+.page-hero__content.perfis-hero__content {
+  width: min(100%, 980px) !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  transform: none !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+.perfis-hero__tag {
+  margin-inline: auto !important;
+}
+
+.perfis-hero__title {
+  max-width: 780px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.perfis-hero__subtitle {
+  max-width: 650px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.perfis-hero__actions {
+  justify-content: center !important;
+}
+
+.perfis-hero__quick {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 900px) {
+  .perfis-hero,
+  .perfis-hero__container {
+    min-height: auto !important;
+  }
+
+  .perfis-hero__container {
+    padding-top: 130px !important;
+    padding-bottom: 68px !important;
+  }
+}
+
+
+/* ============================================================
+   ETAPA 11.15 — HERO PERFIS COM IMAGEM ENVIADA PELO USUÁRIO
+   Correção: aplica a imagem direto no background do hero e
+   reduz a altura para não aumentar demais a primeira dobra.
+   ============================================================ */
+
+.perfis-hero {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  min-height: 92vh !important;
+  min-height: 92dvh !important;
+  display: flex !important;
+  align-items: center !important;
+  background: #3E569E !important;
+  background-image: none !important;
+}
+
+/* Remove pseudo-elementos e fundo antigo */
+.perfis-hero::before,
+.perfis-hero::after,
+.perfis-hero__bg {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+/* Dot grid — igual ao padrão capacidades / atuação */
+.perfis-hero__grid {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background-image: radial-gradient(circle, rgba(255,255,255,.09) 1px, transparent 1px) !important;
+  background-size: 44px 44px !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+}
+
+/* Atmospheric glows */
+.perfis-hero__glow {
+  position: absolute !important;
+  border-radius: 50% !important;
+  filter: blur(110px) !important;
+  pointer-events: none !important;
+  display: block !important;
+}
+.perfis-hero__glow--1 {
+  width: 520px !important; height: 520px !important;
+  top: -120px !important; right: -80px !important;
+  background: rgba(189,160,126,.11) !important;
+  z-index: 0 !important;
+}
+.perfis-hero__glow--2 {
+  width: 420px !important; height: 420px !important;
+  bottom: -100px !important; left: -60px !important;
+  background: rgba(58,90,138,.28) !important;
+  z-index: 0 !important;
+}
+
+.perfis-hero__container {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  min-height: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 104px !important;
+  padding-bottom: 56px !important;
+  margin-inline: auto !important;
+}
+
+.perfis-hero__content,
+.page-hero__content.perfis-hero__content {
+  width: min(100%, 980px) !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+  transform: none !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+.perfis-hero__title {
+  max-width: 760px !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+.perfis-hero__subtitle {
+  max-width: 640px !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+.perfis-hero__actions {
+  justify-content: center !important;
+}
+
+/* Quick cards fora do hero — faixa branca */
+.perfis-hero__quick {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 40px 24px 52px !important;
+  background: #ffffff !important;
+  border-top: 1px solid #edeef2 !important;
+  text-align: center !important;
+}
+
+.perfis-hero__quick-title {
+  color: #4A5068 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+}
+
+.perfis-hero__quick .perfis-hero__quick-grid {
+  max-width: 880px !important;
+  margin-inline: auto !important;
+}
+
+/* Cards em fundo branco — estilo claro */
+.perfis-hero__quick .perfis-hero__quick-card {
+  background: #f7f8fa !important;
+  border: 1px solid #e0e2eb !important;
+  color: #111111 !important;
+  border-radius: 12px !important;
+}
+
+.perfis-hero__quick .perfis-hero__quick-card:hover {
+  background: #edeef2 !important;
+  border-color: #BDA07E !important;
+}
+
+.perfis-hero__quick .perfis-hero__quick-card strong {
+  color: #3E569E !important;
+}
+
+.perfis-hero__quick .perfis-hero__quick-card span {
+  color: #4A5068 !important;
+}
+
+/* Card Enterprise mantém destaque dourado no texto */
+.perfis-hero__quick .perfis-hero__quick-card--enterprise {
+  border-color: #BDA07E !important;
+  background: #fdf9f5 !important;
+}
+
+.perfis-hero__quick .perfis-hero__quick-card--enterprise strong {
+  color: #BDA07E !important;
+}
+
+@media (max-width: 900px) {
+  .perfis-hero {
+    min-height: auto !important;
+  }
+
+  .perfis-hero__container {
+    padding-top: 124px !important;
+    padding-bottom: 58px !important;
+  }
+}
