@@ -3,8 +3,8 @@
 // ============================================
 // CONFIGURAÇÕES DOS ENDPOINTS
 // ============================================
-const API_URL_ADMIN = 'http://2.25.168.21:8081/api/calcular';
-const API_URL_INDUSTRIAL = 'http://2.25.168.21:8081/api/calcular-industrial';
+const API_URL_ADMIN = 'https://calculadora-externa.dbsoftwares.cloud/api/calcular';
+const API_URL_INDUSTRIAL = 'https://calculadora-externa.dbsoftwares.cloud/api/calcular-industrial';
 
 // ============================================
 // ELEMENTOS DO DOM
