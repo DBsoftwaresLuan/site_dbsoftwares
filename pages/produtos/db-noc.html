@@ -18,9 +18,11 @@
     <link href="/styles/global.css" rel="stylesheet" />
     <link href="/styles/produto.css" rel="stylesheet" />
     <link href="/styles/cookies.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global-premium.css" />
   </head>
 
   <body>
+    <div class="db-scroll-progress" aria-hidden="true"><span class="db-scroll-progress__bar"></span></div>
     <!-- ============================================================
        NAVBAR
        ============================================================ -->
@@ -219,6 +221,74 @@
         <div class="produto-hero__scroll reveal reveal--delay-5" aria-hidden="true">
           <div class="produto-hero__scroll-mouse">
             <div class="produto-hero__scroll-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         MÉTRICAS DE IMPACTO
+         ============================================================ -->
+      <section aria-label="Impacto do DB NOC" class="produto-metrics">
+        <div class="produto-metrics__inner reveal--stagger">
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value">24<em>/7</em></div>
+            <div class="produto-metrics__label">Monitoramento contínuo da operação</div>
+          </div>
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value"><em>&lt;</em>5<em>min</em></div>
+            <div class="produto-metrics__label">Tempo médio de resposta a incidentes</div>
+          </div>
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value"><em>+</em>99<em>%</em></div>
+            <div class="produto-metrics__label">Disponibilidade dos processos críticos</div>
+          </div>
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value">0</div>
+            <div class="produto-metrics__label">Falhas não detectadas no monitoramento</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         ANTES / DEPOIS
+         ============================================================ -->
+      <section aria-labelledby="compare-noc-title" class="produto-compare">
+        <div aria-hidden="true" class="produto-compare__bg"></div>
+        <div class="produto-compare__inner">
+          <div class="produto-compare__header reveal">
+            <span class="produto-compare__label">Transformação</span>
+            <h2 class="produto-compare__title" id="compare-noc-title">Antes e depois do <em>DB NOC</em></h2>
+          </div>
+          <div class="produto-compare__grid reveal--delay-1">
+            <div class="produto-compare__col produto-compare__col--before">
+              <div class="produto-compare__col-title">
+                <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>
+                Sem DB NOC
+              </div>
+              <div class="produto-compare__list">
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Falhas descobertas apenas quando o impacto já ocorreu</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Equipe sobrecarregada com verificações manuais constantes</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Tempo de resposta lento e ação reativa</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Ausência de histórico estruturado de incidentes</div>
+              </div>
+            </div>
+            <div class="produto-compare__divider">
+              <div class="produto-compare__arrow" aria-hidden="true">
+                <svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+            <div class="produto-compare__col produto-compare__col--after">
+              <div class="produto-compare__col-title">
+                <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Com DB NOC
+              </div>
+              <div class="produto-compare__list">
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Detecção proativa de falhas antes que afetem a operação</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Monitoramento automático 24/7 sem esforço da equipe</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Resposta em minutos com análise de causa raiz</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Histórico completo e rastreável de cada incidente</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -607,5 +677,7 @@
     </footer>
 
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/produto.js"></script>
+    <script src="/scripts/global-premium.js"></script>
   </body>
 </html>

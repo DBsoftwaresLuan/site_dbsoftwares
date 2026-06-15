@@ -157,7 +157,9 @@
       '.produto-cap__label', '.produto-cap__title', '.produto-cap__subtitle', '.produto-cap__card',
       '.produto-how__label', '.produto-how__title', '.produto-how__intro', '.produto-how__step', '.produto-how__cta-inline',
       '.produto-resultado__label', '.produto-resultado__title', '.produto-resultado__text', '.produto-resultado__item', '.produto-resultado__panel-card', '.produto-resultado__stat',
-      '.produto-cta__eyebrow', '.produto-cta__title', '.produto-cta__text', '.produto-cta__group', '.produto-cta__outros'
+      '.produto-cta__eyebrow', '.produto-cta__title', '.produto-cta__text', '.produto-cta__group', '.produto-cta__outros',
+      '.produto-compare__header', '.produto-compare__col', '.produto-compare__divider',
+      '.produto-metrics__item'
     ];
 
     var elements = Array.prototype.slice.call(document.querySelectorAll(selectors.join(',')));
@@ -166,7 +168,7 @@
       if (el.classList.contains('reveal') || el.classList.contains('reveal--from-left') || el.classList.contains('reveal--from-right') || el.classList.contains('reveal--scale')) return;
 
       el.classList.add('motion-reveal');
-      if (el.matches('.produto-oque__card, .produto-resultado__panel-card, .produto-cap__card, .produto-resultado__stat')) {
+      if (el.matches('.produto-oque__card, .produto-resultado__panel-card, .produto-cap__card, .produto-resultado__stat, .produto-metrics__item')) {
         el.classList.add('motion-reveal--scale');
       }
 
@@ -175,12 +177,14 @@
         return child.matches && child.matches(selectors.join(','));
       }) : [];
       var index = Math.max(0, sameGroup.indexOf(el));
-      var delay = Math.min(index * 45, 220);
+      var delay = Math.min(index * 45, 260);
       el.style.setProperty('--motion-delay', delay + 'ms');
     });
 
     if (reduceMotion || !('IntersectionObserver' in window)) {
       elements.forEach(function (el) { el.classList.add('motion-in'); });
+      // Também ativa reveal--stagger imediatamente
+      document.querySelectorAll('.reveal--stagger').forEach(function (el) { el.classList.add('is-visible'); });
       return;
     }
 
@@ -194,6 +198,32 @@
 
     elements.forEach(function (el) {
       if (el.classList.contains('motion-reveal')) observer.observe(el);
+    });
+
+    // Observer para reveal--stagger (grupos de filhos)
+    var staggerObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        staggerObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -4% 0px' });
+
+    document.querySelectorAll('.reveal--stagger').forEach(function (el) {
+      staggerObserver.observe(el);
+    });
+
+    // Observer para reveal--fade
+    var fadeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        fadeObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal--fade').forEach(function (el) {
+      fadeObserver.observe(el);
     });
   }
 

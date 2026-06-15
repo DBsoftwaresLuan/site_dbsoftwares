@@ -18,9 +18,11 @@
     <link href="/styles/global.css" rel="stylesheet" />
     <link href="/styles/produto.css" rel="stylesheet" />
     <link href="/styles/cookies.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global-premium.css" />
   </head>
 
   <body>
+    <div class="db-scroll-progress" aria-hidden="true"><span class="db-scroll-progress__bar"></span></div>
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
       <div class="nav-inner">
@@ -218,6 +220,30 @@
       </div>
 
       <!-- ═══════════════════════════════════════════════
+           MÉTRICAS DE IMPACTO
+           ═══════════════════════════════════════════════ -->
+      <section aria-label="Impacto do DB Hyper" class="produto-metrics">
+        <div class="produto-metrics__inner reveal--stagger">
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value"><em>+</em>90<em>%</em></div>
+            <div class="produto-metrics__label">Redução de execução manual</div>
+          </div>
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value">24<em>/7</em></div>
+            <div class="produto-metrics__label">Operação contínua sem intervenção</div>
+          </div>
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value">0</div>
+            <div class="produto-metrics__label">Erros por falha humana no processo</div>
+          </div>
+          <div class="produto-metrics__item">
+            <div class="produto-metrics__value"><em>-</em>60<em>%</em></div>
+            <div class="produto-metrics__label">Custo operacional de execução</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
            O QUE É
            ═══════════════════════════════════════════════ -->
       <section class="produto-oque" aria-labelledby="oque-title">
@@ -261,6 +287,50 @@
               <p class="produto-oque__quote">
                 Não se trata apenas de automatizar tarefas — mas de garantir que a execução siga exatamente como foi planejada.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           ANTES / DEPOIS
+           ═══════════════════════════════════════════════ -->
+      <section aria-labelledby="compare-hyper-title" class="produto-compare">
+        <div aria-hidden="true" class="produto-compare__bg"></div>
+        <div class="produto-compare__inner">
+          <div class="produto-compare__header reveal">
+            <span class="produto-compare__label">Transformação</span>
+            <h2 class="produto-compare__title" id="compare-hyper-title">Antes e depois do <em>DB Hyper</em></h2>
+          </div>
+          <div class="produto-compare__grid reveal--delay-1">
+            <div class="produto-compare__col produto-compare__col--before">
+              <div class="produto-compare__col-title">
+                <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" x2="9" y1="9" y2="15"/><line x1="9" x2="15" y1="9" y2="15"/></svg>
+                Sem DB Hyper
+              </div>
+              <div class="produto-compare__list">
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Processos executados manualmente, com alto risco de erro</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Automações pontuais que não se comunicam entre si</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Dependência de pessoas para executar regras críticas</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"></div>Gargalos operacionais que crescem com o volume</div>
+              </div>
+            </div>
+            <div class="produto-compare__divider">
+              <div class="produto-compare__arrow" aria-hidden="true">
+                <svg fill="none" height="16" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+            <div class="produto-compare__col produto-compare__col--after">
+              <div class="produto-compare__col-title">
+                <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Com DB Hyper
+              </div>
+              <div class="produto-compare__list">
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Fluxos end-to-end automatizados com agentes de IA</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Orquestração de ponta a ponta em ecossistemas complexos</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Execução autônoma, previsível e baseada em regras aprovadas</div>
+                <div class="produto-compare__item"><div class="produto-compare__item-dot"><svg fill="none" height="9" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" width="9" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>Escalabilidade sem aumento proporcional de equipe</div>
+              </div>
             </div>
           </div>
         </div>
@@ -566,5 +636,7 @@
     </footer>
 
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/produto.js"></script>
+    <script src="/scripts/global-premium.js"></script>
   </body>
 </html>
