@@ -17,6 +17,7 @@
     />
     <link href="/styles/global.css" rel="stylesheet" />
     <link href="/styles/produto.css" rel="stylesheet" />
+    <link href="/styles/noc.css" rel="stylesheet" />
     <link href="/styles/cookies.css" rel="stylesheet" />
   </head>
 
@@ -179,165 +180,432 @@
     <main id="main-content">
 
       <!-- ============================================================
-         HERO
+         HERO — Fundo azul escuro, layout aprovado
          ============================================================ -->
-      <section class="produto-hero" aria-labelledby="hero-title">
-        <div class="produto-hero__bg" aria-hidden="true">
-          <div class="produto-hero__dots"></div>
-          <div class="produto-hero__glow-1"></div>
-          <div class="produto-hero__glow-2"></div>
+      <section class="noc-hero" aria-labelledby="hero-title">
+        <div class="noc-hero__bg" aria-hidden="true">
+          <div class="noc-hero__dots"></div>
+          <div class="noc-hero__glow-1"></div>
+          <div class="noc-hero__glow-2"></div>
         </div>
-        <div class="produto-hero__inner">
-          <div class="produto-hero__badge reveal">
-            <span class="produto-hero__badge-dot" aria-hidden="true"></span>
-            Sustentação e Continuidade
-          </div>
-          <h1 class="produto-hero__title reveal reveal--delay-1" id="hero-title">
-            DB <span>NOC</span>
-          </h1>
-          <p class="produto-hero__subtitle-label reveal reveal--delay-2">
-            Sua operação sempre ativa
-          </p>
-          <p class="produto-hero__desc reveal reveal--delay-3">
-            O DB NOC garante que tudo continue funcionando, o tempo todo. É a célula de sustentação contínua da operação automatizada: um centro especializado de monitoramento, análise e resposta.
-          </p>
-          <div class="produto-hero__cta-group reveal reveal--delay-4">
-            <a
-              href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC."
-              class="btn btn--primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Falar com especialista
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-            <a href="/pages/capacidades.html" class="btn btn--secondary">
-              Ver todos os produtos
-            </a>
-          </div>
-        </div>
-        <div class="produto-hero__scroll reveal reveal--delay-5" aria-hidden="true">
-          <div class="produto-hero__scroll-mouse">
-            <div class="produto-hero__scroll-dot"></div>
-          </div>
-        </div>
-      </section>
+        <div class="noc-hero__inner">
 
-      <!-- ============================================================
-         O QUE É
-         ============================================================ -->
-      <section class="produto-oque" aria-labelledby="oque-title">
-        <div class="produto-oque__inner">
-          <div class="reveal reveal--from-left">
-            <span class="produto-oque__label">O que é</span>
-            <h2 class="produto-oque__title" id="oque-title">
-              Não apenas reagir —<br />
-              <em>antecipar e proteger.</em>
-            </h2>
-            <p class="produto-oque__text">
-              O DB NOC garante que tudo continue funcionando, o tempo todo. É a célula de sustentação contínua da operação automatizada: um centro especializado de monitoramento, análise e resposta.
+          <!-- Coluna texto -->
+          <div class="noc-hero__content">
+            <nav class="noc-hero__breadcrumb" aria-label="Navegação estrutural">
+              <a href="/pages/capacidades.html">Capacidades</a>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              <span>DB NOC</span>
+            </nav>
+
+            <div class="noc-hero__badge reveal">
+              <span class="noc-hero__badge-dot" aria-hidden="true"></span>
+              Sustentação e Continuidade Operacional
+            </div>
+
+            <h1 class="noc-hero__title reveal reveal--delay-1" id="hero-title">
+              DB <span>NOC</span>
+            </h1>
+            <p class="noc-hero__tagline reveal reveal--delay-2">
+              Sua operação sempre ativa
             </p>
-            <p class="produto-oque__text">
-              Seu papel não é apenas reagir — é antecipar e proteger a continuidade operacional.
+            <div class="noc-hero__divider reveal reveal--delay-2" aria-hidden="true"></div>
+            <p class="noc-hero__desc reveal reveal--delay-3">
+              Centro especializado de monitoramento, análise e resposta que garante a continuidade operacional. O DB NOC não apenas reage — ele antecipa e protege.
             </p>
-          </div>
-          <div class="produto-oque__visual reveal reveal--from-right">
-            <div class="produto-oque__card">
-              <div class="produto-oque__icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                </svg>
+            <div class="noc-hero__cta-group reveal reveal--delay-4">
+              <a
+                href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC."
+                class="noc-btn noc-btn--primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Falar com especialista
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="/pages/capacidades.html" class="noc-btn noc-btn--ghost">
+                Ver todos os produtos
+              </a>
+            </div>
+
+            <!-- Stats rápidos -->
+            <div class="noc-hero__stats reveal reveal--delay-5" role="list" aria-label="Indicadores do DB NOC">
+              <div class="noc-hero__stat" role="listitem">
+                <span class="noc-hero__stat-value">24<em>/7</em></span>
+                <span class="noc-hero__stat-label">Monitoramento</span>
               </div>
-              <span class="produto-oque__quote-mark" aria-hidden="true">"</span>
-              <p class="produto-oque__quote">
-                A liderança opera com a confiança de que processos críticos estão protegidos e a execução não será interrompida.
-              </p>
+              <div class="noc-hero__stat-sep" aria-hidden="true"></div>
+              <div class="noc-hero__stat" role="listitem">
+                <span class="noc-hero__stat-value"><em>&lt;</em>5<em>min</em></span>
+                <span class="noc-hero__stat-label">Tempo de resposta</span>
+              </div>
+              <div class="noc-hero__stat-sep" aria-hidden="true"></div>
+              <div class="noc-hero__stat" role="listitem">
+                <span class="noc-hero__stat-value">99<em>,9%</em></span>
+                <span class="noc-hero__stat-label">Uptime garantido</span>
+              </div>
             </div>
           </div>
+
+          <!-- Coluna imagem -->
+          <div class="noc-hero__visual reveal reveal--from-right">
+            <div class="noc-hero__img-frame">
+              <img
+                src="/assets/images/noc-hero.png"
+                alt="Dashboard do DB NOC com monitoramento em tempo real de processos operacionais"
+                class="noc-hero__img"
+                width="640"
+                height="420"
+              />
+              <div class="noc-hero__img-overlay" aria-hidden="true"></div>
+            </div>
+            <!-- Badge flutuante -->
+            <div class="noc-hero__float-badge" aria-hidden="true">
+              <div class="noc-hero__float-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="noc-hero__float-val">Tempo real</div>
+                <div class="noc-hero__float-sub">Monitoramento ativo</div>
+              </div>
+              <span class="noc-hero__float-status" aria-label="Operando">
+                <span class="noc-hero__float-dot"></span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="noc-hero__scroll" aria-hidden="true">
+          <div class="noc-hero__scroll-mouse">
+            <div class="noc-hero__scroll-dot"></div>
+          </div>
         </div>
       </section>
 
       <!-- ============================================================
-         CAPACIDADES
+         O QUE É — Split layout limpo
          ============================================================ -->
-      <section class="produto-cap" aria-labelledby="cap-title">
-        <div class="produto-cap__bg-grid" aria-hidden="true"></div>
-        <div class="produto-cap__glow-l" aria-hidden="true"></div>
-        <div class="produto-cap__glow-r" aria-hidden="true"></div>
-        <div class="produto-cap__inner">
-          <div class="produto-cap__header reveal">
-            <span class="produto-cap__label">Capacidades</span>
-            <h2 class="produto-cap__title" id="cap-title">O que o DB NOC entrega</h2>
-            <p class="produto-cap__subtitle">
+      <section class="noc-oque section" aria-labelledby="oque-title">
+        <div class="container">
+          <div class="noc-oque__inner">
+
+            <!-- Visual à esquerda -->
+            <div class="noc-oque__visual reveal reveal--from-left">
+              <div class="noc-oque__card-wrap">
+                <div class="noc-oque__icon-block">
+                  <div class="noc-oque__icon-main" aria-hidden="true">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                  </div>
+                </div>
+                <blockquote class="noc-oque__quote">
+                  <p>"A liderança opera com a confiança de que processos críticos estão protegidos — e a execução nunca será interrompida."</p>
+                </blockquote>
+                <!-- Pilares rápidos -->
+                <div class="noc-oque__pillars" role="list">
+                  <div class="noc-oque__pillar" role="listitem">
+                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+                    Monitoramento contínuo
+                  </div>
+                  <div class="noc-oque__pillar" role="listitem">
+                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+                    Detecção antecipada de falhas
+                  </div>
+                  <div class="noc-oque__pillar" role="listitem">
+                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+                    Resposta antes do impacto
+                  </div>
+                  <div class="noc-oque__pillar" role="listitem">
+                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+                    Suporte especializado 24/7
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Texto à direita -->
+            <div class="noc-oque__text-col reveal reveal--from-right">
+              <span class="noc-section-label">O que é o DB NOC</span>
+              <h2 class="noc-section-title" id="oque-title">
+                Não apenas reagir —<br />antecipar e proteger.
+              </h2>
+              <p class="noc-body-text">
+                O DB NOC é a célula de sustentação contínua da sua operação automatizada. Enquanto o DB Hyper executa os processos e o DB Board estrutura as informações, o DB NOC garante que tudo continue funcionando — com segurança, estabilidade e controle.
+              </p>
+              <p class="noc-body-text">
+                Seu papel é identificar problemas antes que causem impacto, agir rapidamente quando necessário e manter a liderança informada sobre a saúde operacional em tempo real.
+              </p>
+              <a
+                href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC."
+                class="noc-link-cta"
+                target="_blank"
+                rel="noopener"
+                aria-label="Falar com um especialista sobre o DB NOC"
+              >
+                Falar com um especialista
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         CAPACIDADES — Cards em grid limpo, fundo off-white
+         ============================================================ -->
+      <section class="noc-cap section bg-off-white" aria-labelledby="cap-title">
+        <div class="container">
+          <div class="noc-cap__header reveal">
+            <span class="noc-section-label">Capacidades</span>
+            <h2 class="noc-section-title" id="cap-title">O que o DB NOC entrega</h2>
+            <p class="noc-section-sub">
               Cinco pilares que mantêm sua operação estável, segura e sem interrupções.
             </p>
           </div>
-          <div class="produto-cap__bento" role="list">
 
-            <div class="produto-cap__card produto-cap__card--wide reveal reveal--delay-1" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">01</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="noc-cap__grid" role="list">
+
+            <!-- Card 01 — destaque em azul -->
+            <article class="noc-cap__card noc-cap__card--featured reveal reveal--delay-1" role="listitem">
+              <div class="noc-cap__card-num" aria-hidden="true">01</div>
+              <div class="noc-cap__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                 </svg>
               </div>
-              <h3 class="produto-cap__card-title">Monitoramento em Tempo Real</h3>
-              <p class="produto-cap__card-desc">Acompanhamento contínuo de todos os fluxos automatizados, com visibilidade imediata de qualquer alteração no comportamento operacional.</p>
-            </div>
+              <h3 class="noc-cap__card-title">Monitoramento em Tempo Real</h3>
+              <p class="noc-cap__card-desc">
+                Acompanhamento contínuo de todos os fluxos automatizados, com visibilidade imediata de qualquer alteração no comportamento operacional.
+              </p>
+            </article>
 
-            <div class="produto-cap__card reveal reveal--delay-2" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">02</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <!-- Card 02 -->
+            <article class="noc-cap__card reveal reveal--delay-2" role="listitem">
+              <div class="noc-cap__card-num" aria-hidden="true">02</div>
+              <div class="noc-cap__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                   <line x1="12" y1="9" x2="12" y2="13"/>
                   <line x1="12" y1="17" x2="12.01" y2="17"/>
                 </svg>
               </div>
-              <h3 class="produto-cap__card-title">Detecção Proativa de Falhas</h3>
-              <p class="produto-cap__card-desc">Identificação antecipada de falhas de comunicação, integração e sistemas antes que causem impacto na operação.</p>
-            </div>
+              <h3 class="noc-cap__card-title">Detecção Proativa de Falhas</h3>
+              <p class="noc-cap__card-desc">
+                Identificação antecipada de falhas de comunicação, integração e sistemas antes que causem impacto na operação.
+              </p>
+            </article>
 
-            <div class="produto-cap__card reveal reveal--delay-3" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">03</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <!-- Card 03 -->
+            <article class="noc-cap__card reveal reveal--delay-3" role="listitem">
+              <div class="noc-cap__card-num" aria-hidden="true">03</div>
+              <div class="noc-cap__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/>
                   <polyline points="12 6 12 12 16 14"/>
                 </svg>
               </div>
-              <h3 class="produto-cap__card-title">Análise Contínua de Integridade</h3>
-              <p class="produto-cap__card-desc">Avaliação permanente da integridade da execução, garantindo que cada processo siga o fluxo correto.</p>
-            </div>
+              <h3 class="noc-cap__card-title">Análise Contínua de Integridade</h3>
+              <p class="noc-cap__card-desc">
+                Avaliação permanente da integridade da execução, garantindo que cada processo siga o fluxo correto sem desvios.
+              </p>
+            </article>
 
-            <div class="produto-cap__card reveal reveal--delay-4" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">04</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <!-- Card 04 -->
+            <article class="noc-cap__card reveal reveal--delay-4" role="listitem">
+              <div class="noc-cap__card-num" aria-hidden="true">04</div>
+              <div class="noc-cap__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
               </div>
-              <h3 class="produto-cap__card-title">Atuação Preventiva e Corretiva</h3>
-              <p class="produto-cap__card-desc">Resposta rápida a incidentes, tanto preventiva quanto corretiva, minimizando o tempo de inatividade e o impacto operacional.</p>
-            </div>
+              <h3 class="noc-cap__card-title">Atuação Preventiva e Corretiva</h3>
+              <p class="noc-cap__card-desc">
+                Resposta rápida a incidentes — tanto preventiva quanto corretiva — minimizando o tempo de inatividade e o impacto operacional.
+              </p>
+            </article>
 
-            <div class="produto-cap__card produto-cap__card--wide reveal reveal--delay-5" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">05</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <!-- Card 05 -->
+            <article class="noc-cap__card reveal reveal--delay-5" role="listitem">
+              <div class="noc-cap__card-num" aria-hidden="true">05</div>
+              <div class="noc-cap__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                   <circle cx="9" cy="7" r="4"/>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
               </div>
-              <h3 class="produto-cap__card-title">Suporte Especializado</h3>
-              <p class="produto-cap__card-desc">Equipe especializada focada exclusivamente em ambientes críticos automatizados, com expertise no ecossistema DB.</p>
+              <h3 class="noc-cap__card-title">Suporte Especializado</h3>
+              <p class="noc-cap__card-desc">
+                Equipe com expertise exclusiva em ambientes críticos automatizados, focada no ecossistema DB e nas particularidades da sua operação.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         COMO FUNCIONA — Timeline com sticky header
+         ============================================================ -->
+      <section class="noc-how section bg-white" aria-labelledby="how-title">
+        <div class="container">
+          <div class="noc-how__inner">
+
+            <!-- Header fixo à esquerda -->
+            <div class="noc-how__header">
+              <span class="noc-section-label">Como funciona na prática</span>
+              <h2 class="noc-section-title" id="how-title">
+                Monitoramento que antecipa problemas
+              </h2>
+              <p class="noc-body-text">
+                O DB NOC acompanha continuamente todos os fluxos executados pelo DB Hyper e os dados estruturados pelo DB Board — atuando antes que o impacto chegue ao negócio.
+              </p>
+              <a
+                href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC."
+                class="noc-link-cta"
+                target="_blank"
+                rel="noopener"
+              >
+                Ver demonstração
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+
+            <!-- Passos da timeline -->
+            <ol class="noc-how__steps" aria-label="Etapas do DB NOC">
+
+              <li class="noc-how__step reveal reveal--delay-1">
+                <div class="noc-how__step-marker" aria-hidden="true">
+                  <div class="noc-how__step-num">1</div>
+                  <div class="noc-how__step-line"></div>
+                </div>
+                <div class="noc-how__step-body">
+                  <h3 class="noc-how__step-title">Identifica interrupções</h3>
+                  <p class="noc-how__step-text">
+                    Qualquer falha no fluxo de execução é detectada imediatamente, com alertas automáticos para a equipe responsável — sem atraso.
+                  </p>
+                </div>
+              </li>
+
+              <li class="noc-how__step reveal reveal--delay-2">
+                <div class="noc-how__step-marker" aria-hidden="true">
+                  <div class="noc-how__step-num">2</div>
+                  <div class="noc-how__step-line"></div>
+                </div>
+                <div class="noc-how__step-body">
+                  <h3 class="noc-how__step-title">Detecta comportamentos fora do padrão</h3>
+                  <p class="noc-how__step-text">
+                    Análise contínua dos padrões de execução para identificar desvios antes que se transformem em falhas críticas e impactem a operação.
+                  </p>
+                </div>
+              </li>
+
+              <li class="noc-how__step reveal reveal--delay-3">
+                <div class="noc-how__step-marker" aria-hidden="true">
+                  <div class="noc-how__step-num">3</div>
+                  <div class="noc-how__step-line"></div>
+                </div>
+                <div class="noc-how__step-body">
+                  <h3 class="noc-how__step-title">Avalia riscos e gargalos</h3>
+                  <p class="noc-how__step-text">
+                    Identificação proativa de pontos de risco operacional e gargalos que podem comprometer a continuidade dos processos críticos.
+                  </p>
+                </div>
+              </li>
+
+              <li class="noc-how__step reveal reveal--delay-4">
+                <div class="noc-how__step-marker" aria-hidden="true">
+                  <div class="noc-how__step-num">4</div>
+                </div>
+                <div class="noc-how__step-body">
+                  <h3 class="noc-how__step-title">Atua antes do impacto no negócio</h3>
+                  <p class="noc-how__step-text">
+                    Intervenção preventiva e corretiva em tempo hábil, garantindo que os processos críticos não sejam interrompidos e a liderança permaneça em controle.
+                  </p>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         RESULTADOS — Métricas em destaque + lista de benefícios
+         ============================================================ -->
+      <section class="noc-resultados section bg-off-white" aria-labelledby="resultado-title">
+        <div class="container">
+          <div class="noc-resultados__inner">
+
+            <!-- Coluna texto -->
+            <div class="reveal reveal--from-left">
+              <span class="noc-section-label">O resultado</span>
+              <h2 class="noc-section-title" id="resultado-title">
+                Operação estável e previsível.
+              </h2>
+              <p class="noc-body-text">
+                Com o DB NOC, a liderança opera com a segurança de que processos críticos estão protegidos e a execução não será interrompida. O controle deixa de ser reativo e passa a ser estratégico.
+              </p>
+              <ul class="noc-resultados__list" aria-label="Benefícios do DB NOC">
+                <li class="noc-resultados__item">
+                  <span class="noc-resultados__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Continuidade operacional garantida 24/7
+                </li>
+                <li class="noc-resultados__item">
+                  <span class="noc-resultados__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Segurança e controle absoluto sobre processos críticos
+                </li>
+                <li class="noc-resultados__item">
+                  <span class="noc-resultados__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Problemas tratados antes de escalar e causar impacto
+                </li>
+                <li class="noc-resultados__item">
+                  <span class="noc-resultados__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  Confiança total na operação crítica automatizada
+                </li>
+              </ul>
+            </div>
+
+            <!-- Painel de métricas -->
+            <div class="noc-resultados__painel reveal reveal--from-right">
+              <div class="noc-resultados__painel-header">
+                <div class="noc-resultados__painel-dot" aria-hidden="true"></div>
+                <span>Continuidade operacional</span>
+                <span class="noc-resultados__painel-status">Monitorando</span>
+              </div>
+              <div class="noc-resultados__metrics" role="list" aria-label="Métricas de desempenho do DB NOC">
+                <div class="noc-resultados__metric" role="listitem">
+                  <span class="noc-resultados__metric-val">24<em>/7</em></span>
+                  <span class="noc-resultados__metric-label">Monitoramento contínuo</span>
+                </div>
+                <div class="noc-resultados__metric" role="listitem">
+                  <span class="noc-resultados__metric-val"><em>&lt;</em>5<em>min</em></span>
+                  <span class="noc-resultados__metric-label">Tempo de resposta</span>
+                </div>
+                <div class="noc-resultados__metric" role="listitem">
+                  <span class="noc-resultados__metric-val">99<em>,9%</em></span>
+                  <span class="noc-resultados__metric-label">Uptime da operação</span>
+                </div>
+                <div class="noc-resultados__metric" role="listitem">
+                  <span class="noc-resultados__metric-val">0<em>h</em></span>
+                  <span class="noc-resultados__metric-label">Downtime não tratado</span>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -345,191 +613,55 @@
       </section>
 
       <!-- ============================================================
-         COMO FUNCIONA
+         CTA FINAL — Alta conversão, fundo azul escuro
          ============================================================ -->
-      <section class="produto-how" aria-labelledby="how-title">
-        <div class="produto-how__inner">
-          <div class="produto-how__header reveal--from-left">
-            <span class="produto-how__label">Como funciona na prática</span>
-            <h2 class="produto-how__title" id="how-title">Monitoramento que antecipa problemas</h2>
-            <p class="produto-how__intro">
-              O DB NOC acompanha continuamente todos os fluxos executados pelo DB Hyper e os dados estruturados pelo DB Board, atuando antes que o impacto atinja o negócio.
-            </p>
-            <a href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC." class="produto-how__cta-inline" target="_blank" rel="noopener">
-              Ver demonstração
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-          </div>
-          <div class="produto-how__steps">
-
-            <div class="produto-how__step reveal reveal--delay-1">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">1</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Identifica interrupções</h3>
-                <p class="produto-how__step-text">Qualquer falha no fluxo de execução é detectada imediatamente, com alertas automáticos para a equipe responsável.</p>
-              </div>
-            </div>
-
-            <div class="produto-how__step reveal reveal--delay-2">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">2</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Detecta comportamentos fora do padrão</h3>
-                <p class="produto-how__step-text">Análise contínua dos padrões de execução para identificar desvios antes que se transformem em falhas críticas.</p>
-              </div>
-            </div>
-
-            <div class="produto-how__step reveal reveal--delay-3">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">3</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Avalia riscos de falha e gargalos</h3>
-                <p class="produto-how__step-text">Identificação proativa de gargalos operacionais e pontos de risco que podem comprometer a continuidade dos processos.</p>
-              </div>
-            </div>
-
-            <div class="produto-how__step reveal reveal--delay-4">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">4</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Atua antes do impacto no negócio</h3>
-                <p class="produto-how__step-text">Intervenção preventiva e corretiva em tempo hábil, garantindo que os processos críticos não sejam interrompidos.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-         RESULTADO
-         ============================================================ -->
-      <section class="produto-resultado" aria-labelledby="resultado-title">
-        <div class="produto-resultado__inner">
-          <div class="reveal reveal--from-left">
-            <span class="produto-resultado__label">O resultado</span>
-            <h2 class="produto-resultado__title" id="resultado-title">
-              Operação estável<br />
-              e <em>previsível.</em>
+      <section class="noc-cta" aria-labelledby="cta-title">
+        <div class="noc-cta__bg-grid" aria-hidden="true"></div>
+        <div class="noc-cta__glow" aria-hidden="true"></div>
+        <div class="container">
+          <div class="noc-cta__inner">
+            <span class="noc-cta__eyebrow reveal">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Próximo passo
+            </span>
+            <h2 class="noc-cta__title reveal reveal--delay-1" id="cta-title">
+              Pronto para proteger<br />sua operação?
             </h2>
-            <p class="produto-resultado__text">
-              Na prática, você garante que a liderança opere com a confiança de que processos críticos estão protegidos e a execução não será interrompida.
+            <p class="noc-cta__text reveal reveal--delay-2">
+              Fale com um especialista da DB e descubra como o DB NOC pode garantir a continuidade e segurança da sua operação — sem surpresas.
             </p>
-            <ul class="produto-resultado__list" aria-label="Benefícios do DB NOC">
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                Continuidade operacional garantida
-              </li>
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                Segurança e controle absoluto
-              </li>
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                Problemas tratados antes de escalar
-              </li>
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </span>
-                Confiança na operação crítica
-              </li>
-            </ul>
-          </div>
-          <div class="produto-resultado__panel reveal--from-right">
-            <div class="produto-resultado__panel-card">
-              <div class="produto-resultado__panel-header">
-                <span class="produto-resultado__panel-title">Continuidade operacional</span>
-                <span class="produto-resultado__panel-status">
-                  <span class="produto-resultado__panel-status-dot" aria-hidden="true"></span>
-                  Monitorando
-                </span>
-              </div>
-              <div class="produto-resultado__stats" role="list" aria-label="Indicadores de impacto">
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">24<em>/7</em></div>
-                  <div class="produto-resultado__stat-label">Monitoramento contínuo</div>
-                </div>
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value"><em>&lt;</em>5<em>min</em></div>
-                  <div class="produto-resultado__stat-label">Tempo de resposta</div>
-                </div>
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">99<em>,9%</em></div>
-                  <div class="produto-resultado__stat-label">Uptime da operação</div>
-                </div>
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">0<em>h</em></div>
-                  <div class="produto-resultado__stat-label">Downtime não tratado</div>
-                </div>
-              </div>
+            <div class="noc-cta__group reveal reveal--delay-3">
+              <a
+                href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC."
+                class="noc-btn noc-btn--primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Falar com especialista
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="/pages/calculadora.html" class="noc-btn noc-btn--ghost">
+                Calcular viabilidade
+              </a>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- ============================================================
-         CTA FINAL
-         ============================================================ -->
-      <section class="produto-cta" aria-labelledby="cta-title">
-        <div class="produto-cta__grid" aria-hidden="true"></div>
-        <div class="produto-cta__glow-1" aria-hidden="true"></div>
-        <div class="produto-cta__glow-2" aria-hidden="true"></div>
-        <div class="produto-cta__inner">
-          <span class="produto-cta__eyebrow reveal">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Próximo passo
-          </span>
-          <h2 class="produto-cta__title reveal reveal--delay-1" id="cta-title">
-            Pronto para proteger<br />sua <em>operação</em>?
-          </h2>
-          <p class="produto-cta__text reveal reveal--delay-2">
-            Fale com um especialista da DB e descubra como o DB NOC pode garantir a continuidade e segurança da sua operação.
-          </p>
-          <div class="produto-cta__group reveal reveal--delay-3">
-            <a
-              href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC."
-              class="btn btn--primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Falar com especialista
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-            <a href="/pages/calculadora.html" class="btn btn--secondary">
-              Calcular viabilidade
-            </a>
-          </div>
-          <div class="produto-cta__outros reveal reveal--delay-4">
-            <span class="produto-cta__outros-label">Conheça também</span>
-            <div class="produto-cta__outros-links">
-              <a href="/pages/produtos/db-board.html" class="produto-cta__outro-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-                DB Board
-              </a>
-              <a href="/pages/produtos/db-hyper.html" class="produto-cta__outro-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                DB Hyper
-              </a>
-              <a href="/pages/capacidades.html" class="produto-cta__outro-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                Ver todos os produtos
-              </a>
+            <!-- Outros produtos -->
+            <div class="noc-cta__outros reveal reveal--delay-4">
+              <span class="noc-cta__outros-label">Conheça também</span>
+              <div class="noc-cta__outros-links">
+                <a href="/pages/produtos/db-board.html" class="noc-cta__outro-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                  DB Board
+                </a>
+                <a href="/pages/produtos/db-hyper.html" class="noc-cta__outro-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  DB Hyper
+                </a>
+                <a href="/pages/capacidades.html" class="noc-cta__outro-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  Todas as Capacidades
+                </a>
+              </div>
             </div>
           </div>
         </div>
