@@ -158,8 +158,9 @@
 .noc-hero__dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
   background-size: 52px 52px;
+  z-index: 0;
 }
 
 .noc-hero__glow-1 {
@@ -1049,4 +1050,105 @@
   .noc-cta {
     padding: 80px 20px;
   }
+}
+
+/* ============================================================
+   ANIMAÇÕES TECNOLÓGICAS
+   ============================================================ */
+
+/* Canvas de rede de partículas no hero */
+.noc-hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .60;
+  z-index: 1;
+}
+
+/* Scan line + heartbeat no card "O que é" */
+.noc-oque__scan {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+  animation: noc-scan-sweep 4.5s ease-in-out infinite;
+  opacity: .75;
+  z-index: 0;
+}
+@keyframes noc-scan-sweep {
+  0%, 100% { transform: translateY(0); opacity: .0; }
+  8%       { opacity: .75; }
+  50%      { transform: translateY(280px); opacity: .75; }
+  92%      { opacity: .0; }
+}
+
+.noc-oque__heartbeat {
+  position: absolute;
+  top: 0; right: 0;
+  width: 200px;
+  height: 60px;
+  opacity: .18;
+  pointer-events: none;
+  z-index: 0;
+}
+.noc-oque__heartbeat-svg {
+  width: 100%;
+  height: 100%;
+}
+.noc-oque__hb-line {
+  stroke: var(--gold);
+  fill: none;
+  stroke-dasharray: 500;
+  animation: noc-hb-dash 2.6s linear infinite;
+}
+@keyframes noc-hb-dash {
+  0%   { stroke-dashoffset: 500; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Sparkline (gráfico de linha no painel de métricas) */
+.noc-resultados__sparkline {
+  margin-bottom: 24px;
+  position: relative;
+}
+.noc-spark__svg {
+  width: 100%;
+  height: 48px;
+  display: block;
+}
+.noc-spark__fill {
+  fill: url(#sparkGrad);
+}
+.noc-spark__line {
+  stroke: var(--gold);
+  fill: none;
+}
+.noc-spark__label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  display: block;
+  margin-top: 8px;
+}
+
+/* Timeline — linha dos passos iluminada ao scroll */
+.noc-how__step-marker {
+  position: relative;
+}
+.noc-how__step-line {
+  position: absolute;
+  top: 38px; left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% + 28px);
+  background: rgba(62,86,158,.12);
+  transition: background .6s ease;
+}
+.noc-how__step--lit .noc-how__step-line {
+  background: linear-gradient(180deg, var(--gold) 0%, rgba(189,160,126,.12) 100%);
+  box-shadow: 0 0 14px rgba(189,160,126,.40);
 }
