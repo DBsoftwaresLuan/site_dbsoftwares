@@ -1,751 +1,653 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta
-      content="DB NOC — Sua operação sempre ativa. Centro especializado de monitoramento, análise e resposta para garantir a continuidade operacional da DB Softwares."
-      name="description"
-    />
-    <title>DB NOC | DB Softwares</title>
-    <link rel="icon" type="image/png" href="/assets/images/logo-icon.png" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/styles/global.css" rel="stylesheet" />
-    <link href="/styles/produto.css" rel="stylesheet" />
-    <link href="/styles/noc.css" rel="stylesheet" />
-  <link href="/styles/cookies.css" rel="stylesheet" />
-  <link href="/styles/global-premium.css" rel="stylesheet" />
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="DB NOC: monitoramento contínuo, sustentação e resposta especializada para preservar a continuidade operacional de processos automatizados críticos." name="description"/>
+<title>DB NOC | DB Softwares</title>
+<link href="/assets/images/logo-icon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="/styles/global.css" rel="stylesheet"/>
+<link href="/styles/produto.css" rel="stylesheet"/>
+<link href="/styles/noc.css" rel="stylesheet"/>
+<link href="/styles/cookies.css" rel="stylesheet"/>
+<link href="/styles/global-premium.css" rel="stylesheet"/>
 </head>
-
-  <body>
-    <div class="db-scroll-progress" aria-hidden="true"><span class="db-scroll-progress__bar"></span></div>
-
-    <!-- ============================================================
+<body>
+<div aria-hidden="true" class="db-scroll-progress"><span class="db-scroll-progress__bar"></span></div>
+<!-- ============================================================
        NAVBAR
        ============================================================ -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
-      <div class="nav-inner">
-        <a href="/index.html" class="nav-logo" aria-label="DB Softwares — Início">
-          <img
-            src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png"
-            alt="DB Softwares"
-            class="nav-logo-img"
-          />
-        </a>
-
-        <div class="nav-links" role="menubar">
-          <a href="/index.html" class="nav-link nav-link--home" role="menuitem" aria-label="Página inicial">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
-              <polyline points="9 21 9 12 15 12 15 21"/>
-            </svg>
+<nav aria-label="Navegação principal" class="navbar" id="navbar" role="navigation">
+<div class="nav-inner">
+<a aria-label="DB Softwares — Início" class="nav-logo" href="/index.html">
+<img alt="DB Softwares" class="nav-logo-img" src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png"/>
+</a>
+<div class="nav-links" role="menubar">
+<a aria-label="Página inicial" class="nav-link nav-link--home" href="/index.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="14">
+<path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"></path>
+<polyline points="9 21 9 12 15 12 15 21"></polyline>
+</svg>
             Início
           </a>
-
-          <div class="nav-item">
-            <a href="/pages/perfis-de-servico.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-perfis">
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/pages/perfis-de-servico.html" id="dd-perfis" role="menuitem">
               Perfis de Serviço
-              <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-perfis">
-              <a href="/pages/perfis-de-servico.html" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</a>
+<div aria-labelledby="dd-perfis" class="nav-dropdown" role="menu">
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>
                 Visão Geral
               </a>
-              <a href="/pages/perfis-de-servico.html#essencial" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html#essencial" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"></path></svg>
                 DB Essencial
               </a>
-              <a href="/pages/perfis-de-servico.html#profissional" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html#profissional" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
                 DB Profissional
               </a>
-              <a href="/pages/perfis-de-servico.html#enterprise" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html#enterprise" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                 DB Enterprise
               </a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a href="/pages/atuacao.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-atuacao">
+</div>
+</div>
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/pages/atuacao.html" id="dd-atuacao" role="menuitem">
               Atuação
-              <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-atuacao">
-              <a href="/pages/atuacao.html#administrativo" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</a>
+<div aria-labelledby="dd-atuacao" class="nav-dropdown" role="menu">
+<a class="nav-dd-link" href="/pages/atuacao.html#administrativo" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="14" rx="2" width="20" x="2" y="7"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                 Administrativo
               </a>
-              <a href="/pages/atuacao.html#industria" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 20h20M4 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg>
+<a class="nav-dd-link" href="/pages/atuacao.html#industria" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M2 20h20M4 20V10l6-6 6 6v10"></path><path d="M10 20v-5h4v5"></path></svg>
                 Indústria
               </a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a href="/pages/capacidades.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-cap">
+</div>
+</div>
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/pages/capacidades.html" id="dd-cap" role="menuitem">
               Capacidades
-              <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-cap">
-              <a href="/pages/capacidades.html" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</a>
+<div aria-labelledby="dd-cap" class="nav-dropdown" role="menu">
+<a class="nav-dd-link" href="/pages/capacidades.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>
                 Visão Geral
               </a>
-              <a href="/pages/produtos/db-board.html" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+<a class="nav-dd-link" href="/pages/produtos/db-board.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>
                 DB Board
               </a>
-              <a href="/pages/produtos/db-hyper.html" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+<a class="nav-dd-link" href="/pages/produtos/db-hyper.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                 DB Hyper
               </a>
-              <a href="/pages/produtos/db-noc.html" class="nav-dd-link" role="menuitem">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+<a class="nav-dd-link" href="/pages/produtos/db-noc.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                 DB NOC
               </a>
-            </div>
-          </div>
-
-          <a href="/pages/sobre.html" class="nav-link" role="menuitem">Sobre a DB</a>
-
-          <a href="/pages/calculadora.html" class="nav-link nav-link--calc" role="menuitem">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+</div>
+</div>
+<a class="nav-link" href="/pages/sobre.html" role="menuitem">Sobre a DB</a>
+<a class="nav-link nav-link--calc" href="/pages/calculadora.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="13"><rect height="20" rx="2" width="16" x="4" y="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="8" x2="16" y1="10" y2="10"></line><line x1="8" x2="12" y1="14" y2="14"></line></svg>
             Calcular Viabilidade
           </a>
-
-          <div class="nav-item">
-            <a href="/index.html#contato" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-contato">
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/index.html#contato" id="dd-contato" role="menuitem">
               Contato
-              <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-contato" style="min-width:220px">
-              <a href="mailto:Danilo@dbsoftwares.com.br" class="nav-dd-link nav-dd-link--email" role="menuitem" target="_blank" rel="noopener">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</a>
+<div aria-labelledby="dd-contato" class="nav-dropdown" role="menu" style="min-width:220px">
+<a class="nav-dd-link nav-dd-link--email" href="mailto:Danilo@dbsoftwares.com.br" rel="noopener" role="menuitem" target="_blank">
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                 E-mail
               </a>
-              <div class="nav-dd-sep"></div>
-              <a href="https://wa.me/554191057438" class="nav-dd-link nav-dd-link--whatsapp" role="menuitem" target="_blank" rel="noopener">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+<div class="nav-dd-sep"></div>
+<a class="nav-dd-link nav-dd-link--whatsapp" href="https://wa.me/554191057438" rel="noopener" role="menuitem" target="_blank">
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 WhatsApp
               </a>
-              <div class="nav-dd-sep"></div>
-              <a href="https://linkedin.com/company/dbsoftwares" class="nav-dd-link nav-dd-link--linkedin" role="menuitem" target="_blank" rel="noopener">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+<div class="nav-dd-sep"></div>
+<a class="nav-dd-link nav-dd-link--linkedin" href="https://linkedin.com/company/dbsoftwares" rel="noopener" role="menuitem" target="_blank">
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 LinkedIn
               </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav-right">
-          <a href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." class="nav-cta" target="_blank" rel="noopener">
+</div>
+</div>
+</div>
+<div class="nav-right">
+<a class="nav-cta" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." rel="noopener" target="_blank">
             Fale Conosco
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-
-      <div class="nav-mobile" id="navMobile" aria-hidden="true">
-        <a href="/index.html" class="nav-mobile-link" role="menuitem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+            <svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+<button aria-controls="navMobile" aria-expanded="false" aria-label="Abrir menu" class="nav-hamburger" id="navHamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="nav-mobile" id="navMobile">
+<a class="nav-mobile-link" href="/index.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"></path><polyline points="9 21 9 12 15 12 15 21"></polyline></svg>
           Início
         </a>
-        <div class="nav-mobile-divider"></div>
-        <div class="nav-mobile-section">
-          <span class="nav-mobile-label">Capacidades</span>
-          <a href="/pages/capacidades.html" class="nav-mobile-link">Visão Geral</a>
-          <a href="/pages/produtos/db-board.html" class="nav-mobile-link sub">DB Board</a>
-          <a href="/pages/produtos/db-hyper.html" class="nav-mobile-link sub">DB Hyper</a>
-          <a href="/pages/produtos/db-noc.html" class="nav-mobile-link sub">DB NOC</a>
-        </div>
-        <div class="nav-mobile-divider"></div>
-        <a href="/pages/sobre.html" class="nav-mobile-link">Sobre a DB</a>
-        <div class="nav-mobile-divider"></div>
-        <a href="/pages/calculadora.html" class="nav-mobile-link nav-mobile-link--calc">Calcular Viabilidade</a>
-        <a href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." class="nav-mobile-cta" target="_blank" rel="noopener">
+<div class="nav-mobile-divider"></div>
+<div class="nav-mobile-section">
+<span class="nav-mobile-label">Capacidades</span>
+<a class="nav-mobile-link" href="/pages/capacidades.html">Visão Geral</a>
+<a class="nav-mobile-link sub" href="/pages/produtos/db-board.html">DB Board</a>
+<a class="nav-mobile-link sub" href="/pages/produtos/db-hyper.html">DB Hyper</a>
+<a class="nav-mobile-link sub" href="/pages/produtos/db-noc.html">DB NOC</a>
+</div>
+<div class="nav-mobile-divider"></div>
+<a class="nav-mobile-link" href="/pages/sobre.html">Sobre a DB</a>
+<div class="nav-mobile-divider"></div>
+<a class="nav-mobile-link nav-mobile-link--calc" href="/pages/calculadora.html">Calcular Viabilidade</a>
+<a class="nav-mobile-cta" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." rel="noopener" target="_blank">
           Fale Conosco
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-        </a>
-      </div>
-    </nav>
-
-    <main id="main-content">
-
-      <!-- ============================================================
+          <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+</div>
+</nav>
+<main id="main-content">
+<!-- ============================================================
          HERO — Fundo azul escuro, layout aprovado
          ============================================================ -->
-      <section class="noc-hero" aria-labelledby="hero-title">
-        <div class="noc-hero__bg" aria-hidden="true">
-          <div class="noc-hero__dots"></div>
-          <div class="noc-hero__glow-1"></div>
-          <div class="noc-hero__glow-2"></div>
-          <!-- Canvas de rede de monitoramento -->
-          <canvas class="noc-hero__canvas" id="nocCanvas" aria-hidden="true"></canvas>
-        </div>
-        <div class="noc-hero__inner">
-
-          <!-- Coluna texto -->
-          <div class="noc-hero__content">
-            <nav class="noc-hero__breadcrumb" aria-label="Navegação estrutural">
-              <a href="/pages/capacidades.html">Capacidades</a>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-              <span>DB NOC</span>
-            </nav>
-
-            <div class="noc-hero__badge reveal">
-              <span class="noc-hero__badge-dot" aria-hidden="true"></span>
+<section aria-labelledby="hero-title" class="noc-hero">
+<div aria-hidden="true" class="noc-hero__bg">
+<div class="noc-hero__dots"></div>
+<div class="noc-hero__glow-1"></div>
+<div class="noc-hero__glow-2"></div>
+<!-- Canvas de rede de monitoramento -->
+<canvas aria-hidden="true" class="noc-hero__canvas" id="nocCanvas"></canvas>
+</div>
+<div class="noc-hero__inner">
+<!-- Coluna texto -->
+<div class="noc-hero__content">
+<nav aria-label="Navegação estrutural" class="noc-hero__breadcrumb">
+<a href="/pages/capacidades.html">Capacidades</a>
+<svg aria-hidden="true" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="9 18 15 12 9 6"></polyline></svg>
+<span>DB NOC</span>
+</nav>
+<div class="noc-hero__badge reveal">
+<span aria-hidden="true" class="noc-hero__badge-dot"></span>
               Sustentação e Continuidade Operacional
             </div>
-
-            <h1 class="noc-hero__title reveal reveal--delay-1" id="hero-title">
+<h1 class="noc-hero__title reveal reveal--delay-1" id="hero-title">
               DB <span>NOC</span>
-            </h1>
-            <p class="noc-hero__tagline reveal reveal--delay-2">
-              Sua operação sempre ativa
+</h1>
+<p class="noc-hero__tagline reveal reveal--delay-2">
+              Continuidade operacional para processos que não podem parar
             </p>
-            <div class="noc-hero__divider reveal reveal--delay-2" aria-hidden="true"></div>
-            <p class="noc-hero__desc reveal reveal--delay-3">
-              Centro especializado de monitoramento, análise e resposta que garante a continuidade operacional. O DB NOC não apenas reage — ele antecipa e protege.
+<div aria-hidden="true" class="noc-hero__divider reveal reveal--delay-2"></div>
+<p class="noc-hero__desc reveal reveal--delay-3">
+              Monitoramento contínuo, resposta especializada e atuação preventiva para garantir a estabilidade da execução automatizada e proteger operações críticas contra interrupções.
             </p>
-            <div class="noc-hero__cta-group reveal reveal--delay-4">
-              <a
-                href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC."
-                class="noc-btn noc-btn--primary"
-                target="_blank"
-                rel="noopener"
-              >
+<div class="noc-hero__cta-group reveal reveal--delay-4">
+<a class="noc-btn noc-btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC." rel="noopener" target="_blank">
                 Falar com especialista
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-              <a href="/pages/capacidades.html" class="noc-btn noc-btn--ghost">
+                <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+<a class="noc-btn noc-btn--ghost" href="/pages/capacidades.html">
                 Ver todos os produtos
               </a>
-            </div>
-
-
-          </div>
-
-          <!-- Coluna imagem -->
-          <div class="noc-hero__visual reveal reveal--from-right">
-            <div class="noc-hero__img-frame">
-              <img
-                src="/assets/images/noc-hero.png"
-                alt="Dashboard do DB NOC com monitoramento em tempo real de processos operacionais"
-                class="noc-hero__img"
-                width="640"
-                height="420"
-              />
-              <div class="noc-hero__img-overlay" aria-hidden="true"></div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="noc-hero__scroll" aria-hidden="true">
-          <div class="noc-hero__scroll-mouse">
-            <div class="noc-hero__scroll-dot"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
+</div>
+</div>
+<!-- Coluna imagem -->
+<div class="noc-hero__visual reveal reveal--from-right">
+<div class="noc-hero__img-frame">
+<img alt="Dashboard do DB NOC com monitoramento em tempo real de processos operacionais" class="noc-hero__img" height="420" src="/assets/images/noc-hero.png" width="640"/>
+<div aria-hidden="true" class="noc-hero__img-overlay"></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="noc-hero__scroll">
+<div class="noc-hero__scroll-mouse">
+<div class="noc-hero__scroll-dot"></div>
+</div>
+</div>
+</section>
+<!-- ============================================================
          O QUE É — Split layout limpo
          ============================================================ -->
-      <section class="noc-oque section" aria-labelledby="oque-title">
-        <div class="container">
-          <div class="noc-oque__inner">
-
-            <!-- Visual à esquerda -->
-            <div class="noc-oque__visual reveal reveal--from-left">
-              <div class="noc-oque__card-wrap">
-                <!-- Scan line tecnológica -->
-                <div class="noc-oque__scan" aria-hidden="true"></div>
-                <!-- Heartbeat SVG animado -->
-                <div class="noc-oque__heartbeat" aria-hidden="true">
-                  <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="noc-oque__heartbeat-svg">
-                    <polyline class="noc-oque__hb-line" points="0,30 30,30 40,10 50,50 60,30 80,30 90,5 100,55 110,30 140,30 150,15 160,45 170,30 200,30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <div class="noc-oque__icon-block">
-                  <div class="noc-oque__icon-main" aria-hidden="true">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                    </svg>
-                  </div>
-                </div>
-                <blockquote class="noc-oque__quote">
-                  <p>"A liderança opera com a confiança de que processos críticos estão protegidos — e a execução nunca será interrompida."</p>
-                </blockquote>
-                <!-- Pilares rápidos -->
-                <div class="noc-oque__pillars" role="list">
-                  <div class="noc-oque__pillar" role="listitem">
-                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+<section aria-labelledby="oque-title" class="noc-oque section">
+<div class="container">
+<div class="noc-oque__inner">
+<!-- Visual à esquerda -->
+<div class="noc-oque__visual reveal reveal--from-left">
+<div class="noc-oque__card-wrap">
+<!-- Scan line tecnológica -->
+<div aria-hidden="true" class="noc-oque__scan"></div>
+<!-- Heartbeat SVG animado -->
+<div aria-hidden="true" class="noc-oque__heartbeat">
+<svg class="noc-oque__heartbeat-svg" fill="none" viewbox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+<polyline class="noc-oque__hb-line" points="0,30 30,30 40,10 50,50 60,30 80,30 90,5 100,55 110,30 140,30 150,15 160,45 170,30 200,30" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+</svg>
+</div>
+<div class="noc-oque__icon-block">
+<div aria-hidden="true" class="noc-oque__icon-main">
+<svg fill="none" height="36" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="36">
+<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+</svg>
+</div>
+</div>
+<blockquote class="noc-oque__quote">
+<p>"Quando a execução é crítica para o negócio, continuidade não é opcional. É responsabilidade técnica."</p>
+</blockquote>
+<!-- Pilares rápidos -->
+<div class="noc-oque__pillars" role="list">
+<div class="noc-oque__pillar" role="listitem">
+<span aria-hidden="true" class="noc-oque__pillar-dot"></span>
                     Monitoramento contínuo
                   </div>
-                  <div class="noc-oque__pillar" role="listitem">
-                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+<div class="noc-oque__pillar" role="listitem">
+<span aria-hidden="true" class="noc-oque__pillar-dot"></span>
                     Detecção antecipada de falhas
                   </div>
-                  <div class="noc-oque__pillar" role="listitem">
-                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+<div class="noc-oque__pillar" role="listitem">
+<span aria-hidden="true" class="noc-oque__pillar-dot"></span>
                     Resposta antes do impacto
                   </div>
-                  <div class="noc-oque__pillar" role="listitem">
-                    <span class="noc-oque__pillar-dot" aria-hidden="true"></span>
+<div class="noc-oque__pillar" role="listitem">
+<span aria-hidden="true" class="noc-oque__pillar-dot"></span>
                     Suporte especializado 24/7
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Texto à direita -->
-            <div class="noc-oque__text-col reveal reveal--from-right">
-              <span class="noc-section-label">O que é o DB NOC</span>
-              <h2 class="noc-section-title" id="oque-title">
-                Não apenas reagir —<br />antecipar e proteger.
-              </h2>
-              <p class="noc-body-text">
-                O DB NOC é a célula de sustentação contínua da sua operação automatizada. Enquanto o DB Hyper executa os processos e o DB Board estrutura as informações, o DB NOC garante que tudo continue funcionando — com segurança, estabilidade e controle.
+</div>
+</div>
+</div>
+<!-- Texto à direita -->
+<div class="noc-oque__text-col reveal reveal--from-right">
+<span class="noc-section-label">O que é o DB NOC</span>
+<h2 class="noc-section-title" id="oque-title">O que é o DB NOC?</h2>
+<p class="noc-body-text">
+                O DB NOC é a célula de monitoramento e sustentação da DB Softwares. Sua missão é garantir que a execução automatizada permaneça disponível, íntegra e funcionando corretamente em todos os momentos.
               </p>
-              <p class="noc-body-text">
-                Seu papel é identificar problemas antes que causem impacto, agir rapidamente quando necessário e manter a liderança informada sobre a saúde operacional em tempo real.
+<p class="noc-body-text">
+                Por meio de monitoramento em tempo real, análise contínua de integridade e resposta especializada, o DB NOC identifica riscos antes que eles impactem a operação e atua para preservar a continuidade dos processos.
               </p>
-              <a
-                href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC."
-                class="noc-link-cta"
-                target="_blank"
-                rel="noopener"
-                aria-label="Falar com um especialista sobre o DB NOC"
-              >
+<a aria-label="Falar com um especialista sobre o DB NOC" class="noc-link-cta" href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC." rel="noopener" target="_blank">
                 Falar com um especialista
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
+                <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================
          CAPACIDADES — Cards em grid limpo, fundo azul DB
          ============================================================ -->
-      <section class="noc-cap section noc-cap--dark" aria-labelledby="cap-title">
-        <canvas class="produto-cap__canvas" id="nocCapCanvas" aria-hidden="true"></canvas>
-        <div class="produto-cap__bg-grid" aria-hidden="true"></div>
-        <div class="produto-cap__glow-l" aria-hidden="true"></div>
-        <div class="produto-cap__glow-r" aria-hidden="true"></div>
-        <div class="container" style="position:relative;z-index:4;">
-          <div class="noc-cap__header reveal">
-            <span class="noc-section-label">Capacidades</span>
-            <h2 class="noc-section-title" id="cap-title">O que o DB NOC entrega</h2>
-            <p class="noc-section-sub">
-              Cinco pilares que mantêm sua operação estável, segura e sem interrupções.
+<section aria-labelledby="cap-title" class="noc-cap section noc-cap--dark">
+<canvas aria-hidden="true" class="produto-cap__canvas" id="nocCapCanvas"></canvas>
+<div aria-hidden="true" class="produto-cap__bg-grid"></div>
+<div aria-hidden="true" class="produto-cap__glow-l"></div>
+<div aria-hidden="true" class="produto-cap__glow-r"></div>
+<div class="container" style="position:relative;z-index:4;">
+<div class="noc-cap__header reveal">
+<span class="noc-section-label">Capacidades</span>
+<h2 class="noc-section-title" id="cap-title">O que o DB NOC entrega</h2>
+<p class="noc-section-sub">
+              Capacidades que preservam a estabilidade, a integridade e a continuidade da execução automatizada.
             </p>
-          </div>
-
-          <div class="noc-cap__grid" role="list">
-
-            <!-- Card 01 — destaque em azul -->
-            <article class="noc-cap__card noc-cap__card--featured reveal reveal--delay-1" role="listitem">
-              <div class="noc-cap__card-num" aria-hidden="true">01</div>
-              <div class="noc-cap__card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                </svg>
-              </div>
-              <h3 class="noc-cap__card-title">Monitoramento em Tempo Real</h3>
-              <p class="noc-cap__card-desc">
-                Acompanhamento contínuo de todos os fluxos automatizados, com visibilidade imediata de qualquer alteração no comportamento operacional.
+</div>
+<div class="noc-cap__grid" role="list">
+<!-- Card 01 — destaque em azul -->
+<article class="noc-cap__card noc-cap__card--featured reveal reveal--delay-1" role="listitem">
+<div aria-hidden="true" class="noc-cap__card-num">01</div>
+<div aria-hidden="true" class="noc-cap__card-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+</svg>
+</div>
+<h3 class="noc-cap__card-title">Monitoramento em Tempo Real</h3>
+<p class="noc-cap__card-desc">
+                Acompanhamento contínuo dos fluxos automatizados, com visibilidade imediata sobre alterações de comportamento, atrasos, falhas e riscos de indisponibilidade.
               </p>
-            </article>
-
-            <!-- Card 02 -->
-            <article class="noc-cap__card reveal reveal--delay-2" role="listitem">
-              <div class="noc-cap__card-num" aria-hidden="true">02</div>
-              <div class="noc-cap__card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                  <line x1="12" y1="9" x2="12" y2="13"/>
-                  <line x1="12" y1="17" x2="12.01" y2="17"/>
-                </svg>
-              </div>
-              <h3 class="noc-cap__card-title">Detecção Proativa de Falhas</h3>
-              <p class="noc-cap__card-desc">
-                Identificação antecipada de falhas de comunicação, integração e sistemas antes que causem impacto na operação.
+</article>
+<!-- Card 02 -->
+<article class="noc-cap__card reveal reveal--delay-2" role="listitem">
+<div aria-hidden="true" class="noc-cap__card-num">02</div>
+<div aria-hidden="true" class="noc-cap__card-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+<line x1="12" x2="12" y1="9" y2="13"></line>
+<line x1="12" x2="12.01" y1="17" y2="17"></line>
+</svg>
+</div>
+<h3 class="noc-cap__card-title">Detecção Proativa de Falhas</h3>
+<p class="noc-cap__card-desc">
+                Identificação antecipada de falhas de comunicação, integração e sistemas antes que elas comprometam a execução ou cheguem à liderança como crise.
               </p>
-            </article>
-
-            <!-- Card 03 -->
-            <article class="noc-cap__card reveal reveal--delay-3" role="listitem">
-              <div class="noc-cap__card-num" aria-hidden="true">03</div>
-              <div class="noc-cap__card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-              </div>
-              <h3 class="noc-cap__card-title">Análise Contínua de Integridade</h3>
-              <p class="noc-cap__card-desc">
-                Avaliação permanente da integridade da execução, garantindo que cada processo siga o fluxo correto sem desvios.
+</article>
+<!-- Card 03 -->
+<article class="noc-cap__card reveal reveal--delay-3" role="listitem">
+<div aria-hidden="true" class="noc-cap__card-num">03</div>
+<div aria-hidden="true" class="noc-cap__card-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<h3 class="noc-cap__card-title">Análise Contínua de Integridade</h3>
+<p class="noc-cap__card-desc">
+                Avaliação permanente da integridade dos fluxos para garantir que cada processo siga o caminho correto e respeite as regras aprovadas.
               </p>
-            </article>
-
-            <!-- Card 04 -->
-            <article class="noc-cap__card reveal reveal--delay-4" role="listitem">
-              <div class="noc-cap__card-num" aria-hidden="true">04</div>
-              <div class="noc-cap__card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </div>
-              <h3 class="noc-cap__card-title">Atuação Preventiva e Corretiva</h3>
-              <p class="noc-cap__card-desc">
-                Resposta rápida a incidentes — tanto preventiva quanto corretiva — minimizando o tempo de inatividade e o impacto operacional.
+</article>
+<!-- Card 04 -->
+<article class="noc-cap__card reveal reveal--delay-4" role="listitem">
+<div aria-hidden="true" class="noc-cap__card-num">04</div>
+<div aria-hidden="true" class="noc-cap__card-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<h3 class="noc-cap__card-title">Atuação Preventiva e Corretiva</h3>
+<p class="noc-cap__card-desc">
+                Resposta preventiva e corretiva em tempo hábil, minimizando indisponibilidades, gargalos e impactos sobre processos críticos.
               </p>
-            </article>
-
-            <!-- Card 05 -->
-            <article class="noc-cap__card reveal reveal--delay-5" role="listitem">
-              <div class="noc-cap__card-num" aria-hidden="true">05</div>
-              <div class="noc-cap__card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <h3 class="noc-cap__card-title">Suporte Especializado</h3>
-              <p class="noc-cap__card-desc">
-                Equipe com expertise exclusiva em ambientes críticos automatizados, focada no ecossistema DB e nas particularidades da sua operação.
+</article>
+<!-- Card 05 -->
+<article class="noc-cap__card reveal reveal--delay-5" role="listitem">
+<div aria-hidden="true" class="noc-cap__card-num">05</div>
+<div aria-hidden="true" class="noc-cap__card-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+</div>
+<h3 class="noc-cap__card-title">Suporte Especializado</h3>
+<p class="noc-cap__card-desc">
+                Atuação técnica especializada em ambientes críticos automatizados, com foco na continuidade da execução e na estabilidade do ecossistema DB.
               </p>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
+</article>
+</div>
+</div>
+</section>
+<!-- ============================================================
          COMO FUNCIONA — Timeline com sticky header
          ============================================================ -->
-      <section class="noc-how section bg-white" aria-labelledby="how-title">
-        <div class="container">
-          <div class="noc-how__inner">
-
-            <!-- Header fixo à esquerda -->
-            <div class="noc-how__header">
-              <span class="noc-section-label">Como funciona na prática</span>
-              <h2 class="noc-section-title" id="how-title">
-                Monitoramento que antecipa problemas
+<section aria-labelledby="how-title" class="noc-how section bg-white">
+<div class="container">
+<div class="noc-how__inner">
+<!-- Header fixo à esquerda -->
+<div class="noc-how__header">
+<span class="noc-section-label">Como funciona na prática</span>
+<h2 class="noc-section-title" id="how-title">
+                Monitoramento que preserva continuidade
               </h2>
-              <p class="noc-body-text">
-                O DB NOC acompanha continuamente todos os fluxos executados pelo DB Hyper e os dados estruturados pelo DB Board — atuando antes que o impacto chegue ao negócio.
+<p class="noc-body-text">
+                O DB NOC acompanha continuamente os fluxos executados pelo DB Hyper e os sinais estruturados pelo DB Board. A atuação acontece antes que o impacto chegue ao negócio, reduzindo interrupções e protegendo a previsibilidade operacional.
               </p>
-              <a
-                href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC."
-                class="noc-link-cta"
-                target="_blank"
-                rel="noopener"
-              >
+<a class="noc-link-cta" href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC." rel="noopener" target="_blank">
                 Ver demonstração
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-            </div>
-
-            <!-- Passos da timeline -->
-            <ol class="noc-how__steps" aria-label="Etapas do DB NOC">
-
-              <li class="noc-how__step reveal reveal--delay-1">
-                <div class="noc-how__step-marker" aria-hidden="true">
-                  <div class="noc-how__step-num">1</div>
-                  <div class="noc-how__step-line"></div>
-                </div>
-                <div class="noc-how__step-body">
-                  <h3 class="noc-how__step-title">Identifica interrupções</h3>
-                  <p class="noc-how__step-text">
-                    Qualquer falha no fluxo de execução é detectada imediatamente, com alertas automáticos para a equipe responsável — sem atraso.
+                <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+</div>
+<!-- Passos da timeline -->
+<ol aria-label="Etapas do DB NOC" class="noc-how__steps">
+<li class="noc-how__step reveal reveal--delay-1">
+<div aria-hidden="true" class="noc-how__step-marker">
+<div class="noc-how__step-num">1</div>
+<div class="noc-how__step-line"></div>
+</div>
+<div class="noc-how__step-body">
+<h3 class="noc-how__step-title">Identifica interrupções</h3>
+<p class="noc-how__step-text">
+                    Falhas no fluxo de execução são detectadas rapidamente, com alertas e acionamentos para reduzir tempo de resposta.
                   </p>
-                </div>
-              </li>
-
-              <li class="noc-how__step reveal reveal--delay-2">
-                <div class="noc-how__step-marker" aria-hidden="true">
-                  <div class="noc-how__step-num">2</div>
-                  <div class="noc-how__step-line"></div>
-                </div>
-                <div class="noc-how__step-body">
-                  <h3 class="noc-how__step-title">Detecta comportamentos fora do padrão</h3>
-                  <p class="noc-how__step-text">
-                    Análise contínua dos padrões de execução para identificar desvios antes que se transformem em falhas críticas e impactem a operação.
+</div>
+</li>
+<li class="noc-how__step reveal reveal--delay-2">
+<div aria-hidden="true" class="noc-how__step-marker">
+<div class="noc-how__step-num">2</div>
+<div class="noc-how__step-line"></div>
+</div>
+<div class="noc-how__step-body">
+<h3 class="noc-how__step-title">Detecta comportamentos fora do padrão</h3>
+<p class="noc-how__step-text">
+                    Padrões de execução são acompanhados continuamente para identificar desvios antes que eles se transformem em falhas críticas.
                   </p>
-                </div>
-              </li>
-
-              <li class="noc-how__step reveal reveal--delay-3">
-                <div class="noc-how__step-marker" aria-hidden="true">
-                  <div class="noc-how__step-num">3</div>
-                  <div class="noc-how__step-line"></div>
-                </div>
-                <div class="noc-how__step-body">
-                  <h3 class="noc-how__step-title">Avalia riscos e gargalos</h3>
-                  <p class="noc-how__step-text">
-                    Identificação proativa de pontos de risco operacional e gargalos que podem comprometer a continuidade dos processos críticos.
+</div>
+</li>
+<li class="noc-how__step reveal reveal--delay-3">
+<div aria-hidden="true" class="noc-how__step-marker">
+<div class="noc-how__step-num">3</div>
+<div class="noc-how__step-line"></div>
+</div>
+<div class="noc-how__step-body">
+<h3 class="noc-how__step-title">Avalia riscos e gargalos</h3>
+<p class="noc-how__step-text">
+                    Riscos operacionais e gargalos são analisados para evitar que comprometam a continuidade dos processos críticos.
                   </p>
-                </div>
-              </li>
-
-              <li class="noc-how__step reveal reveal--delay-4">
-                <div class="noc-how__step-marker" aria-hidden="true">
-                  <div class="noc-how__step-num">4</div>
-                </div>
-                <div class="noc-how__step-body">
-                  <h3 class="noc-how__step-title">Atua antes do impacto no negócio</h3>
-                  <p class="noc-how__step-text">
-                    Intervenção preventiva e corretiva em tempo hábil, garantindo que os processos críticos não sejam interrompidos e a liderança permaneça em controle.
+</div>
+</li>
+<li class="noc-how__step reveal reveal--delay-4">
+<div aria-hidden="true" class="noc-how__step-marker">
+<div class="noc-how__step-num">4</div>
+</div>
+<div class="noc-how__step-body">
+<h3 class="noc-how__step-title">Atua antes do impacto no negócio</h3>
+<p class="noc-how__step-text">
+                    A atuação técnica ocorre em tempo hábil para preservar a execução e manter a liderança informada sobre a saúde operacional.
                   </p>
-                </div>
-              </li>
-
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
+</div>
+</li>
+</ol>
+</div>
+</div>
+</section>
+<!-- ============================================================
          RESULTADOS — Métricas em destaque + lista de benefícios
          ============================================================ -->
-      <section class="noc-resultados section bg-off-white" aria-labelledby="resultado-title">
-        <div class="container">
-          <div class="noc-resultados__inner">
-
-            <!-- Coluna texto -->
-            <div class="reveal reveal--from-left">
-              <span class="noc-section-label">O resultado</span>
-              <h2 class="noc-section-title" id="resultado-title">
-                Operação estável e previsível.
+<section aria-labelledby="resultado-title" class="noc-resultados section bg-off-white">
+<div class="container">
+<div class="noc-resultados__inner">
+<!-- Coluna texto -->
+<div class="reveal reveal--from-left">
+<span class="noc-section-label">O resultado</span>
+<h2 class="noc-section-title" id="resultado-title">
+                Segurança operacional para a liderança.
               </h2>
-              <p class="noc-body-text">
-                Com o DB NOC, a liderança opera com a segurança de que processos críticos estão protegidos e a execução não será interrompida. O controle deixa de ser reativo e passa a ser estratégico.
+<p class="noc-body-text">
+                O DB NOC reduz o impacto de falhas, minimiza indisponibilidades e oferece a tranquilidade de saber que processos críticos estão sendo monitorados continuamente. A liderança deixa de se preocupar com interrupções silenciosas e passa a focar no crescimento do negócio.
               </p>
-              <ul class="noc-resultados__list" aria-label="Benefícios do DB NOC">
-                <li class="noc-resultados__item">
-                  <span class="noc-resultados__check" aria-hidden="true">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Continuidade operacional garantida 24/7
+<ul aria-label="Benefícios do DB NOC" class="noc-resultados__list">
+<li class="noc-resultados__item">
+<span aria-hidden="true" class="noc-resultados__check">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</span>
+                  Maior disponibilidade dos processos críticos
                 </li>
-                <li class="noc-resultados__item">
-                  <span class="noc-resultados__check" aria-hidden="true">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Segurança e controle absoluto sobre processos críticos
+<li class="noc-resultados__item">
+<span aria-hidden="true" class="noc-resultados__check">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</span>
+                  Menor impacto de falhas e indisponibilidades
                 </li>
-                <li class="noc-resultados__item">
-                  <span class="noc-resultados__check" aria-hidden="true">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Problemas tratados antes de escalar e causar impacto
+<li class="noc-resultados__item">
+<span aria-hidden="true" class="noc-resultados__check">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</span>
+                  Resposta mais rápida a incidentes e desvios
                 </li>
-                <li class="noc-resultados__item">
-                  <span class="noc-resultados__check" aria-hidden="true">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  Confiança total na operação crítica automatizada
+<li class="noc-resultados__item">
+<span aria-hidden="true" class="noc-resultados__check">
+<svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</span>
+                  Mais previsibilidade para operações automatizadas críticas
                 </li>
-              </ul>
-            </div>
-
-            <!-- Painel de métricas -->
-            <div class="noc-resultados__painel reveal reveal--from-right">
-              <div class="noc-resultados__painel-header">
-                <div class="noc-resultados__painel-dot" aria-hidden="true"></div>
-                <span>Continuidade operacional</span>
-                <span class="noc-resultados__painel-status">Monitorando</span>
-              </div>
-              <!-- Gráfico de linha de atividade -->
-              <div class="noc-resultados__sparkline" aria-hidden="true">
-                <svg class="noc-spark__svg" viewBox="0 0 280 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#BDA07E" stop-opacity="0.35"/>
-                      <stop offset="100%" stop-color="#BDA07E" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <path class="noc-spark__fill" d="M0,38 L20,36 L40,32 L60,34 L80,22 L100,24 L120,14 L140,18 L160,10 L180,12 L200,8 L220,10 L240,6 L260,8 L280,4 L280,48 L0,48 Z"/>
-                  <polyline class="noc-spark__line" points="0,38 20,36 40,32 60,34 80,22 100,24 120,14 140,18 160,10 180,12 200,8 220,10 240,6 260,8 280,4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                </svg>
-                <span class="noc-spark__label">Estabilidade operacional — 30 dias</span>
-              </div>
-              <div class="noc-resultados__metrics" role="list" aria-label="Métricas de desempenho do DB NOC">
-                <div class="noc-resultados__metric" role="listitem">
-                  <span class="noc-resultados__metric-val" data-count="24" data-suffix="/7"><span class="noc-count">24</span><em>/7</em></span>
-                  <span class="noc-resultados__metric-label">Monitoramento contínuo</span>
-                </div>
-                <div class="noc-resultados__metric" role="listitem">
-                  <span class="noc-resultados__metric-val"><em>&lt;</em>5<em>min</em></span>
-                  <span class="noc-resultados__metric-label">Tempo de resposta</span>
-                </div>
-                <div class="noc-resultados__metric" role="listitem">
-                  <span class="noc-resultados__metric-val" data-count="99"><span class="noc-count">99</span><em>,9%</em></span>
-                  <span class="noc-resultados__metric-label">Uptime da operação</span>
-                </div>
-                <div class="noc-resultados__metric" role="listitem">
-                  <span class="noc-resultados__metric-val" data-count="0"><span class="noc-count">0</span><em>h</em></span>
-                  <span class="noc-resultados__metric-label">Downtime não tratado</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
+</ul>
+</div>
+<!-- Painel de métricas -->
+<div class="noc-resultados__painel reveal reveal--from-right">
+<div class="noc-resultados__painel-header">
+<div aria-hidden="true" class="noc-resultados__painel-dot"></div>
+<span>Continuidade operacional</span>
+<span class="noc-resultados__painel-status">Monitorando</span>
+</div>
+<!-- Gráfico de linha de atividade -->
+<div aria-hidden="true" class="noc-resultados__sparkline">
+<svg class="noc-spark__svg" preserveaspectratio="none" viewbox="0 0 280 48" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="sparkGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#BDA07E" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#BDA07E" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path class="noc-spark__fill" d="M0,38 L20,36 L40,32 L60,34 L80,22 L100,24 L120,14 L140,18 L160,10 L180,12 L200,8 L220,10 L240,6 L260,8 L280,4 L280,48 L0,48 Z"></path>
+<polyline class="noc-spark__line" fill="none" points="0,38 20,36 40,32 60,34 80,22 100,24 120,14 140,18 160,10 180,12 200,8 220,10 240,6 260,8 280,4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+</svg>
+<span class="noc-spark__label">Estabilidade operacional — 30 dias</span>
+</div>
+<div aria-label="Métricas de desempenho do DB NOC" class="noc-resultados__metrics" role="list">
+<div class="noc-resultados__metric" role="listitem">
+<span class="noc-resultados__metric-val" data-count="24" data-suffix="/7"><span class="noc-count">24</span><em>/7</em></span>
+<span class="noc-resultados__metric-label">Monitoramento contínuo</span>
+</div>
+<div class="noc-resultados__metric" role="listitem">
+<span class="noc-resultados__metric-val"><em>&lt;</em>5<em>min</em></span>
+<span class="noc-resultados__metric-label">Tempo de resposta</span>
+</div>
+<div class="noc-resultados__metric" role="listitem">
+<span class="noc-resultados__metric-val" data-count="99"><span class="noc-count">99</span><em>,9%</em></span>
+<span class="noc-resultados__metric-label">Uptime da operação</span>
+</div>
+<div class="noc-resultados__metric" role="listitem">
+<span class="noc-resultados__metric-val" data-count="0"><span class="noc-count">0</span><em>h</em></span>
+<span class="noc-resultados__metric-label">Downtime não tratado</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================
          CTA FINAL — Alta conversão, fundo azul escuro
          ============================================================ -->
-      <section class="noc-cta" aria-labelledby="cta-title">
-        <div class="noc-cta__bg-grid" aria-hidden="true"></div>
-        <div class="noc-cta__glow" aria-hidden="true"></div>
-        <div class="container">
-          <div class="noc-cta__inner">
-            <span class="noc-cta__eyebrow reveal">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+<section aria-labelledby="cta-title" class="noc-cta">
+<div aria-hidden="true" class="noc-cta__bg-grid"></div>
+<div aria-hidden="true" class="noc-cta__glow"></div>
+<div class="container">
+<div class="noc-cta__inner">
+<span class="noc-cta__eyebrow reveal">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
               Próximo passo
             </span>
-            <h2 class="noc-cta__title reveal reveal--delay-1" id="cta-title">
-              Pronto para proteger<br />sua operação?
-            </h2>
-            <p class="noc-cta__text reveal reveal--delay-2">
-              Fale com um especialista da DB e descubra como o DB NOC pode garantir a continuidade e segurança da sua operação — sem surpresas.
+<h2 class="noc-cta__title reveal reveal--delay-1" id="cta-title">Proteja o que sustenta sua operação.</h2>
+<p class="noc-cta__text reveal reveal--delay-2">
+              Conheça a estrutura que monitora, preserva e sustenta a execução automatizada dos processos mais críticos da sua empresa.
             </p>
-            <div class="noc-cta__group reveal reveal--delay-3">
-              <a
-                href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC."
-                class="noc-btn noc-btn--primary"
-                target="_blank"
-                rel="noopener"
-              >
+<div class="noc-cta__group reveal reveal--delay-3">
+<a class="noc-btn noc-btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC." rel="noopener" target="_blank">
                 Falar com especialista
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-              <a href="/pages/calculadora.html" class="noc-btn noc-btn--ghost">
+                <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+<a class="noc-btn noc-btn--ghost" href="/pages/calculadora.html">
                 Calcular viabilidade
               </a>
-            </div>
-
-            <!-- Outros produtos -->
-            <div class="noc-cta__outros reveal reveal--delay-4">
-              <span class="noc-cta__outros-label">Conheça também</span>
-              <div class="noc-cta__outros-links">
-                <a href="/pages/produtos/db-board.html" class="noc-cta__outro-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+</div>
+<!-- Outros produtos -->
+<div class="noc-cta__outros reveal reveal--delay-4">
+<span class="noc-cta__outros-label">Conheça também</span>
+<div class="noc-cta__outros-links">
+<a class="noc-cta__outro-link" href="/pages/produtos/db-board.html">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>
                   DB Board
                 </a>
-                <a href="/pages/produtos/db-hyper.html" class="noc-cta__outro-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+<a class="noc-cta__outro-link" href="/pages/produtos/db-hyper.html">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                   DB Hyper
                 </a>
-                <a href="/pages/capacidades.html" class="noc-cta__outro-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+<a class="noc-cta__outro-link" href="/pages/capacidades.html">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>
                   Todas as Capacidades
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ============================================================
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ============================================================
        FOOTER
        ============================================================ -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="ft-top">
-        <div class="ft-brand">
-          <a href="/index.html" class="ft-logo">
-            <img
-              src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png"
-              alt="DB Softwares"
-              width="140"
-              height="38"
-              loading="lazy"
-            />
-          </a>
-          <p class="ft-tagline">Governança Operacional com precisão,<br />previsibilidade e inteligência.</p>
-          <div class="ft-social">
-            <a href="https://linkedin.com/company/dbsoftwares" class="ft-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="mailto:Danilo@dbsoftwares.com.br" class="ft-social-link" aria-label="E-mail">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </a>
-            <a href="https://wa.me/554191057438" class="ft-social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </a>
-          </div>
-        </div>
-        <nav class="ft-nav" aria-label="Links do rodapé">
-          <div class="ft-nav-col">
-            <span class="ft-nav-heading">Capacidades</span>
-            <a href="/pages/capacidades.html" class="ft-nav-link">Visão Geral</a>
-            <a href="/pages/produtos/db-board.html" class="ft-nav-link">DB Board</a>
-            <a href="/pages/produtos/db-hyper.html" class="ft-nav-link">DB Hyper</a>
-            <a href="/pages/produtos/db-noc.html" class="ft-nav-link">DB NOC</a>
-          </div>
-          <div class="ft-nav-col">
-            <span class="ft-nav-heading">Empresa</span>
-            <a href="/pages/sobre.html" class="ft-nav-link">Sobre a DB</a>
-            <a href="/pages/atuacao.html" class="ft-nav-link">Atuação</a>
-            <a href="/pages/perfis-de-servico.html" class="ft-nav-link">Perfis de Serviço</a>
-            <a href="/pages/calculadora.html" class="ft-nav-link">Calculadora</a>
-          </div>
-          <div class="ft-nav-col">
-            <span class="ft-nav-heading">Contato</span>
-            <a href="mailto:Danilo@dbsoftwares.com.br" class="ft-nav-link ft-nav-link--icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+<footer class="site-footer" role="contentinfo">
+<div class="ft-top">
+<div class="ft-brand">
+<a class="ft-logo" href="/index.html">
+<img alt="DB Softwares" height="38" loading="lazy" src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png" width="140"/>
+</a>
+<p class="ft-tagline">Governança Operacional com precisão,<br/>previsibilidade e inteligência.</p>
+<div class="ft-social">
+<a aria-label="LinkedIn" class="ft-social-link" href="https://linkedin.com/company/dbsoftwares" rel="noopener" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</a>
+<a aria-label="E-mail" class="ft-social-link" href="mailto:Danilo@dbsoftwares.com.br">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+</a>
+<a aria-label="WhatsApp" class="ft-social-link" href="https://wa.me/554191057438" rel="noopener" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+</a>
+</div>
+</div>
+<nav aria-label="Links do rodapé" class="ft-nav">
+<div class="ft-nav-col">
+<span class="ft-nav-heading">Capacidades</span>
+<a class="ft-nav-link" href="/pages/capacidades.html">Visão Geral</a>
+<a class="ft-nav-link" href="/pages/produtos/db-board.html">DB Board</a>
+<a class="ft-nav-link" href="/pages/produtos/db-hyper.html">DB Hyper</a>
+<a class="ft-nav-link" href="/pages/produtos/db-noc.html">DB NOC</a>
+</div>
+<div class="ft-nav-col">
+<span class="ft-nav-heading">Empresa</span>
+<a class="ft-nav-link" href="/pages/sobre.html">Sobre a DB</a>
+<a class="ft-nav-link" href="/pages/atuacao.html">Atuação</a>
+<a class="ft-nav-link" href="/pages/perfis-de-servico.html">Perfis de Serviço</a>
+<a class="ft-nav-link" href="/pages/calculadora.html">Calculadora</a>
+</div>
+<div class="ft-nav-col">
+<span class="ft-nav-heading">Contato</span>
+<a class="ft-nav-link ft-nav-link--icon" href="mailto:Danilo@dbsoftwares.com.br">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
               Danilo@dbsoftwares.com.br
             </a>
-            <a href="https://wa.me/554191057438" class="ft-nav-link ft-nav-link--icon" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+<a class="ft-nav-link ft-nav-link--icon" href="https://wa.me/554191057438" rel="noopener" target="_blank">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
               +55 (41) 9105-7438
             </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Emanuel%20Kant%2C%2060%2C%20Cap%C3%A3o%20Raso%2C%20Curitiba" class="ft-nav-link ft-nav-link--icon" target="_blank" rel="noopener">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<a class="ft-nav-link ft-nav-link--icon" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Emanuel%20Kant%2C%2060%2C%20Cap%C3%A3o%20Raso%2C%20Curitiba" rel="noopener" target="_blank">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               Curitiba, Paraná
             </a>
-          </div>
-        </nav>
-      </div>
-      <div class="ft-bottom">
-        <span class="ft-copy">&copy; <span id="ftYear"></span> DB Softwares. Todos os direitos reservados.</span>
-        <div class="ft-sep" aria-hidden="true"></div>
-        <a href="/pages/politica/politica.html" class="ft-copy ft-copy--legal">Política de Privacidade</a>
-        <span class="ft-sep-dot" aria-hidden="true">·</span>
-        <a href="/pages/politica/termos.html" class="ft-copy ft-copy--legal">Termos de Uso</a>
-      </div>
-    </footer>
-
+</div>
+</nav>
+</div>
+<div class="ft-bottom">
+<span class="ft-copy">© <span id="ftYear"></span> DB Softwares. Todos os direitos reservados.</span>
+<div aria-hidden="true" class="ft-sep"></div>
+<a class="ft-copy ft-copy--legal" href="/pages/politica/politica.html">Política de Privacidade</a>
+<span aria-hidden="true" class="ft-sep-dot">·</span>
+<a class="ft-copy ft-copy--legal" href="/pages/politica/termos.html">Termos de Uso</a>
+</div>
+</footer>
 <script src="/scripts/main.js"></script>
 <script src="/scripts/global-premium.js"></script>
 <script src="/scripts/capacidades-animations.js"></script>
-
-    <!-- ============================================================
+<!-- ============================================================
        ANIMAÇÕES TECNOLÓGICAS — DB NOC
        ============================================================ -->
-    <script>
+<script>
     (function () {
       /* ── 1. Canvas — Rede de partículas conectadas no hero ──────── */
       const canvas = document.getElementById('nocCanvas');
@@ -879,5 +781,5 @@
 
     })();
     </script>
-  </body>
+</body>
 </html>
