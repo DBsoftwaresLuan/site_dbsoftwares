@@ -47,7 +47,7 @@ function initHyperCapAnimation() {
   }
 
   function animate() {
-    ctx.fillStyle = 'rgba(62, 86, 158, 0.05)';
+    ctx.fillStyle = 'rgba(10, 21, 48, 0.05)';
     ctx.fillRect(0, 0, width, height);
 
     // Atualizar e desenhar nós
@@ -165,7 +165,7 @@ function initBoardCapAnimation() {
   }
 
   function animate() {
-    ctx.fillStyle = 'rgba(62, 86, 158, 0.08)';
+    ctx.fillStyle = 'rgba(10, 21, 48, 0.08)';
     ctx.fillRect(0, 0, width, height);
 
     // Desenhar grade de fundo
@@ -295,7 +295,7 @@ function initNocCapAnimation() {
   }
 
   function animate() {
-    ctx.fillStyle = 'rgba(62, 86, 158, 0.06)';
+    ctx.fillStyle = 'rgba(10, 21, 48, 0.06)';
     ctx.fillRect(0, 0, width, height);
 
     // Ondas de radar
