@@ -1174,6 +1174,11 @@
       color: rgba(255,255,255,.3);
     }
     .ft-copy--muted { color: rgba(255,255,255,.2); }
+    .ft-copy--legal {
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .ft-copy--legal:hover { color: var(--gold); }
     .ft-sep {
       width: 1px; height: 14px;
       background: rgba(255,255,255,.12);

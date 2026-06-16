@@ -887,7 +887,9 @@
 .at-cta-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  min-width: 220px;
   padding: 15px 28px;
   border-radius: 40px;
   font-size: 15px;
