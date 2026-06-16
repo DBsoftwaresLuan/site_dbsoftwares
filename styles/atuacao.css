@@ -106,7 +106,9 @@
 .at-hero-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  min-width: 200px;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -895,7 +897,7 @@
 }
 .at-cta-btn--primary {
   background: var(--gold);
-  color: #1a1a1a;
+  color: #fff;
 }
 .at-cta-btn--primary:hover {
   background: var(--gold-lt);
