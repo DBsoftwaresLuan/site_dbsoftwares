@@ -795,6 +795,200 @@
 }
 
 /* ============================================================
+   O QUE É — Dashboard visual (substitui card de citação)
+   ============================================================ */
+.produto-oque__dashboard {
+  background: var(--blue-dk);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(14, 27, 61, .22);
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.produto-oque__dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--gold), var(--blue));
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+.produto-oque__dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  background: rgba(0, 0, 0, .22);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.produto-oque__dashboard-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.produto-oque__dashboard-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.produto-oque__dashboard-dots span:nth-child(1) { background: #ff5f57; }
+.produto-oque__dashboard-dots span:nth-child(2) { background: #febc2e; }
+.produto-oque__dashboard-dots span:nth-child(3) { background: #28c840; }
+
+.produto-oque__dashboard-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: rgba(255, 255, 255, .3);
+}
+
+.produto-oque__dashboard-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Métricas */
+.produto-oque__dash-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.produto-oque__dash-metric {
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.produto-oque__dash-metric-val {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.produto-oque__dash-metric-val em {
+  font-style: normal;
+  color: var(--gold);
+  font-size: .72em;
+}
+
+.produto-oque__dash-metric-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .35);
+}
+
+/* Flow steps */
+.produto-oque__dash-flow {
+  display: flex;
+  align-items: center;
+}
+
+.produto-oque__dash-flow-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, .28);
+  white-space: nowrap;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .06);
+  flex-shrink: 0;
+}
+
+.produto-oque__dash-flow-step svg {
+  opacity: .45;
+  flex-shrink: 0;
+}
+
+.produto-oque__dash-flow-step--active {
+  color: var(--white);
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(189, 160, 126, .2);
+}
+
+.produto-oque__dash-flow-step--active svg {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.produto-oque__dash-flow-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(189, 160, 126, .35), rgba(255, 255, 255, .06));
+  margin: 0 4px;
+  min-width: 8px;
+}
+
+/* Log */
+.produto-oque__dash-log {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  background: rgba(0, 0, 0, .18);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, .05);
+}
+
+.produto-oque__dash-log-line {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, .45);
+}
+
+.produto-oque__dash-log-line strong {
+  color: rgba(255, 255, 255, .75);
+  font-weight: 600;
+}
+
+.produto-oque__dash-log-line--running {
+  color: rgba(255, 255, 255, .65);
+}
+
+.produto-oque__dash-log-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.produto-oque__dash-log-dot--ok {
+  background: #28c840;
+}
+
+.produto-oque__dash-log-dot--pulse {
+  background: var(--gold);
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .45; transform: scale(.7); }
+}
+
+/* ============================================================
    CAPACIDADES — Bento Grid
    ============================================================ */
 .produto-cap {

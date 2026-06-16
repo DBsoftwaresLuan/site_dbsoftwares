@@ -149,20 +149,7 @@
               </a>
             </div>
 
-            <div class="produto-hero__stats reveal reveal--delay-5" role="list" aria-label="Métricas de impacto">
-              <div class="produto-hero__stat" role="listitem">
-                <span class="produto-hero__stat-value">100<em>%</em></span>
-                <span class="produto-hero__stat-label">Disponibilidade</span>
-              </div>
-              <div class="produto-hero__stat" role="listitem">
-                <span class="produto-hero__stat-value"><em>+</em>90<em>%</em></span>
-                <span class="produto-hero__stat-label">Menos execução manual</span>
-              </div>
-              <div class="produto-hero__stat" role="listitem">
-                <span class="produto-hero__stat-value">0<em>x</em></span>
-                <span class="produto-hero__stat-label">Erros de processo</span>
-              </div>
-            </div>
+
           </div>
 
           <div class="produto-hero__visual reveal--scale">
@@ -174,15 +161,7 @@
                 loading="eager"
               />
             </div>
-            <div class="produto-hero__img-badge reveal--delay-5" aria-hidden="true">
-              <div class="produto-hero__img-badge-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              </div>
-              <div class="produto-hero__img-badge-text">
-                <span class="produto-hero__img-badge-val">DB Hyper</span>
-                <span class="produto-hero__img-badge-label">Hyperautomação com IA</span>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -251,17 +230,59 @@
             </div>
           </div>
           <div class="produto-oque__visual reveal--from-right">
-            <div class="produto-oque__card">
-              <div class="produto-oque__card-noise" aria-hidden="true"></div>
-              <div class="produto-oque__card-glow" aria-hidden="true"></div>
-              <span class="produto-oque__card-tag">DB Hyper</span>
-              <div class="produto-oque__icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <div class="produto-oque__dashboard">
+              <div class="produto-oque__dashboard-header" aria-hidden="true">
+                <div class="produto-oque__dashboard-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="produto-oque__dashboard-title">DB Hyper — Painel Operacional</span>
               </div>
-              <span class="produto-oque__quote-mark" aria-hidden="true">"</span>
-              <p class="produto-oque__quote">
-                Não se trata apenas de automatizar tarefas — mas de garantir que a execução siga exatamente como foi planejada.
-              </p>
+              <div class="produto-oque__dashboard-body">
+                <div class="produto-oque__dash-metrics">
+                  <div class="produto-oque__dash-metric">
+                    <span class="produto-oque__dash-metric-val">100<em>%</em></span>
+                    <span class="produto-oque__dash-metric-label">Disponibilidade</span>
+                  </div>
+                  <div class="produto-oque__dash-metric">
+                    <span class="produto-oque__dash-metric-val"><em>+</em>90<em>%</em></span>
+                    <span class="produto-oque__dash-metric-label">Menos execução manual</span>
+                  </div>
+                  <div class="produto-oque__dash-metric">
+                    <span class="produto-oque__dash-metric-val">0</span>
+                    <span class="produto-oque__dash-metric-label">Erros de processo</span>
+                  </div>
+                </div>
+                <div class="produto-oque__dash-flow" aria-hidden="true">
+                  <div class="produto-oque__dash-flow-step produto-oque__dash-flow-step--active">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Regra aprovada
+                  </div>
+                  <div class="produto-oque__dash-flow-line"></div>
+                  <div class="produto-oque__dash-flow-step produto-oque__dash-flow-step--active">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>
+                    Agente em execução
+                  </div>
+                  <div class="produto-oque__dash-flow-line"></div>
+                  <div class="produto-oque__dash-flow-step">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Resultado entregue
+                  </div>
+                </div>
+                <div class="produto-oque__dash-log">
+                  <div class="produto-oque__dash-log-line">
+                    <span class="produto-oque__dash-log-dot produto-oque__dash-log-dot--ok"></span>
+                    <span>Processo <strong>FIN-2024</strong> executado com sucesso</span>
+                  </div>
+                  <div class="produto-oque__dash-log-line">
+                    <span class="produto-oque__dash-log-dot produto-oque__dash-log-dot--ok"></span>
+                    <span>Agente IA interpretou contexto e adaptou fluxo</span>
+                  </div>
+                  <div class="produto-oque__dash-log-line produto-oque__dash-log-line--running">
+                    <span class="produto-oque__dash-log-dot produto-oque__dash-log-dot--pulse"></span>
+                    <span>Orquestrando próxima etapa...</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -405,7 +426,7 @@
 
       <!-- ═══════════════════════════════════════════════
            RESULTADO
-           ═══════════════════════════════════════════════ -->
+           ═══════════════���═══════════════════════════════ -->
       <section class="produto-resultado" aria-labelledby="resultado-title">
         <div class="produto-resultado__inner">
           <div class="reveal--from-left">
