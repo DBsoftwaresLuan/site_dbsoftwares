@@ -578,45 +578,7 @@
   animation: scroll-fall 2.2s ease-in-out infinite;
 }
 
-/* ============================================================
-   INTRO BAR — faixa de social proof / pilares
-   ============================================================ */
-.produto-intro {
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-100);
-  padding: 0 32px;
-}
 
-.produto-intro__inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-
-.produto-intro__item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 20px 32px;
-  border-right: 1px solid var(--gray-100);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--gray-600);
-  letter-spacing: .02em;
-}
-
-.produto-intro__item:last-child {
-  border-right: none;
-}
-
-.produto-intro__item-icon {
-  color: var(--blue);
-  flex-shrink: 0;
-}
 
 /* ============================================================
    O QUE É — Split com visual interativo
@@ -628,12 +590,12 @@
 }
 
 .produto-oque__inner {
-  max-width: 1100px;
+  max-width: 720px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .produto-oque__label {
@@ -674,14 +636,16 @@
 /* Mini bullets na seção O que é */
 .produto-oque__bullets {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
 }
 
 .produto-oque__bullet {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 14px;
   font-weight: 600;
   color: var(--dark-text);
@@ -695,43 +659,7 @@
   flex-shrink: 0;
 }
 
-/* Visual — imagem do dashboard */
-.produto-oque__visual {
-  position: relative;
-}
 
-.produto-oque__img-wrapper {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 24px 64px rgba(14, 27, 61, .18), 0 0 0 1px rgba(14, 27, 61, .06);
-}
-
-.produto-oque__img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.produto-oque__img-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(14, 27, 61, .82);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(189, 160, 126, .25);
-  border-radius: 999px;
-  padding: 7px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .04em;
-  color: var(--gold);
-  z-index: 1;
-}
 
 /* ============================================================
    O QUE É — Dashboard visual (substitui card de citação)
