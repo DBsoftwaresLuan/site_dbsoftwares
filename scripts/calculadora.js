@@ -44,6 +44,21 @@ if (btnVoltarAdmin) {
 toggleFormularios();
 
 // ============================================
+// PRÉ-SELEÇÃO VIA PARÂMETRO DE URL
+// ============================================
+(function () {
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get('tipo');
+    if (tipo === 'industrial') {
+        selectTipoProcesso.value = 'industria';
+        toggleFormularios();
+    } else if (tipo === 'administrativo') {
+        selectTipoProcesso.value = 'backoffice';
+        toggleFormularios();
+    }
+})();
+
+// ============================================
 // FUNÇÕES GERAIS DE UI
 // ============================================
 function setLoading(button, isLoading) {
