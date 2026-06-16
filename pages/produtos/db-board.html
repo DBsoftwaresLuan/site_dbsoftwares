@@ -1,546 +1,491 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta
-      content="DB Board — A visão que governa a operação. Transforme dados operacionais em decisões estratégicas com o painel de observabilidade da DB Softwares."
-      name="description"
-    />
-    <title>DB Board | DB Softwares</title>
-    <link rel="icon" type="image/png" href="/assets/images/logo-icon.png" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/styles/global.css" rel="stylesheet" />
-    <link href="/styles/produto.css" rel="stylesheet" />
-    <link href="/styles/cookies.css" rel="stylesheet" />
-    <link href="/styles/global-premium.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <div class="db-scroll-progress" aria-hidden="true"><span class="db-scroll-progress__bar"></span></div>
-
-    <!-- NAVBAR -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
-      <div class="nav-inner">
-        <a href="/index.html" class="nav-logo" aria-label="DB Softwares — Início">
-          <img src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png" alt="DB Softwares" class="nav-logo-img" />
-        </a>
-        <div class="nav-links" role="menubar">
-          <a href="/index.html" class="nav-link nav-link--home" role="menuitem" aria-label="Página inicial">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="DB Board: governança visual e observabilidade estratégica para centralizar indicadores, monitorar a execução das regras aprovadas e apoiar decisões com contexto." name="description"/>
+<title>DB Board | DB Softwares</title>
+<link href="/assets/images/logo-icon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="/styles/global.css" rel="stylesheet"/>
+<link href="/styles/produto.css" rel="stylesheet"/>
+<link href="/styles/cookies.css" rel="stylesheet"/>
+<link href="/styles/global-premium.css" rel="stylesheet"/>
+</head>
+<body>
+<div aria-hidden="true" class="db-scroll-progress"><span class="db-scroll-progress__bar"></span></div>
+<!-- NAVBAR -->
+<nav aria-label="Navegação principal" class="navbar" id="navbar" role="navigation">
+<div class="nav-inner">
+<a aria-label="DB Softwares — Início" class="nav-logo" href="/index.html">
+<img alt="DB Softwares" class="nav-logo-img" src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png"/>
+</a>
+<div class="nav-links" role="menubar">
+<a aria-label="Página inicial" class="nav-link nav-link--home" href="/index.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="14"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"></path><polyline points="9 21 9 12 15 12 15 21"></polyline></svg>
             Início
           </a>
-          <div class="nav-item">
-            <a href="/pages/perfis-de-servico.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-perfis">Perfis de Serviço <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-perfis">
-              <a href="/pages/perfis-de-servico.html" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Visão Geral</a>
-              <a href="/pages/perfis-de-servico.html#essencial" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>DB Essencial</a>
-              <a href="/pages/perfis-de-servico.html#profissional" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>DB Profissional</a>
-              <a href="/pages/perfis-de-servico.html#enterprise" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>DB Enterprise</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="/pages/atuacao.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-atuacao">Atuação <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-atuacao">
-              <a href="/pages/atuacao.html#administrativo" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Administrativo</a>
-              <a href="/pages/atuacao.html#industria" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 20h20M4 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg>Indústria</a>
-            </div>
-          </div>
-          <div class="nav-item">
-            <a href="/pages/capacidades.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-cap">Capacidades <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-cap">
-              <a href="/pages/capacidades.html" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Visão Geral</a>
-              <a href="/pages/produtos/db-board.html" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>DB Board</a>
-              <a href="/pages/produtos/db-hyper.html" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>DB Hyper</a>
-              <a href="/pages/produtos/db-noc.html" class="nav-dd-link" role="menuitem"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>DB NOC</a>
-            </div>
-          </div>
-          <a href="/pages/sobre.html" class="nav-link" role="menuitem">Sobre a DB</a>
-          <a href="/pages/calculadora.html" class="nav-link nav-link--calc" role="menuitem">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/pages/perfis-de-servico.html" id="dd-perfis" role="menuitem">Perfis de Serviço <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div aria-labelledby="dd-perfis" class="nav-dropdown" role="menu">
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>Visão Geral</a>
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html#essencial" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"></path></svg>DB Essencial</a>
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html#profissional" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>DB Profissional</a>
+<a class="nav-dd-link" href="/pages/perfis-de-servico.html#enterprise" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>DB Enterprise</a>
+</div>
+</div>
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/pages/atuacao.html" id="dd-atuacao" role="menuitem">Atuação <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div aria-labelledby="dd-atuacao" class="nav-dropdown" role="menu">
+<a class="nav-dd-link" href="/pages/atuacao.html#administrativo" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="14" rx="2" width="20" x="2" y="7"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>Administrativo</a>
+<a class="nav-dd-link" href="/pages/atuacao.html#industria" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M2 20h20M4 20V10l6-6 6 6v10"></path><path d="M10 20v-5h4v5"></path></svg>Indústria</a>
+</div>
+</div>
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/pages/capacidades.html" id="dd-cap" role="menuitem">Capacidades <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div aria-labelledby="dd-cap" class="nav-dropdown" role="menu">
+<a class="nav-dd-link" href="/pages/capacidades.html" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>Visão Geral</a>
+<a class="nav-dd-link" href="/pages/produtos/db-board.html" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>DB Board</a>
+<a class="nav-dd-link" href="/pages/produtos/db-hyper.html" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>DB Hyper</a>
+<a class="nav-dd-link" href="/pages/produtos/db-noc.html" role="menuitem"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>DB NOC</a>
+</div>
+</div>
+<a class="nav-link" href="/pages/sobre.html" role="menuitem">Sobre a DB</a>
+<a class="nav-link nav-link--calc" href="/pages/calculadora.html" role="menuitem">
+<svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="13"><rect height="20" rx="2" width="16" x="4" y="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="8" x2="16" y1="10" y2="10"></line><line x1="8" x2="12" y1="14" y2="14"></line></svg>
             Calcular Viabilidade
           </a>
-          <div class="nav-item">
-            <a href="/index.html#contato" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false" id="dd-contato">Contato <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-            <div class="nav-dropdown" role="menu" aria-labelledby="dd-contato" style="min-width:220px">
-              <a href="mailto:Danilo@dbsoftwares.com.br" class="nav-dd-link nav-dd-link--email" role="menuitem" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>E-mail</a>
-              <div class="nav-dd-sep"></div>
-              <a href="https://wa.me/554191057438" class="nav-dd-link nav-dd-link--whatsapp" role="menuitem" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</a>
-              <div class="nav-dd-sep"></div>
-              <a href="https://linkedin.com/company/dbsoftwares" class="nav-dd-link nav-dd-link--linkedin" role="menuitem" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-right">
-          <a href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." class="nav-cta" target="_blank" rel="noopener">
+<div class="nav-item">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/index.html#contato" id="dd-contato" role="menuitem">Contato <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<div aria-labelledby="dd-contato" class="nav-dropdown" role="menu" style="min-width:220px">
+<a class="nav-dd-link nav-dd-link--email" href="mailto:Danilo@dbsoftwares.com.br" rel="noopener" role="menuitem" target="_blank"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>E-mail</a>
+<div class="nav-dd-sep"></div>
+<a class="nav-dd-link nav-dd-link--whatsapp" href="https://wa.me/554191057438" rel="noopener" role="menuitem" target="_blank"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>WhatsApp</a>
+<div class="nav-dd-sep"></div>
+<a class="nav-dd-link nav-dd-link--linkedin" href="https://linkedin.com/company/dbsoftwares" rel="noopener" role="menuitem" target="_blank"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a>
+</div>
+</div>
+</div>
+<div class="nav-right">
+<a class="nav-cta" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." rel="noopener" target="_blank">
             Fale Conosco
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-          <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
-        </div>
-      </div>
-      <div class="nav-mobile" id="navMobile" aria-hidden="true">
-        <a href="/index.html" class="nav-mobile-link" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>Início</a>
-        <div class="nav-mobile-divider"></div>
-        <div class="nav-mobile-section">
-          <span class="nav-mobile-label">Capacidades</span>
-          <a href="/pages/capacidades.html" class="nav-mobile-link">Visão Geral</a>
-          <a href="/pages/produtos/db-board.html" class="nav-mobile-link sub">DB Board</a>
-          <a href="/pages/produtos/db-hyper.html" class="nav-mobile-link sub">DB Hyper</a>
-          <a href="/pages/produtos/db-noc.html" class="nav-mobile-link sub">DB NOC</a>
-        </div>
-        <div class="nav-mobile-divider"></div>
-        <a href="/pages/sobre.html" class="nav-mobile-link">Sobre a DB</a>
-        <div class="nav-mobile-divider"></div>
-        <a href="/pages/calculadora.html" class="nav-mobile-link nav-mobile-link--calc">Calcular Viabilidade</a>
-        <a href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." class="nav-mobile-cta" target="_blank" rel="noopener">Fale Conosco <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-      </div>
-    </nav>
-
-    <main id="main-content">
-
-      <!-- ═══════════════════════════════════════════════
+            <svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+<button aria-controls="navMobile" aria-expanded="false" aria-label="Abrir menu" class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+</div>
+</div>
+<div aria-hidden="true" class="nav-mobile" id="navMobile">
+<a class="nav-mobile-link" href="/index.html" role="menuitem"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"></path><polyline points="9 21 9 12 15 12 15 21"></polyline></svg>Início</a>
+<div class="nav-mobile-divider"></div>
+<div class="nav-mobile-section">
+<span class="nav-mobile-label">Capacidades</span>
+<a class="nav-mobile-link" href="/pages/capacidades.html">Visão Geral</a>
+<a class="nav-mobile-link sub" href="/pages/produtos/db-board.html">DB Board</a>
+<a class="nav-mobile-link sub" href="/pages/produtos/db-hyper.html">DB Hyper</a>
+<a class="nav-mobile-link sub" href="/pages/produtos/db-noc.html">DB NOC</a>
+</div>
+<div class="nav-mobile-divider"></div>
+<a class="nav-mobile-link" href="/pages/sobre.html">Sobre a DB</a>
+<div class="nav-mobile-divider"></div>
+<a class="nav-mobile-link nav-mobile-link--calc" href="/pages/calculadora.html">Calcular Viabilidade</a>
+<a class="nav-mobile-cta" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20DB%20Softwares." rel="noopener" target="_blank">Fale Conosco <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg></a>
+</div>
+</nav>
+<main id="main-content">
+<!-- ═══════════════════════════════════════════════
            HERO
            ═══════════════════════════════════════════════ -->
-      <section class="produto-hero produto-hero--dark" aria-labelledby="hero-title">
-        <div class="produto-hero__bg" aria-hidden="true">
-          <div class="produto-hero__dots"></div>
-          <canvas class="produto-hero__particles" id="boardCanvas" aria-hidden="true"></canvas>
-          <div class="produto-hero__glow-1"></div>
-          <div class="produto-hero__glow-2"></div>
-        </div>
-
-        <div class="produto-hero__inner">
-          <!-- Conteúdo textual -->
-          <div class="produto-hero__content">
-            <nav class="produto-hero__breadcrumb reveal" aria-label="Navegação estrutural">
-              <a href="/pages/capacidades.html">Capacidades</a>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-              <span>DB Board</span>
-            </nav>
-
-            <div class="produto-hero__badge reveal reveal--delay-1">
-              <span class="produto-hero__badge-dot" aria-hidden="true"></span>
+<section aria-labelledby="hero-title" class="produto-hero produto-hero--dark">
+<div aria-hidden="true" class="produto-hero__bg">
+<div class="produto-hero__dots"></div>
+<canvas aria-hidden="true" class="produto-hero__particles" id="boardCanvas"></canvas>
+<div class="produto-hero__glow-1"></div>
+<div class="produto-hero__glow-2"></div>
+</div>
+<div class="produto-hero__inner">
+<!-- Conteúdo textual -->
+<div class="produto-hero__content">
+<nav aria-label="Navegação estrutural" class="produto-hero__breadcrumb reveal">
+<a href="/pages/capacidades.html">Capacidades</a>
+<svg aria-hidden="true" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="9 18 15 12 9 6"></polyline></svg>
+<span>DB Board</span>
+</nav>
+<div class="produto-hero__badge reveal reveal--delay-1">
+<span aria-hidden="true" class="produto-hero__badge-dot"></span>
               Visibilidade e Decisão
             </div>
-
-            <h1 class="produto-hero__title reveal reveal--delay-2" id="hero-title">
+<h1 class="produto-hero__title reveal reveal--delay-2" id="hero-title">
               DB <span>Board</span>
-            </h1>
-            <p class="produto-hero__tagline reveal reveal--delay-3">
-              A visão que governa a operação
+</h1>
+<p class="produto-hero__tagline reveal reveal--delay-3">
+              Governança visual para operações que não podem depender de achismos
             </p>
-            <div class="produto-hero__divider reveal reveal--delay-3" aria-hidden="true"></div>
-            <p class="produto-hero__desc reveal reveal--delay-4">
-              Mais do que um dashboard — é a camada de observabilidade estratégica da operação. Centraliza indicadores, organiza informações e elimina ruído para que a liderança decida com clareza e velocidade.
+<div aria-hidden="true" class="produto-hero__divider reveal reveal--delay-3"></div>
+<p class="produto-hero__desc reveal reveal--delay-4">
+              Transforme dados dispersos em inteligência operacional. O DB Board centraliza indicadores, monitora a execução das regras de negócio e entrega visibilidade estratégica para gestores, coordenadores e executivos tomarem decisões com confiança.
             </p>
-
-            <div class="produto-hero__cta-group reveal reveal--delay-5">
-              <a href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20Board." class="btn btn--primary" target="_blank" rel="noopener">
+<div class="produto-hero__cta-group reveal reveal--delay-5">
+<a class="btn btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20Board." rel="noopener" target="_blank">
                 Falar com especialista
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-              <a href="/pages/calculadora.html" class="btn btn--secondary">
+                <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+<a class="btn btn--secondary" href="/pages/calculadora.html">
                 Calcular viabilidade
               </a>
-            </div>
-
-
-          </div>
-
-          <!-- Imagem do produto -->
-          <div class="produto-hero__visual reveal--scale">
-            <div class="produto-hero__img-wrapper">
-              <img
-                src="/assets/images/produtos/db-board-hero.png"
-                alt="Interface do DB Board — painel de observabilidade operacional"
-                class="produto-hero__img"
-                loading="eager"
-              />
-            </div>
-
-          </div>
-        </div>
-
-
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
+</div>
+</div>
+<!-- Imagem do produto -->
+<div class="produto-hero__visual reveal--scale">
+<div class="produto-hero__img-wrapper">
+<img alt="Interface do DB Board — painel de observabilidade operacional" class="produto-hero__img" loading="eager" src="https://static.wixstatic.com/media/443a8d_f1b069bfa1144776b2f950e8842a4d18~mv2.png"/>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══════════════════════════════════════════════
            INTRO BAR
            ═══════════════════════════════════════════════ -->
-      <div class="produto-intro" role="region" aria-label="Diferenciais do DB Board">
-        <div class="produto-intro__inner">
-          <div class="produto-intro__item">
-            <svg class="produto-intro__item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            Consolidação Multiplataforma
+<div aria-label="Diferenciais do DB Board" class="produto-intro" role="region">
+<div class="produto-intro__inner">
+<div class="produto-intro__item">
+<svg aria-hidden="true" class="produto-intro__item-icon" fill="none" height="16" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="16"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>
+            Consolidação de Dados Multiplataforma
           </div>
-          <div class="produto-intro__item">
-            <svg class="produto-intro__item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+<div class="produto-intro__item">
+<svg aria-hidden="true" class="produto-intro__item-icon" fill="none" height="16" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="16"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             Indicadores em Tempo Real
           </div>
-          <div class="produto-intro__item">
-            <svg class="produto-intro__item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+<div class="produto-intro__item">
+<svg aria-hidden="true" class="produto-intro__item-icon" fill="none" height="16" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
             Visões por Nível Hierárquico
           </div>
-          <div class="produto-intro__item">
-            <svg class="produto-intro__item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+<div class="produto-intro__item">
+<svg aria-hidden="true" class="produto-intro__item-icon" fill="none" height="16" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             Governança de Regras
           </div>
-        </div>
-      </div>
-
-      <!-- ═══════════════════════════════════════════════
+</div>
+</div>
+<!-- ═══════════════════════════════════════════════
            O QUE É
            ═══════════════════════════════════════════════ -->
-      <section class="produto-oque" aria-labelledby="oque-title">
-        <div class="produto-oque__inner">
-          <div class="reveal--from-left">
-            <span class="produto-oque__label">O que é</span>
-            <h2 class="produto-oque__title" id="oque-title">
-              Dados deixam de ser registros.<br />
-              <em>Passam a orientar decisões.</em>
-            </h2>
-            <p class="produto-oque__text">
-              O DB Board transforma dados operacionais em visão clara para decisão. É a camada de observabilidade estratégica que centraliza indicadores de ERP, MES, sensores e APIs em um único painel inteligente.
+<section aria-labelledby="oque-title" class="produto-oque">
+<div class="produto-oque__inner">
+<div class="reveal--from-left">
+<span class="produto-oque__label">O que é</span>
+<h2 class="produto-oque__title" id="oque-title">O que é o DB Board?</h2>
+<p class="produto-oque__text">
+              O DB Board é a camada de observabilidade estratégica da DB Softwares. Muito além de um dashboard tradicional, ele consolida informações provenientes de ERPs, sistemas industriais, sensores, bancos de dados e aplicações corporativas para criar uma visão única da operação.
             </p>
-            <p class="produto-oque__text">
-              A liderança entende rapidamente o que aconteceu e por quê — com contexto completo da execução das regras de negócio automatizadas.
+<p class="produto-oque__text">
+              Seu objetivo não é apenas mostrar números. Seu objetivo é permitir que a liderança compreenda o comportamento da execução automatizada, identifique desvios rapidamente e mantenha controle sobre processos críticos.
             </p>
-            <div class="produto-oque__bullets">
-              <div class="produto-oque__bullet">
-                <span class="produto-oque__bullet-dot" aria-hidden="true"></span>
+<div class="produto-oque__bullets">
+<div class="produto-oque__bullet">
+<span aria-hidden="true" class="produto-oque__bullet-dot"></span>
                 Visão Operacional, Gerencial e Executiva
               </div>
-              <div class="produto-oque__bullet">
-                <span class="produto-oque__bullet-dot" aria-hidden="true"></span>
+<div class="produto-oque__bullet">
+<span aria-hidden="true" class="produto-oque__bullet-dot"></span>
                 Rastreabilidade completa da execução automatizada
               </div>
-              <div class="produto-oque__bullet">
-                <span class="produto-oque__bullet-dot" aria-hidden="true"></span>
+<div class="produto-oque__bullet">
+<span aria-hidden="true" class="produto-oque__bullet-dot"></span>
                 Eliminação de ruído informacional
               </div>
-            </div>
-          </div>
-          <div class="produto-oque__visual reveal--from-right">
-            <div class="produto-oque__card">
-              <div class="produto-oque__card-noise" aria-hidden="true"></div>
-              <div class="produto-oque__card-glow" aria-hidden="true"></div>
-              <span class="produto-oque__card-tag">DB Board</span>
-              <div class="produto-oque__icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-              </div>
-              <span class="produto-oque__quote-mark" aria-hidden="true">"</span>
-              <p class="produto-oque__quote">
-                Você não apenas monitora — você governa a operação com decisões mais rápidas, seguras e alinhadas à estratégia.
+</div>
+</div>
+<div class="produto-oque__visual reveal--from-right">
+<div class="produto-oque__card">
+<div aria-hidden="true" class="produto-oque__card-noise"></div>
+<div aria-hidden="true" class="produto-oque__card-glow"></div>
+<span class="produto-oque__card-tag">DB Board</span>
+<div aria-hidden="true" class="produto-oque__icon">
+<svg fill="none" height="28" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="28"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>
+</div>
+<span aria-hidden="true" class="produto-oque__quote-mark">"</span>
+<p class="produto-oque__quote">
+                Com o DB Board, gestores deixam de reagir aos problemas depois que eles acontecem. A operação passa a ser acompanhada em tempo real, com contexto suficiente para agir antes que pequenas variações se transformem em impactos financeiros ou operacionais.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
+</div>
+</div>
+</div>
+</section>
+<!-- ═══════════════════════════════════════════════
            CAPACIDADES — Bento Grid
            ═══════════════════════════════════════════════ -->
-      <section class="produto-cap" aria-labelledby="cap-title">
-        <canvas class="produto-cap__canvas" id="boardCapCanvas" aria-hidden="true"></canvas>
-        <div class="produto-cap__bg-grid" aria-hidden="true"></div>
-        <div class="produto-cap__glow-l" aria-hidden="true"></div>
-        <div class="produto-cap__glow-r" aria-hidden="true"></div>
-        <div class="produto-cap__inner">
-          <div class="produto-cap__header reveal">
-            <span class="produto-cap__label">Capacidades</span>
-            <h2 class="produto-cap__title" id="cap-title">O que o DB Board entrega</h2>
-            <p class="produto-cap__subtitle">Quatro pilares que sustentam a visão estratégica da sua operação.</p>
-          </div>
-
-          <div class="produto-cap__bento" role="list">
-
-            <!-- Card 1 — wide -->
-            <div class="produto-cap__card produto-cap__card--wide reveal reveal--delay-1" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">01</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-              </div>
-              <h3 class="produto-cap__card-title">Consolidação Multiplataforma</h3>
-              <p class="produto-cap__card-desc">Integração nativa com ERP, MES, sensores, APIs e sistemas legados — todos os dados operacionais reunidos em um único painel centralizado e estruturado.</p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="produto-cap__card reveal reveal--delay-2" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">02</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <h3 class="produto-cap__card-title">Indicadores por Nível</h3>
-              <p class="produto-cap__card-desc">Visões Operacional, Gerencial e Executiva — cada nível com os indicadores certos para o perfil de quem decide.</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="produto-cap__card reveal reveal--delay-3" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">03</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <h3 class="produto-cap__card-title">Rastreabilidade da Execução</h3>
-              <p class="produto-cap__card-desc">Acompanhe em tempo real como as regras de negócio automatizadas estão sendo executadas, com histórico detalhado e auditável.</p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="produto-cap__card produto-cap__card--wide reveal reveal--delay-4" role="listitem">
-              <div class="produto-cap__card-line" aria-hidden="true"></div>
-              <span class="produto-cap__card-num">04</span>
-              <div class="produto-cap__card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <h3 class="produto-cap__card-title">Visualização por Governança de Regras</h3>
-              <p class="produto-cap__card-desc">Os dados são apresentados dentro de um modelo lógico de governança, alinhados às regras e estratégias aprovadas — garantindo que o que você vê reflete exatamente o que foi planejado.</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
+<section aria-labelledby="cap-title" class="produto-cap">
+<canvas aria-hidden="true" class="produto-cap__canvas" id="boardCapCanvas"></canvas>
+<div aria-hidden="true" class="produto-cap__bg-grid"></div>
+<div aria-hidden="true" class="produto-cap__glow-l"></div>
+<div aria-hidden="true" class="produto-cap__glow-r"></div>
+<div class="produto-cap__inner">
+<div class="produto-cap__header reveal">
+<span class="produto-cap__label">Capacidades</span>
+<h2 class="produto-cap__title" id="cap-title">O que o DB Board entrega</h2>
+<p class="produto-cap__subtitle">Capacidades que transformam dados dispersos em governança visual da execução.</p>
+</div>
+<div class="produto-cap__bento" role="list">
+<!-- Card 1 — wide -->
+<div class="produto-cap__card produto-cap__card--wide reveal reveal--delay-1" role="listitem">
+<div aria-hidden="true" class="produto-cap__card-line"></div>
+<span class="produto-cap__card-num">01</span>
+<div aria-hidden="true" class="produto-cap__card-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg>
+</div>
+<h3 class="produto-cap__card-title">Consolidação de Dados Multiplataforma</h3>
+<p class="produto-cap__card-desc">Integração com ERP, MES, sensores, APIs, bancos de dados e sistemas legados, reunindo informações críticas em uma visão única, organizada e confiável.</p>
+</div>
+<!-- Card 2 -->
+<div class="produto-cap__card reveal reveal--delay-2" role="listitem">
+<div aria-hidden="true" class="produto-cap__card-line"></div>
+<span class="produto-cap__card-num">02</span>
+<div aria-hidden="true" class="produto-cap__card-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</div>
+<h3 class="produto-cap__card-title">Visões por Nível de Gestão</h3>
+<p class="produto-cap__card-desc">Indicadores organizados para equipes operacionais, gestores e liderança executiva, cada um com a profundidade necessária para sua tomada de decisão.</p>
+</div>
+<!-- Card 3 -->
+<div class="produto-cap__card reveal reveal--delay-3" role="listitem">
+<div aria-hidden="true" class="produto-cap__card-line"></div>
+<span class="produto-cap__card-num">03</span>
+<div aria-hidden="true" class="produto-cap__card-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+</div>
+<h3 class="produto-cap__card-title">Rastreabilidade da Execução</h3>
+<p class="produto-cap__card-desc">Acompanhe como as regras aprovadas estão sendo executadas, com histórico, contexto e evidências para análise, auditoria e melhoria contínua.</p>
+</div>
+<!-- Card 4 -->
+<div class="produto-cap__card produto-cap__card--wide reveal reveal--delay-4" role="listitem">
+<div aria-hidden="true" class="produto-cap__card-line"></div>
+<span class="produto-cap__card-num">04</span>
+<div aria-hidden="true" class="produto-cap__card-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+</div>
+<h3 class="produto-cap__card-title">Gestão de Exceções e Gargalos</h3>
+<p class="produto-cap__card-desc">Desvios, atrasos e gargalos deixam de ficar escondidos na operação. O DB Board destaca pontos críticos e ajuda a priorizar decisões com base em impacto real.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══════════════════════════════════════════════
            COMO FUNCIONA
            ════════════════════════════════���═════���════════ -->
-      <section class="produto-how" aria-labelledby="how-title">
-        <div class="produto-how__inner">
-          <div class="produto-how__header reveal--from-left">
-            <span class="produto-how__label">Como funciona na prática</span>
-            <h2 class="produto-how__title" id="how-title">Da informação à decisão</h2>
-            <p class="produto-how__intro">
-              O DB Board organiza os dados da operação dentro de um modelo lógico de decisão — especialmente os vindos de processos automatizados pelo DB Hyper.
+<section aria-labelledby="how-title" class="produto-how">
+<div class="produto-how__inner">
+<div class="produto-how__header reveal--from-left">
+<span class="produto-how__label">Como funciona na prática</span>
+<h2 class="produto-how__title" id="how-title">Transforme informação em ação</h2>
+<p class="produto-how__intro">
+              O DB Board organiza a leitura da operação dentro de um modelo de governança. Ele não existe para acumular gráficos, mas para revelar o que precisa de atenção, o que está aderente às regras e onde a liderança deve atuar.
             </p>
-            <a href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20Board." class="produto-how__cta-inline" target="_blank" rel="noopener">
+<a class="produto-how__cta-inline" href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20Board." rel="noopener" target="_blank">
               Ver demonstração
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-          </div>
-          <div class="produto-how__steps" role="list" aria-label="Etapas de funcionamento do DB Board">
-
-            <div class="produto-how__step reveal reveal--delay-1" role="listitem">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">1</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Identificar desvios rapidamente</h3>
-                <p class="produto-how__step-text">Alertas visuais e indicadores de variação permitem que a liderança identifique anomalias antes que se tornem problemas maiores na operação.</p>
-              </div>
-            </div>
-
-            <div class="produto-how__step reveal reveal--delay-2" role="listitem">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">2</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Entender as causas reais</h3>
-                <p class="produto-how__step-text">Drill-down contextualizado para que o gestor compreenda a origem de cada variação e não apenas o sintoma aparente.</p>
-              </div>
-            </div>
-
-            <div class="produto-how__step reveal reveal--delay-3" role="listitem">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">3</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Validar aderência às regras aprovadas</h3>
-                <p class="produto-how__step-text">Verifique se os processos automatizados estão seguindo exatamente o que foi definido e aprovado pela gestão.</p>
-              </div>
-            </div>
-
-            <div class="produto-how__step reveal reveal--delay-4" role="listitem">
-              <div class="produto-how__step-left" aria-hidden="true">
-                <div class="produto-how__step-num">4</div>
-                <div class="produto-how__step-connector"></div>
-              </div>
-              <div class="produto-how__step-body">
-                <h3 class="produto-how__step-title">Ajustar com precisão</h3>
-                <p class="produto-how__step-text">Com contexto completo em mãos, decisões são tomadas com base em dados reais — não em percepções ou achismos.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
+              <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+</div>
+<div aria-label="Etapas de funcionamento do DB Board" class="produto-how__steps" role="list">
+<div class="produto-how__step reveal reveal--delay-1" role="listitem">
+<div aria-hidden="true" class="produto-how__step-left">
+<div class="produto-how__step-num">1</div>
+<div class="produto-how__step-connector"></div>
+</div>
+<div class="produto-how__step-body">
+<h3 class="produto-how__step-title">Identificar desvios rapidamente</h3>
+<p class="produto-how__step-text">Alertas visuais e indicadores de variação permitem que a liderança identifique anomalias antes que se tornem problemas maiores.</p>
+</div>
+</div>
+<div class="produto-how__step reveal reveal--delay-2" role="listitem">
+<div aria-hidden="true" class="produto-how__step-left">
+<div class="produto-how__step-num">2</div>
+<div class="produto-how__step-connector"></div>
+</div>
+<div class="produto-how__step-body">
+<h3 class="produto-how__step-title">Entender as causas reais</h3>
+<p class="produto-how__step-text">Análises contextualizadas ajudam o gestor a compreender a origem de cada variação, e não apenas o sintoma aparente.</p>
+</div>
+</div>
+<div class="produto-how__step reveal reveal--delay-3" role="listitem">
+<div aria-hidden="true" class="produto-how__step-left">
+<div class="produto-how__step-num">3</div>
+<div class="produto-how__step-connector"></div>
+</div>
+<div class="produto-how__step-body">
+<h3 class="produto-how__step-title">Validar aderência às regras aprovadas</h3>
+<p class="produto-how__step-text">Verifique se os processos automatizados estão seguindo o que foi definido, aprovado e esperado pela gestão.</p>
+</div>
+</div>
+<div class="produto-how__step reveal reveal--delay-4" role="listitem">
+<div aria-hidden="true" class="produto-how__step-left">
+<div class="produto-how__step-num">4</div>
+<div class="produto-how__step-connector"></div>
+</div>
+<div class="produto-how__step-body">
+<h3 class="produto-how__step-title">Ajustar com precisão</h3>
+<p class="produto-how__step-text">Com contexto completo, decisões deixam de depender de achismos e passam a ser tomadas com base em dados reais.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══════════════════════════════════════════════
            RESULTADO
            ══════════��════════════════════════════════════ -->
-      <section class="produto-resultado" aria-labelledby="resultado-title">
-        <div class="produto-resultado__inner">
-          <div class="reveal--from-left">
-            <span class="produto-resultado__label">O resultado</span>
-            <h2 class="produto-resultado__title" id="resultado-title">
-              Mais clareza.<br />
-              Mais controle.<br />
-              <em>Menos incerteza.</em>
-            </h2>
-            <p class="produto-resultado__text">
-              Você não apenas monitora — você governa a operação com decisões mais rápidas, seguras e alinhadas à estratégia.
+<section aria-labelledby="resultado-title" class="produto-resultado">
+<div class="produto-resultado__inner">
+<div class="reveal--from-left">
+<span class="produto-resultado__label">O resultado</span>
+<h2 class="produto-resultado__title" id="resultado-title">Governança baseada em dados. Controle baseado em contexto.</h2>
+<p class="produto-resultado__text">
+              Com o DB Board, gestores deixam de reagir aos problemas depois que eles acontecem. A operação passa a ser acompanhada em tempo real, com contexto suficiente para agir antes que pequenas variações se transformem em impactos financeiros ou operacionais.
             </p>
-            <ul class="produto-resultado__list" aria-label="Benefícios do DB Board">
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                Decisões mais rápidas e embasadas em dados reais
+<ul aria-label="Benefícios do DB Board" class="produto-resultado__list">
+<li class="produto-resultado__item">
+<span aria-hidden="true" class="produto-resultado__check"><svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Decisões mais rápidas e embasadas em contexto operacional
               </li>
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                Eliminação de ruído nas informações operacionais
+<li class="produto-resultado__item">
+<span aria-hidden="true" class="produto-resultado__check"><svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Redução de ruído entre dados, indicadores e prioridades
               </li>
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                Governança da operação em tempo real
+<li class="produto-resultado__item">
+<span aria-hidden="true" class="produto-resultado__check"><svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Governança visual da execução em tempo real
               </li>
-              <li class="produto-resultado__item">
-                <span class="produto-resultado__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                Visão estratégica totalmente alinhada à execução
+<li class="produto-resultado__item">
+<span aria-hidden="true" class="produto-resultado__check"><svg fill="none" height="11" stroke="currentColor" stroke-width="3.5" viewbox="0 0 24 24" width="11"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Visão estratégica alinhada às regras aprovadas e à execução real
               </li>
-            </ul>
-          </div>
-
-          <div class="produto-resultado__panel reveal--from-right">
-            <div class="produto-resultado__panel-card">
-              <div class="produto-resultado__panel-header">
-                <span class="produto-resultado__panel-title">Impacto operacional</span>
-                <span class="produto-resultado__panel-status">
-                  <span class="produto-resultado__panel-status-dot" aria-hidden="true"></span>
+</ul>
+</div>
+<div class="produto-resultado__panel reveal--from-right">
+<div class="produto-resultado__panel-card">
+<div class="produto-resultado__panel-header">
+<span class="produto-resultado__panel-title">Impacto operacional</span>
+<span class="produto-resultado__panel-status">
+<span aria-hidden="true" class="produto-resultado__panel-status-dot"></span>
                   Ativo
                 </span>
-              </div>
-              <div class="produto-resultado__stats" role="list" aria-label="Indicadores de impacto">
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">360<em>°</em></div>
-                  <div class="produto-resultado__stat-label">Visão da operação</div>
-                </div>
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">3<em>x</em></div>
-                  <div class="produto-resultado__stat-label">Agilidade nas decisões</div>
-                </div>
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">100<em>%</em></div>
-                  <div class="produto-resultado__stat-label">Rastreabilidade</div>
-                </div>
-                <div class="produto-resultado__stat" role="listitem">
-                  <div class="produto-resultado__stat-value">0<em>h</em></div>
-                  <div class="produto-resultado__stat-label">Downtime de informação</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
+</div>
+<div aria-label="Indicadores de impacto" class="produto-resultado__stats" role="list">
+<div class="produto-resultado__stat" role="listitem">
+<div class="produto-resultado__stat-value">360<em>°</em></div>
+<div class="produto-resultado__stat-label">Visão da operação</div>
+</div>
+<div class="produto-resultado__stat" role="listitem">
+<div class="produto-resultado__stat-value">3<em>x</em></div>
+<div class="produto-resultado__stat-label">Agilidade nas decisões</div>
+</div>
+<div class="produto-resultado__stat" role="listitem">
+<div class="produto-resultado__stat-value">100<em>%</em></div>
+<div class="produto-resultado__stat-label">Rastreabilidade</div>
+</div>
+<div class="produto-resultado__stat" role="listitem">
+<div class="produto-resultado__stat-value">0<em>h</em></div>
+<div class="produto-resultado__stat-label">Downtime de informação</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══════════════════════════════════════════════
            CTA FINAL
            ═══════════════════════════════════════════════ -->
-      <section class="produto-cta" aria-labelledby="cta-title">
-        <div class="produto-cta__grid" aria-hidden="true"></div>
-        <div class="produto-cta__glow-1" aria-hidden="true"></div>
-        <div class="produto-cta__glow-2" aria-hidden="true"></div>
-        <div class="produto-cta__inner">
-          <span class="produto-cta__eyebrow reveal">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+<section aria-labelledby="cta-title" class="produto-cta">
+<div aria-hidden="true" class="produto-cta__grid"></div>
+<div aria-hidden="true" class="produto-cta__glow-1"></div>
+<div aria-hidden="true" class="produto-cta__glow-2"></div>
+<div class="produto-cta__inner">
+<span class="produto-cta__eyebrow reveal">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
             Próximo passo
           </span>
-          <h2 class="produto-cta__title reveal reveal--delay-1" id="cta-title">
-            Pronto para governar<br />com <em>clareza total</em>?
-          </h2>
-          <p class="produto-cta__text reveal reveal--delay-2">
-            Fale com um especialista da DB e descubra como o DB Board pode transformar a visibilidade e o controle da sua operação.
+<h2 class="produto-cta__title reveal reveal--delay-1" id="cta-title">Enxergue sua operação com clareza.</h2>
+<p class="produto-cta__text reveal reveal--delay-2">
+            Descubra como a governança visual pode aumentar a previsibilidade, reduzir riscos e acelerar a tomada de decisão.
           </p>
-          <div class="produto-cta__group reveal reveal--delay-3">
-            <a href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20Board." class="btn btn--primary" target="_blank" rel="noopener">
+<div class="produto-cta__group reveal reveal--delay-3">
+<a class="btn btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20Board." rel="noopener" target="_blank">
               Falar com especialista
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-            <a href="/pages/calculadora.html" class="btn btn--secondary">
+              <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+</a>
+<a class="btn btn--secondary" href="/pages/calculadora.html">
               Calcular viabilidade
             </a>
-          </div>
-
-          <div class="produto-cta__outros reveal reveal--delay-4">
-            <span class="produto-cta__outros-label">Conheça também</span>
-            <div class="produto-cta__outros-links">
-              <a href="/pages/produtos/db-hyper.html" class="produto-cta__outro-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+</div>
+<div class="produto-cta__outros reveal reveal--delay-4">
+<span class="produto-cta__outros-label">Conheça também</span>
+<div class="produto-cta__outros-links">
+<a class="produto-cta__outro-link" href="/pages/produtos/db-hyper.html">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                 DB Hyper
               </a>
-              <a href="/pages/produtos/db-noc.html" class="produto-cta__outro-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+<a class="produto-cta__outro-link" href="/pages/produtos/db-noc.html">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                 DB NOC
               </a>
-              <a href="/pages/capacidades.html" class="produto-cta__outro-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+<a class="produto-cta__outro-link" href="/pages/capacidades.html">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>
                 Ver todos os produtos
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="ft-top">
-        <div class="ft-brand">
-          <a href="/index.html" class="ft-logo">
-            <img src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png" alt="DB Softwares" width="140" height="38" loading="lazy" />
-          </a>
-          <p class="ft-tagline">Governança Operacional com precisão,<br />previsibilidade e inteligência.</p>
-          <div class="ft-social">
-            <a href="https://linkedin.com/company/dbsoftwares" class="ft-social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="mailto:Danilo@dbsoftwares.com.br" class="ft-social-link" aria-label="E-mail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
-            <a href="https://wa.me/554191057438" class="ft-social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
-          </div>
-        </div>
-        <nav class="ft-nav" aria-label="Links do rodapé">
-          <div class="ft-nav-col">
-            <span class="ft-nav-heading">Capacidades</span>
-            <a href="/pages/capacidades.html" class="ft-nav-link">Visão Geral</a>
-            <a href="/pages/produtos/db-board.html" class="ft-nav-link">DB Board</a>
-            <a href="/pages/produtos/db-hyper.html" class="ft-nav-link">DB Hyper</a>
-            <a href="/pages/produtos/db-noc.html" class="ft-nav-link">DB NOC</a>
-          </div>
-          <div class="ft-nav-col">
-            <span class="ft-nav-heading">Empresa</span>
-            <a href="/pages/sobre.html" class="ft-nav-link">Sobre a DB</a>
-            <a href="/pages/atuacao.html" class="ft-nav-link">Atuação</a>
-            <a href="/pages/perfis-de-servico.html" class="ft-nav-link">Perfis de Serviço</a>
-            <a href="/pages/calculadora.html" class="ft-nav-link">Calculadora</a>
-          </div>
-          <div class="ft-nav-col">
-            <span class="ft-nav-heading">Contato</span>
-            <a href="mailto:Danilo@dbsoftwares.com.br" class="ft-nav-link ft-nav-link--icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Danilo@dbsoftwares.com.br</a>
-            <a href="https://wa.me/554191057438" class="ft-nav-link ft-nav-link--icon" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>+55 (41) 9105-7438</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Emanuel%20Kant%2C%2060%2C%20Curitiba" class="ft-nav-link ft-nav-link--icon" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Curitiba, Paraná</a>
-          </div>
-        </nav>
-      </div>
-      <div class="ft-bottom">
-        <span class="ft-copy">&copy; <span id="ftYear"></span> DB Softwares. Todos os direitos reservados.</span>
-        <div class="ft-sep" aria-hidden="true"></div>
-        <a href="/pages/politica/politica.html" class="ft-copy ft-copy--legal">Política de Privacidade</a>
-        <span class="ft-sep-dot" aria-hidden="true">·</span>
-        <a href="/pages/politica/termos.html" class="ft-copy ft-copy--legal">Termos de Uso</a>
-      </div>
-    </footer>
-
-  <script src="/scripts/main.js"></script>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+<div class="ft-top">
+<div class="ft-brand">
+<a class="ft-logo" href="/index.html">
+<img alt="DB Softwares" height="38" loading="lazy" src="https://static.wixstatic.com/media/e9ba97_5165f0173c15429d8f4c68648319ce77~mv2.png" width="140"/>
+</a>
+<p class="ft-tagline">Governança Operacional com precisão,<br/>previsibilidade e inteligência.</p>
+<div class="ft-social">
+<a aria-label="LinkedIn" class="ft-social-link" href="https://linkedin.com/company/dbsoftwares" rel="noopener" target="_blank"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a aria-label="E-mail" class="ft-social-link" href="mailto:Danilo@dbsoftwares.com.br"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+<a aria-label="WhatsApp" class="ft-social-link" href="https://wa.me/554191057438" rel="noopener" target="_blank"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+</div>
+</div>
+<nav aria-label="Links do rodapé" class="ft-nav">
+<div class="ft-nav-col">
+<span class="ft-nav-heading">Capacidades</span>
+<a class="ft-nav-link" href="/pages/capacidades.html">Visão Geral</a>
+<a class="ft-nav-link" href="/pages/produtos/db-board.html">DB Board</a>
+<a class="ft-nav-link" href="/pages/produtos/db-hyper.html">DB Hyper</a>
+<a class="ft-nav-link" href="/pages/produtos/db-noc.html">DB NOC</a>
+</div>
+<div class="ft-nav-col">
+<span class="ft-nav-heading">Empresa</span>
+<a class="ft-nav-link" href="/pages/sobre.html">Sobre a DB</a>
+<a class="ft-nav-link" href="/pages/atuacao.html">Atuação</a>
+<a class="ft-nav-link" href="/pages/perfis-de-servico.html">Perfis de Serviço</a>
+<a class="ft-nav-link" href="/pages/calculadora.html">Calculadora</a>
+</div>
+<div class="ft-nav-col">
+<span class="ft-nav-heading">Contato</span>
+<a class="ft-nav-link ft-nav-link--icon" href="mailto:Danilo@dbsoftwares.com.br"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>Danilo@dbsoftwares.com.br</a>
+<a class="ft-nav-link ft-nav-link--icon" href="https://wa.me/554191057438" rel="noopener" target="_blank"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>+55 (41) 9105-7438</a>
+<a class="ft-nav-link ft-nav-link--icon" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Emanuel%20Kant%2C%2060%2C%20Curitiba" rel="noopener" target="_blank"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Curitiba, Paraná</a>
+</div>
+</nav>
+</div>
+<div class="ft-bottom">
+<span class="ft-copy">© <span id="ftYear"></span> DB Softwares. Todos os direitos reservados.</span>
+<div aria-hidden="true" class="ft-sep"></div>
+<a class="ft-copy ft-copy--legal" href="/pages/politica/politica.html">Política de Privacidade</a>
+<span aria-hidden="true" class="ft-sep-dot">·</span>
+<a class="ft-copy ft-copy--legal" href="/pages/politica/termos.html">Termos de Uso</a>
+</div>
+</footer>
+<script src="/scripts/main.js"></script>
 <script src="/scripts/global-premium.js"></script>
 <script src="/scripts/capacidades-animations.js"></script>
-  <script>
+<script>
     (function () {
       var canvas = document.getElementById('boardCanvas');
       if (!canvas) return;
