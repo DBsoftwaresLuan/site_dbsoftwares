@@ -275,18 +275,21 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 48px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  gap: 0;
+  align-items: stretch;
   min-height: calc(100vh - 80px);
 }
 
 .produto-hero__content {
-  padding: 80px 0 80px;
+  padding: 80px 48px 80px calc(max(48px, (100vw - 1320px) / 2 + 48px));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Breadcrumb produto */
@@ -441,22 +444,24 @@
 .produto-hero__visual {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding: 40px 0;
+  align-self: stretch;
+  padding: 0;
 }
 
 .produto-hero__img-wrapper {
   position: relative;
   width: 100%;
-  max-width: 580px;
-  border-radius: 20px;
+  max-width: none;
+  border-radius: 0;
   overflow: hidden;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, .06),
-    0 32px 80px rgba(0, 0, 0, .55),
-    0 0 100px rgba(62, 86, 158, .25);
+    -8px 0 60px rgba(0, 0, 0, .40),
+    0 0 100px rgba(62, 86, 158, .20);
   animation: float-up 6s ease-in-out infinite;
+  display: flex;
+  align-items: center;
 }
 
 .produto-hero__img-wrapper::before {
@@ -486,9 +491,11 @@
 
 .produto-hero__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border-radius: 20px;
+  border-radius: 0;
 }
 
 /* Badge flutuante sobre a imagem */
@@ -1750,8 +1757,12 @@
    ============================================================ */
 @media (max-width: 1100px) {
   .produto-hero__inner {
-    gap: 40px;
-    padding: 0 32px;
+    gap: 0;
+    padding: 0;
+  }
+
+  .produto-hero__content {
+    padding: 80px 32px 80px 32px;
   }
 
   .produto-cap__bento {
@@ -1772,11 +1783,11 @@
     grid-template-columns: 1fr;
     gap: 0;
     text-align: center;
-    padding: 0 24px;
+    padding: 0;
   }
 
   .produto-hero__content {
-    padding: 64px 0 40px;
+    padding: 64px 24px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1797,6 +1808,19 @@
 
   .produto-hero__visual {
     padding: 0 0 80px;
+    align-self: auto;
+  }
+
+  .produto-hero__img-wrapper {
+    border-radius: 20px;
+    max-width: 580px;
+    margin: 0 auto;
+    min-height: 280px;
+  }
+
+  .produto-hero__img {
+    object-fit: cover;
+    border-radius: 20px;
   }
 
   .produto-hero__divider {
