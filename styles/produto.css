@@ -275,18 +275,18 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
-  align-items: stretch;
+  gap: 48px;
+  align-items: center;
   min-height: calc(100vh - 80px);
 }
 
 .produto-hero__content {
-  padding: 80px 48px 80px calc(max(48px, (100vw - 1320px) / 2 + 48px));
+  padding: 80px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -444,24 +444,23 @@
 .produto-hero__visual {
   position: relative;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   align-self: stretch;
-  padding: 0;
+  padding: 40px 0 40px 0;
 }
 
 .produto-hero__img-wrapper {
   position: relative;
   width: 100%;
-  max-width: none;
-  border-radius: 0;
-  overflow: hidden;
+  max-width: 640px;
+  border-radius: 20px;
+  overflow: visible;
   box-shadow:
-    -8px 0 60px rgba(0, 0, 0, .40),
-    0 0 100px rgba(62, 86, 158, .20);
+    0 0 0 1px rgba(255, 255, 255, .06),
+    0 32px 80px rgba(0, 0, 0, .55),
+    0 0 100px rgba(62, 86, 158, .25);
   animation: float-up 6s ease-in-out infinite;
-  display: flex;
-  align-items: center;
 }
 
 .produto-hero__img-wrapper::before {
@@ -475,6 +474,7 @@
       rgba(62, 86, 158, .1) 100%);
   z-index: 1;
   pointer-events: none;
+  border-radius: 20px;
 }
 
 /* Borda brilhante no topo */
@@ -487,15 +487,14 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(189, 160, 126, .5), transparent);
   z-index: 2;
+  border-radius: 20px 20px 0 0;
 }
 
 .produto-hero__img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 /* Badge flutuante sobre a imagem */
@@ -1757,12 +1756,8 @@
    ============================================================ */
 @media (max-width: 1100px) {
   .produto-hero__inner {
-    gap: 0;
-    padding: 0;
-  }
-
-  .produto-hero__content {
-    padding: 80px 32px 80px 32px;
+    gap: 40px;
+    padding: 0 32px;
   }
 
   .produto-cap__bento {
@@ -1783,11 +1778,11 @@
     grid-template-columns: 1fr;
     gap: 0;
     text-align: center;
-    padding: 0;
+    padding: 0 24px;
   }
 
   .produto-hero__content {
-    padding: 64px 24px 40px;
+    padding: 64px 0 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1808,19 +1803,10 @@
 
   .produto-hero__visual {
     padding: 0 0 80px;
-    align-self: auto;
   }
 
   .produto-hero__img-wrapper {
-    border-radius: 20px;
-    max-width: 580px;
-    margin: 0 auto;
-    min-height: 280px;
-  }
-
-  .produto-hero__img {
-    object-fit: cover;
-    border-radius: 20px;
+    max-width: 100%;
   }
 
   .produto-hero__divider {
