@@ -1774,6 +1774,14 @@
     justify-content: center;
   }
 
+  .produto-hero__badge {
+    align-self: center;
+  }
+
+  .produto-hero__cta-group {
+    justify-content: center;
+  }
+
   .produto-hero__visual {
     padding: 0 0 80px;
   }
