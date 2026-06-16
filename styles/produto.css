@@ -453,41 +453,13 @@
 .produto-hero__img-wrapper {
   position: relative;
   width: 100%;
-  max-width: 640px;
+  max-width: 740px;
   border-radius: 20px;
   overflow: visible;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, .06),
-    0 32px 80px rgba(0, 0, 0, .55),
-    0 0 100px rgba(62, 86, 158, .25);
+    0 32px 80px rgba(0, 0, 0, .45),
+    0 0 80px rgba(62, 86, 158, .20);
   animation: float-up 6s ease-in-out infinite;
-}
-
-.produto-hero__img-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg,
-      rgba(189, 160, 126, .06) 0%,
-      transparent 40%,
-      transparent 60%,
-      rgba(62, 86, 158, .1) 100%);
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 20px;
-}
-
-/* Borda brilhante no topo */
-.produto-hero__img-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(189, 160, 126, .5), transparent);
-  z-index: 2;
-  border-radius: 20px 20px 0 0;
 }
 
 .produto-hero__img {
