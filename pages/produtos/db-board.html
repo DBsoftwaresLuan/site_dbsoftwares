@@ -246,7 +246,8 @@
       <!-- ═══════════════════════════════════════════════
            CAPACIDADES — Bento Grid
            ═══════════════════════════════════════════════ -->
-      <section class="produto-cap" aria-labelledby="cap-title">
+      <section class="produto-cap produto-cap--blue" aria-labelledby="cap-title">
+        <canvas class="produto-cap__canvas" id="boardCapCanvas" aria-hidden="true"></canvas>
         <div class="produto-cap__bg-grid" aria-hidden="true"></div>
         <div class="produto-cap__glow-l" aria-hidden="true"></div>
         <div class="produto-cap__glow-r" aria-hidden="true"></div>
@@ -309,7 +310,7 @@
 
       <!-- ═══════════════════════════════════════════════
            COMO FUNCIONA
-           ═══════════════════════════════════════════════ -->
+           ══════════════════════════════════════���════════ -->
       <section class="produto-how" aria-labelledby="how-title">
         <div class="produto-how__inner">
           <div class="produto-how__header reveal--from-left">
@@ -403,7 +404,7 @@
               </li>
               <li class="produto-resultado__item">
                 <span class="produto-resultado__check" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-                Visão estratégica totalmente alinhada à execução
+                Visão estrat��gica totalmente alinhada à execução
               </li>
             </ul>
           </div>
@@ -538,6 +539,7 @@
 
   <script src="/scripts/main.js"></script>
 <script src="/scripts/global-premium.js"></script>
+<script src="/scripts/capacidades-animations.js"></script>
   <script>
     (function () {
       var canvas = document.getElementById('boardCanvas');
