@@ -470,6 +470,26 @@
   border-radius: 20px;
 }
 
+.produto-hero__legal {
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, .22);
+  text-align: center;
+  letter-spacing: .02em;
+}
+
+.produto-hero__legal a {
+  color: rgba(255, 255, 255, .30);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color .2s ease;
+}
+
+.produto-hero__legal a:hover {
+  color: rgba(255, 255, 255, .55);
+}
+
 /* Badge flutuante sobre a imagem */
 .produto-hero__img-badge {
   position: absolute;
