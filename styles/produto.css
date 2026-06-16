@@ -1709,7 +1709,7 @@
   font-weight: 700;
   letter-spacing: .01em;
   background: var(--gold);
-  color: var(--blue-dk);
+  color: #fff;
   text-decoration: none;
   transition: all .25s ease;
   border: 2px solid var(--gold);
@@ -1730,7 +1730,7 @@
   padding: 14px 28px;
   border-radius: 12px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   background: transparent;
   color: rgba(255, 255, 255, .7);
   text-decoration: none;
