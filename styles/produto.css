@@ -993,9 +993,14 @@
    ============================================================ */
 .produto-cap {
   padding: 128px 32px;
-  background: var(--blue);
+  background: #0A1530;
   position: relative;
   overflow: hidden;
+}
+
+/* Variante azul DB — usada apenas pelo DB Hyper */
+.produto-cap--blue {
+  background: var(--blue);
 }
 
 /* Canvas para animação de fundo tecnológico */
