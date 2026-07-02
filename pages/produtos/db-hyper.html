@@ -61,6 +61,8 @@
 <div class="nav-item">
 <a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/index.html#contato" id="dd-contato" role="menuitem">Contato <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
 <div aria-labelledby="dd-contato" class="nav-dropdown" role="menu" style="min-width:220px">
+<button type="button" class="nav-dd-link nav-dd-link--receive" role="menuitem" onclick="window.openContactModal()"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.91z"></path></svg>Receber Contato</button>
+<div class="nav-dd-sep"></div>
 <a class="nav-dd-link nav-dd-link--email" href="mailto:Danilo@dbsoftwares.com.br" rel="noopener" role="menuitem" target="_blank"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>E-mail</a>
 <div class="nav-dd-sep"></div>
 <a class="nav-dd-link nav-dd-link--whatsapp" href="https://wa.me/554191057438" rel="noopener" role="menuitem" target="_blank"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>WhatsApp</a>
@@ -127,10 +129,10 @@
               Automação avançada, agentes de IA e integração operacional trabalhando juntos para garantir que processos críticos sejam executados com consistência, escala e previsibilidade.
             </p>
 <div class="produto-hero__cta-group reveal reveal--delay-5">
-<a class="btn btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20Hyper." rel="noopener" target="_blank">
+<button type="button" class="btn btn--primary" onclick="window.openContactModal()">
                 Falar com especialista
                 <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 <a class="btn btn--secondary" href="/pages/calculadora.html">
                 Calcular viabilidade
               </a>
@@ -256,10 +258,10 @@
 <p class="produto-how__intro">
               O DB Hyper transforma processos em ativos executáveis confiáveis. Ao reduzir dependências manuais e interferências operacionais desnecessárias, ele aumenta produtividade, reduz falhas e mantém consistência mesmo em operações de alta complexidade.
             </p>
-<a class="produto-how__cta-inline" href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20Hyper." rel="noopener" target="_blank">
+<button type="button" class="produto-how__cta-inline" onclick="window.openContactModal()">
               Ver demonstração
               <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 </div>
 <div aria-label="Etapas de funcionamento do DB Hyper" class="produto-how__steps" role="list">
 <div class="produto-how__step reveal reveal--delay-1" role="listitem">
@@ -355,10 +357,10 @@
             Descubra como o DB Hyper combina automação e inteligência artificial para entregar resultados previsíveis todos os dias.
           </p>
 <div class="produto-cta__group reveal reveal--delay-3">
-<a class="btn btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20Hyper." rel="noopener" target="_blank">
+<button type="button" class="btn btn--primary" onclick="window.openContactModal()">
               Falar com especialista
               <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 <a class="btn btn--secondary" href="/pages/calculadora.html">
               Calcular viabilidade
             </a>
@@ -431,6 +433,7 @@
 <script src="/scripts/main.js"></script>
 <script src="/scripts/global-premium.js"></script>
 <script src="/scripts/capacidades-animations.js"></script>
+<script src="/scripts/contact-modal.js"></script>
 <script>
     (function () {
       var canvas = document.getElementById('hyperCanvas');

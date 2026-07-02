@@ -109,6 +109,11 @@
               <svg aria-hidden="true" class="nav-chevron" fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </a>
 <div aria-labelledby="dd-contato" class="nav-dropdown" role="menu" style="min-width:220px">
+<button type="button" class="nav-dd-link nav-dd-link--receive" role="menuitem" onclick="window.openContactModal()">
+<svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.91z"></path></svg>
+                Receber Contato
+              </button>
+<div class="nav-dd-sep"></div>
 <a class="nav-dd-link nav-dd-link--email" href="mailto:Danilo@dbsoftwares.com.br" rel="noopener" role="menuitem" target="_blank">
 <svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                 E-mail
@@ -194,10 +199,10 @@
               Monitoramento contínuo, resposta especializada e atuação preventiva para garantir a estabilidade da execução automatizada e proteger operações críticas contra interrupções.
             </p>
 <div class="noc-hero__cta-group reveal reveal--delay-4">
-<a class="noc-btn noc-btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC." rel="noopener" target="_blank">
+<button type="button" class="noc-btn noc-btn--primary" onclick="window.openContactModal()">
                 Falar com especialista
                 <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 <a class="noc-btn noc-btn--ghost" href="/pages/capacidades.html">
                 Ver todos os produtos
               </a>
@@ -232,10 +237,10 @@
 <p class="noc-body-text">
                 Por meio de monitoramento em tempo real, análise contínua de integridade e resposta especializada, o DB NOC identifica riscos antes que eles impactem a operação e atua para preservar a continuidade dos processos.
               </p>
-<a aria-label="Falar com um especialista sobre o DB NOC" class="noc-link-cta" href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC." rel="noopener" target="_blank">
+<button type="button" aria-label="Falar com um especialista sobre o DB NOC" class="noc-link-cta" onclick="window.openContactModal()">
                 Falar com um especialista
                 <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 </div>
 </div>
 </div>
@@ -346,10 +351,10 @@
 <p class="noc-body-text">
                 O DB NOC acompanha continuamente os fluxos executados pelo DB Hyper e os sinais estruturados pelo DB Board. A atuação acontece antes que o impacto chegue ao negócio, reduzindo interrupções e protegendo a previsibilidade operacional.
               </p>
-<a class="noc-link-cta" href="https://wa.me/554191057438?text=Quero%20entender%20melhor%20o%20DB%20NOC." rel="noopener" target="_blank">
+<button type="button" class="noc-link-cta" onclick="window.openContactModal()">
                 Ver demonstração
                 <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 </div>
 <!-- Passos da timeline -->
 <ol aria-label="Etapas do DB NOC" class="noc-how__steps">
@@ -467,10 +472,10 @@
               Conheça a estrutura que monitora, preserva e sustenta a execução automatizada dos processos mais críticos da sua empresa.
             </p>
 <div class="noc-cta__group reveal reveal--delay-3">
-<a class="noc-btn noc-btn--primary" href="https://wa.me/554191057438?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20DB%20NOC." rel="noopener" target="_blank">
+<button type="button" class="noc-btn noc-btn--primary" onclick="window.openContactModal()">
                 Falar com especialista
                 <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-</a>
+</button>
 <a class="noc-btn noc-btn--ghost" href="/pages/calculadora.html">
                 Calcular viabilidade
               </a>
@@ -562,6 +567,7 @@
 <script src="/scripts/main.js"></script>
 <script src="/scripts/global-premium.js"></script>
 <script src="/scripts/capacidades-animations.js"></script>
+<script src="/scripts/contact-modal.js"></script>
 <!-- ============================================================
        ANIMAÇÕES TECNOLÓGICAS — DB NOC
        ============================================================ -->

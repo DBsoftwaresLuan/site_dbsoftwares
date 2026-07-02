@@ -638,6 +638,12 @@ blockquote.light {
     .nav-dd-link--whatsapp:hover svg { color: #22c55e; }
     .nav-dd-link--linkedin:hover { background: rgba(14,165,233,.05); color: #0369a1; }
     .nav-dd-link--linkedin:hover svg { color: #0ea5e9; }
+    /* Receber Contato — reset button para parecer link */
+    button.nav-dd-link, button.nav-mobile-link {
+      background: none; border: none; cursor: pointer; width: 100%; text-align: left; font-family: inherit;
+    }
+    .nav-dd-link--receive:hover { background: rgba(189,160,126,.08); color: var(--gold-dk); }
+    .nav-dd-link--receive:hover svg { color: var(--gold); }
 
     /* Separator in dropdown */
     .nav-dd-sep { height: 1px; background: var(--gray-100); margin: 4px 6px; }

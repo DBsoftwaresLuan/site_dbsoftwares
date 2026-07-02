@@ -84,6 +84,9 @@
   margin-bottom: 20px;
 }
 
+/* Reset para <button> com classes noc */
+button.noc-link-cta, button.noc-btn { background: none; font-family: 'Montserrat', sans-serif; }
+
 /* Link inline com seta */
 .noc-link-cta {
   display: inline-flex;
