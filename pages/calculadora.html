@@ -1020,14 +1020,15 @@
             <label for="tipo_processo">Tipo de Processo</label>
             <select id="tipo_processo" required>
               <option value="">Selecione...</option>
-              <option value="backoffice">Backoffice</option>
-              <option value="financeiro">Financeiro</option>
-              <option value="fiscal">Fiscal / Tributário</option>
-              <option value="compras">Compras</option>
-              <option value="sap_erp">ERP / SAP</option>
-              <option value="industria">Indústria</option>
+              <option value="backoffice">Backoffice – processos internos de suporte (RH, administrativo)</option>
+              <option value="financeiro">Financeiro – fluxos de pagamento, conciliação, contas a pagar/receber</option>
+              <option value="fiscal">Fiscal / Tributário – apuração de impostos, notas fiscais</option>
+              <option value="compras">Compras – cotação, pedidos, negociação com fornecedores</option>
+              <option value="sap_erp">ERP / SAP – processos dentro de sistemas ERP</option>
+              <option value="industria">Indústria – processos industriais (chão de fábrica)</option>
               <option value="outro">Outro</option>
             </select>
+            <span class="field-help">Selecione a categoria que melhor descreve seu processo</span>
           </div>
         </div>
 
@@ -1063,22 +1064,22 @@
               >
               <select id="grau_estruturacao" required>
                 <option value="">Selecione...</option>
-                <option value="baixo">
-                  Baixo - Muitas exceções e variações
-                </option>
-                <option value="medio">Médio - Parcialmente padronizado</option>
-                <option value="alto">Alto - Bem definido e documentado</option>
+                <option value="baixo">Baixo – muitas exceções e variações</option>
+                <option value="medio">Médio – parcialmente padronizado</option>
+                <option value="alto">Alto – bem definido e documentado</option>
               </select>
+              <span class="field-help">Define o potencial máximo de eficiência</span>
             </div>
             <div class="form-group">
               <label for="criticidade">Criticidade do Processo</label>
               <select id="criticidade" required>
                 <option value="">Selecione...</option>
-                <option value="baixa">Baixa</option>
-                <option value="media">Média</option>
-                <option value="alta">Alta</option>
-                <option value="critica">Crítica</option>
+                <option value="baixa">Baixa – impacto pequeno; pode ser adiado</option>
+                <option value="media">Média – impacto moderado; atrasos afetam outras áreas</option>
+                <option value="alta">Alta – impacto significativo; gera perdas financeiras</option>
+                <option value="critica">Crítica – impacto severo; pode paralisar operações</option>
               </select>
+              <span class="field-help">Baseado no impacto que falhas ou atrasos causam no negócio</span>
             </div>
           </section>
           <!-- Bloco 2: Operação e Governança -->
@@ -1114,6 +1115,7 @@
                 </option>
                 <option value="alta">Alta – execução manual contínua</option>
               </select>
+              <span class="field-help">O processo exige que um colaborador execute ações manuais repetitivas?</span>
             </div>
             <div class="form-group radio-group">
               <label>O cliente aceita padronização e ajuste do processo?</label>
@@ -1136,6 +1138,7 @@
                   <span>Não</span>
                 </label>
               </div>
+              <span class="field-help">A padronização é essencial para automação com governança</span>
             </div>
           </section>
           <!-- Bloco 3: Volume e Custo -->
@@ -1170,6 +1173,7 @@
                   required
                   placeholder="Ex: 1000"
                 />
+                <span class="field-help">Quantas vezes o processo é executado por mês</span>
               </div>
               <div class="form-group">
                 <label for="tempo_medio_min"
@@ -1183,6 +1187,7 @@
                   required
                   placeholder="Ex: 10"
                 />
+                <span class="field-help">Tempo médio gasto em cada execução do processo</span>
               </div>
             </div>
             <div class="form-row">
@@ -1206,16 +1211,11 @@
                 <label for="custo_hora">Custo Médio da Hora (R$)</label>
                 <select id="custo_hora" required>
                   <option value="">Selecione...</option>
-                  <option value="30">
-                    Menor custo (ex: operacional, estágio) – R$ 30/h
-                  </option>
-                  <option value="50">
-                    Custo médio (ex: analista, técnico) – R$ 50/h
-                  </option>
-                  <option value="80">
-                    Custo alto (ex: especialista, coordenador) – R$ 80/h
-                  </option>
+                  <option value="30">Menor custo – operacional, estágio, jovem aprendiz – R$ 30/h</option>
+                  <option value="50">Custo médio – analista, assistente, técnico – R$ 50/h</option>
+                  <option value="80">Custo alto – especialista, coordenador, engenheiro – R$ 80/h</option>
                 </select>
+                <span class="field-help">Valor médio por hora do colaborador envolvido no processo</span>
               </div>
             </div>
           </section>
@@ -1244,10 +1244,11 @@
               <label for="taxa_retrabalho">Taxa de Retrabalho / Erro</label>
               <select id="taxa_retrabalho" required>
                 <option value="">Selecione...</option>
-                <option value="0-5">0 a 5%</option>
-                <option value="5-15">5 a 15%</option>
-                <option value="15+">Acima de 15%</option>
+                <option value="0-5">0 a 5% – poucos erros, raramente precisa refazer</option>
+                <option value="5-15">5 a 15% – erros moderados, algumas tarefas são refeitas</option>
+                <option value="15+">Acima de 15% – muitos erros, retrabalho frequente</option>
               </select>
+              <span class="field-help">Estimativa de quantas tarefas precisam ser corrigidas ou refeitas</span>
             </div>
           </section>
           <button type="submit" class="btn-calcular" id="btnCalcularAdmin">
