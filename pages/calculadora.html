@@ -1141,7 +1141,39 @@
               <span class="field-help">A padronização é essencial para automação com governança</span>
             </div>
           </section>
-          <!-- Bloco 3: Volume e Custo -->
+          <!-- Bloco 3: Eficiência e Retrabalho -->
+          <section class="form-section">
+            <div class="section-title">
+              <span class="section-icon">
+                <svg
+                  fill="none"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="20"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" x2="12" y1="8" y2="12"></line>
+                  <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                </svg>
+              </span>
+              <h3>Eficiência e Retrabalho</h3>
+            </div>
+            <div class="form-group">
+              <label for="taxa_retrabalho">Taxa de Retrabalho / Erro</label>
+              <select id="taxa_retrabalho" required>
+                <option value="">Selecione...</option>
+                <option value="0-5">0 a 5% – poucos erros, raramente precisa refazer</option>
+                <option value="5-15">5 a 15% – erros moderados, algumas tarefas são refeitas</option>
+                <option value="15+">Acima de 15% – muitos erros, retrabalho frequente</option>
+              </select>
+              <span class="field-help">Estimativa de quantas tarefas precisam ser corrigidas ou refeitas</span>
+            </div>
+          </section>
+          <!-- Bloco 4: Volume e Custo -->
           <section class="form-section">
             <div class="section-title">
               <span class="section-icon">
@@ -1192,22 +1224,6 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="pessoas_envolvidas"
-                  >Número de Pessoas Envolvidas</label
-                >
-                <input
-                  type="number"
-                  id="pessoas_envolvidas"
-                  step="1"
-                  min="0"
-                  required
-                  placeholder="Ex: 3"
-                />
-                <span class="field-help"
-                  >Informativo - não entra no cálculo</span
-                >
-              </div>
-              <div class="form-group">
                 <label for="custo_hora">Custo Médio da Hora (R$)</label>
                 <select id="custo_hora" required>
                   <option value="">Selecione...</option>
@@ -1217,38 +1233,6 @@
                 </select>
                 <span class="field-help">Valor médio por hora do colaborador envolvido no processo</span>
               </div>
-            </div>
-          </section>
-          <!-- Bloco 4: Ineficiências -->
-          <section class="form-section">
-            <div class="section-title">
-              <span class="section-icon">
-                <svg
-                  fill="none"
-                  height="20"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="20"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" x2="12" y1="8" y2="12"></line>
-                  <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                </svg>
-              </span>
-              <h3>Eficiência e Retrabalho</h3>
-            </div>
-            <div class="form-group">
-              <label for="taxa_retrabalho">Taxa de Retrabalho / Erro</label>
-              <select id="taxa_retrabalho" required>
-                <option value="">Selecione...</option>
-                <option value="0-5">0 a 5% – poucos erros, raramente precisa refazer</option>
-                <option value="5-15">5 a 15% – erros moderados, algumas tarefas são refeitas</option>
-                <option value="15+">Acima de 15% – muitos erros, retrabalho frequente</option>
-              </select>
-              <span class="field-help">Estimativa de quantas tarefas precisam ser corrigidas ou refeitas</span>
             </div>
           </section>
           <button type="submit" class="btn-calcular" id="btnCalcularAdmin">
