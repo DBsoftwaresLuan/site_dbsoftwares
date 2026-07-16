@@ -850,6 +850,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    align-items: start;
 }
 .form-row.form-row--3 {
     grid-template-columns: 1fr 1fr 1fr;
