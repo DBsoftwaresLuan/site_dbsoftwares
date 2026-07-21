@@ -91,24 +91,244 @@
     });
   }
 
+  // ── Autocomplete ──────────────────────────────────────────────
+  var selectedSuggestionIndex = -1;
+  var currentSuggestions = [];
+
+  function buildSuggestionsList() {
+    var items = document.querySelectorAll('.faq-item');
+    var list = [];
+    items.forEach(function (item) {
+      var questionEl = item.querySelector('.faq-item__text');
+      var answerId = item.querySelector('.faq-item__question') &&
+        item.querySelector('.faq-item__question').getAttribute('aria-controls');
+      if (questionEl && answerId) {
+        list.push({
+          question: questionEl.textContent.trim(),
+          answerId: answerId,
+          item: item
+        });
+      }
+    });
+    return list;
+  }
+
+  function getAutocompleteSuggestions(query, allQuestions) {
+    if (!query || query.length < 2) return [];
+    var normalized = normalizeStr(query);
+    var results = [];
+
+    allQuestions.forEach(function (entry) {
+      var normQ = normalizeStr(entry.question);
+      if (normQ.includes(normalized)) {
+        var score = normQ.startsWith(normalized) ? 2 : 1;
+        results.push({ entry: entry, score: score });
+      }
+    });
+
+    results.sort(function (a, b) { return b.score - a.score; });
+    return results.slice(0, 6).map(function (r) { return r.entry; });
+  }
+
+  function normalizeStr(str) {
+    return str.toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function createSuggestionsDropdown() {
+    var dropdown = document.createElement('ul');
+    dropdown.id = 'faqSuggestionsDropdown';
+    dropdown.className = 'faq-suggestions';
+    dropdown.setAttribute('role', 'listbox');
+    dropdown.setAttribute('aria-label', 'Sugestoes de perguntas');
+    dropdown.hidden = true;
+    return dropdown;
+  }
+
+  function renderSuggestions(suggestions, query, dropdown) {
+    dropdown.innerHTML = '';
+    selectedSuggestionIndex = -1;
+
+    if (!suggestions.length) {
+      dropdown.hidden = true;
+      return;
+    }
+
+    suggestions.forEach(function (entry, idx) {
+      var li = document.createElement('li');
+      li.className = 'faq-suggestions__item';
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', 'false');
+      li.setAttribute('data-idx', idx);
+
+      var icon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>';
+      var highlighted = highlightSuggestion(entry.question, query);
+      li.innerHTML = icon + '<span>' + highlighted + '</span>';
+
+      li.addEventListener('mousedown', function (e) {
+        e.preventDefault();
+        selectSuggestion(entry, dropdown);
+      });
+
+      dropdown.appendChild(li);
+    });
+
+    dropdown.hidden = false;
+  }
+
+  function highlightSuggestion(text, query) {
+    var escaped = escapeRegex(query);
+    var regex = new RegExp('(' + escaped + ')', 'gi');
+    return text.replace(regex, '<strong>$1</strong>');
+  }
+
+  function selectSuggestion(entry, dropdown) {
+    var input = document.getElementById('faqSearchInput');
+    var clearBtn = document.getElementById('faqSearchClear');
+    if (input) {
+      input.value = entry.question;
+      if (clearBtn) clearBtn.hidden = false;
+    }
+    dropdown.hidden = true;
+    selectedSuggestionIndex = -1;
+    navigateToQuestion(entry);
+  }
+
+  function navigateToQuestion(entry) {
+    // Mostra todos os grupos e itens primeiro
+    resetToAll();
+
+    var item = entry.item;
+    var btn = item.querySelector('.faq-item__question');
+    var answer = item.querySelector('.faq-item__answer');
+
+    // Garante que o item esteja visível e aberto
+    if (btn && answer) {
+      item.classList.add('faq-item--open');
+      btn.setAttribute('aria-expanded', 'true');
+      answer.hidden = false;
+    }
+
+    // Rola suavemente até a pergunta
+    setTimeout(function () {
+      item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      item.classList.add('faq-item--highlighted');
+      setTimeout(function () {
+        item.classList.remove('faq-item--highlighted');
+      }, 2000);
+    }, 80);
+
+    // Atualiza contagem
+    updateSearchCount(entry.question, 1);
+  }
+
+  function moveSuggestionFocus(direction, suggestions, dropdown) {
+    var items = dropdown.querySelectorAll('.faq-suggestions__item');
+    if (!items.length) return;
+
+    if (selectedSuggestionIndex >= 0) {
+      items[selectedSuggestionIndex].classList.remove('faq-suggestions__item--active');
+      items[selectedSuggestionIndex].setAttribute('aria-selected', 'false');
+    }
+
+    selectedSuggestionIndex += direction;
+
+    if (selectedSuggestionIndex < 0) selectedSuggestionIndex = items.length - 1;
+    if (selectedSuggestionIndex >= items.length) selectedSuggestionIndex = 0;
+
+    items[selectedSuggestionIndex].classList.add('faq-suggestions__item--active');
+    items[selectedSuggestionIndex].setAttribute('aria-selected', 'true');
+  }
+
   // ── Busca em Tempo Real ───────────────────────────────────────
   function initSearch() {
-    const input = document.getElementById('faqSearchInput');
-    const clearBtn = document.getElementById('faqSearchClear');
-    const resetBtn = document.getElementById('faqResetBtn');
+    var input = document.getElementById('faqSearchInput');
+    var clearBtn = document.getElementById('faqSearchClear');
+    var resetBtn = document.getElementById('faqResetBtn');
 
     if (!input) return;
 
+    var allQuestions = buildSuggestionsList();
+    var searchWrap = input.closest('.faq-search__wrap');
+    var dropdown = createSuggestionsDropdown();
+    if (searchWrap) searchWrap.appendChild(dropdown);
+
     input.addEventListener('input', function () {
-      const query = input.value.trim();
+      var query = input.value.trim();
       clearBtn.hidden = query === '';
       performSearch(query);
+
+      currentSuggestions = getAutocompleteSuggestions(query, allQuestions);
+      renderSuggestions(currentSuggestions, query, dropdown);
+    });
+
+    input.addEventListener('keydown', function (e) {
+      if (e.nativeEvent && e.nativeEvent.isComposing) return;
+      if (e.keyCode === 229) return;
+
+      if (!dropdown.hidden && currentSuggestions.length) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          moveSuggestionFocus(1, currentSuggestions, dropdown);
+          return;
+        }
+        if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          moveSuggestionFocus(-1, currentSuggestions, dropdown);
+          return;
+        }
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          if (selectedSuggestionIndex >= 0 && currentSuggestions[selectedSuggestionIndex]) {
+            selectSuggestion(currentSuggestions[selectedSuggestionIndex], dropdown);
+          } else if (currentSuggestions.length > 0) {
+            // Enter sem seleção navega para a melhor correspondência
+            selectSuggestion(currentSuggestions[0], dropdown);
+          }
+          return;
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        // Sem dropdown: navega para primeiro resultado da busca atual
+        var query = input.value.trim();
+        if (query) {
+          var matches = getAutocompleteSuggestions(query, allQuestions);
+          if (matches.length > 0) {
+            navigateToQuestion(matches[0]);
+          }
+        }
+        return;
+      }
+
+      if (e.key === 'Escape') {
+        dropdown.hidden = true;
+        selectedSuggestionIndex = -1;
+      }
+    });
+
+    input.addEventListener('blur', function () {
+      setTimeout(function () {
+        dropdown.hidden = true;
+        selectedSuggestionIndex = -1;
+      }, 150);
+    });
+
+    input.addEventListener('focus', function () {
+      var query = input.value.trim();
+      if (query.length >= 2) {
+        currentSuggestions = getAutocompleteSuggestions(query, allQuestions);
+        renderSuggestions(currentSuggestions, query, dropdown);
+      }
     });
 
     if (clearBtn) {
       clearBtn.addEventListener('click', function () {
         input.value = '';
         clearBtn.hidden = true;
+        dropdown.hidden = true;
+        currentSuggestions = [];
+        selectedSuggestionIndex = -1;
         clearSearchHighlights();
         updateSearchCount('');
         resetToAll();
@@ -120,6 +340,9 @@
       resetBtn.addEventListener('click', function () {
         input.value = '';
         if (clearBtn) clearBtn.hidden = true;
+        dropdown.hidden = true;
+        currentSuggestions = [];
+        selectedSuggestionIndex = -1;
         clearSearchHighlights();
         updateSearchCount('');
         resetToAll();
