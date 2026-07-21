@@ -415,6 +415,10 @@
   text-align: center;
 }
 
+.faq-empty[hidden] {
+  display: none !important;
+}
+
 .faq-empty svg {
   color: var(--gray-300);
 }
