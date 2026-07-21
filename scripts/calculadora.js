@@ -195,7 +195,6 @@ function coletarDadosAdmin() {
         aceita_padronizacao: aceitaPadronizacaoRadio ? aceitaPadronizacaoRadio.value === 'true' : null,
         volume_mensal: parseInt(document.getElementById('volume_mensal').value, 10),
         tempo_medio_min: parseFloat(document.getElementById('tempo_medio_min').value),
-        pessoas_envolvidas: parseInt(document.getElementById('pessoas_envolvidas').value, 10),
         custo_hora: parseFloat(document.getElementById('custo_hora').value),
         taxa_retrabalho: document.getElementById('taxa_retrabalho').value
     };
@@ -210,7 +209,6 @@ function validarDadosAdmin(dados) {
     if (dados.aceita_padronizacao === null) erros.push('Aceita padronização');
     if (!dados.volume_mensal || dados.volume_mensal <= 0) erros.push('Volume mensal > 0');
     if (!dados.tempo_medio_min || dados.tempo_medio_min <= 0) erros.push('Tempo médio > 0');
-    if (!dados.pessoas_envolvidas || dados.pessoas_envolvidas <= 0) erros.push('Número de pessoas > 0');
     if (!dados.custo_hora || dados.custo_hora <= 0) erros.push('Custo da hora > 0');
     if (!dados.taxa_retrabalho) erros.push('Taxa de retrabalho');
     return erros;
