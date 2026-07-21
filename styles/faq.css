@@ -233,6 +233,14 @@
   top: 78px;
   z-index: 100;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Remove restrição do container dentro da nav para não cortar o scroll */
+.faq-categories .container {
+  max-width: none;
+  padding: 0;
+  overflow: visible;
 }
 
 .faq-categories__list {
@@ -243,10 +251,25 @@
   padding: 14px 24px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  /* Garante que o último item não seja cortado */
+  padding-right: 32px;
 }
 
 .faq-categories__list::-webkit-scrollbar {
   display: none;
+}
+
+/* Fade indicando scroll à direita */
+.faq-categories::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--white));
+  pointer-events: none;
+  z-index: 1;
 }
 
 .faq-cat-btn {
@@ -579,7 +602,8 @@
   }
 
   .faq-categories__list {
-    padding: 12px 0;
+    padding: 12px 16px 12px 16px;
+    padding-right: 40px;
     gap: 6px;
   }
 
