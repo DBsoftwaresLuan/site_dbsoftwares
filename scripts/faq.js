@@ -91,7 +91,62 @@
     });
   }
 
-  // ── Autocomplete ──────────────────────────────────────────────
+  // ── Motor de Busca Inteligente ────────────────────────────────
+
+  // Mapa de sinônimos / ideias relacionadas
+  // Chave: termo que o usuário pode digitar → expansão para busca
+  var SYNONYMS = {
+    'robo': ['automacao', 'automatizacao', 'rpa', 'bot', 'hyperautomacao'],
+    'robo': ['automacao', 'rpa', 'bot'],
+    'bot': ['automacao', 'rpa', 'hyperautomacao'],
+    'automatizar': ['automacao', 'hyperautomacao', 'rpa'],
+    'automatizacao': ['automacao', 'hyperautomacao'],
+    'ia': ['inteligencia artificial', 'machine learning', 'llm', 'gpt', 'modelo'],
+    'inteligencia': ['ia', 'machine learning', 'gpt', 'modelo'],
+    'custo': ['roi', 'retorno', 'investimento', 'economizar', 'economia'],
+    'preco': ['custo', 'valor', 'investimento', 'roi', 'quanto'],
+    'valor': ['preco', 'custo', 'investimento', 'roi'],
+    'quanto': ['preco', 'custo', 'valor', 'investimento'],
+    'seguranca': ['lgpd', 'privacidade', 'dados', 'etica', 'conformidade'],
+    'privacidade': ['lgpd', 'dados', 'seguranca'],
+    'lgpd': ['privacidade', 'dados', 'seguranca', 'conformidade'],
+    'dados': ['lgpd', 'privacidade', 'seguranca', 'observabilidade'],
+    'monitoramento': ['observabilidade', 'rastreabilidade', 'controle', 'noc'],
+    'observabilidade': ['monitoramento', 'rastreabilidade', 'controle'],
+    'governanca': ['controle', 'gestao', 'processo', 'compliance'],
+    'gestao': ['governanca', 'controle', 'processo'],
+    'processo': ['governanca', 'fluxo', 'operacao', 'bpm'],
+    'erro': ['falha', 'problema', 'bug', 'incidente', 'retrabalho'],
+    'falha': ['erro', 'problema', 'incidente', 'bug'],
+    'retrabalho': ['erro', 'falha', 'qualidade', 'eficiencia'],
+    'eficiencia': ['produtividade', 'desempenho', 'performance', 'otimizacao'],
+    'produtividade': ['eficiencia', 'desempenho', 'automacao'],
+    'industria': ['industrial', 'manufactura', 'fabricacao', 'producao'],
+    'industria': ['fabrica', 'industria', 'chao de fabrica'],
+    'administrativo': ['backoffice', 'financeiro', 'contabil', 'rh'],
+    'financeiro': ['financas', 'contabil', 'contabilidade', 'roi', 'custo'],
+    'rh': ['recursos humanos', 'pessoas', 'colaboradores', 'funcionarios'],
+    'saude': ['clinica', 'hospital', 'medico', 'healthcare'],
+    'noc': ['suporte', 'sustentacao', 'continuidade', 'operacional'],
+    'suporte': ['noc', 'sustentacao', 'continuidade', 'atendimento'],
+    'contrato': ['terceirizacao', 'outsourcing', 'parceria', 'servico'],
+    'terceirizar': ['outsourcing', 'contrato', 'parceria', 'terceirizacao'],
+    'resultado': ['roi', 'retorno', 'beneficio', 'impacto'],
+    'tecnologia': ['software', 'plataforma', 'sistema', 'ferramenta'],
+    'software': ['sistema', 'plataforma', 'tecnologia', 'ferramenta'],
+    'integracao': ['api', 'conector', 'sistema', 'erp', 'crm'],
+    'erp': ['sap', 'sistema', 'integracao', 'conector'],
+    'crm': ['salesforce', 'cliente', 'vendas', 'integracao'],
+    'escalar': ['crescimento', 'expansao', 'escala', 'crescer'],
+    'crescimento': ['escalar', 'expansao', 'escala'],
+    'confianca': ['etica', 'transparencia', 'seguranca', 'responsabilidade'],
+    'etica': ['confianca', 'transparencia', 'responsabilidade', 'bias'],
+    'como': ['o que e', 'funciona', 'como funciona'],
+    'o que': ['como', 'o que e', 'definicao', 'conceito'],
+    'diferenca': ['diferencial', 'comparacao', 'versus', 'vs'],
+    'diferencial': ['diferenca', 'vantagem', 'comparacao']
+  };
+
   var selectedSuggestionIndex = -1;
   var currentSuggestions = [];
 
@@ -100,11 +155,13 @@
     var list = [];
     items.forEach(function (item) {
       var questionEl = item.querySelector('.faq-item__text');
+      var answerEl = item.querySelector('.faq-item__answer p');
       var answerId = item.querySelector('.faq-item__question') &&
         item.querySelector('.faq-item__question').getAttribute('aria-controls');
       if (questionEl && answerId) {
         list.push({
           question: questionEl.textContent.trim(),
+          answer: answerEl ? answerEl.textContent.trim() : '',
           answerId: answerId,
           item: item
         });
@@ -113,17 +170,121 @@
     return list;
   }
 
+  // Distância de Levenshtein simplificada (máx 2 erros tolerados)
+  function levenshtein(a, b) {
+    if (a === b) return 0;
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+    // Limita custo da matriz para performance
+    var maxLen = Math.max(a.length, b.length);
+    if (maxLen > 20) return maxLen; // palavras longas: não calcular
+    var prev = [];
+    var curr = [];
+    for (var j = 0; j <= b.length; j++) prev[j] = j;
+    for (var i = 1; i <= a.length; i++) {
+      curr[0] = i;
+      for (var j2 = 1; j2 <= b.length; j2++) {
+        var cost = a[i - 1] === b[j2 - 1] ? 0 : 1;
+        curr[j2] = Math.min(curr[j2 - 1] + 1, prev[j2] + 1, prev[j2 - 1] + cost);
+      }
+      var tmp = prev; prev = curr; curr = tmp;
+    }
+    return prev[b.length];
+  }
+
+  // Verifica se uma palavra tem correspondência fuzzy com alguma palavra do texto
+  function fuzzyWordMatch(queryWord, textWords) {
+    if (queryWord.length < 3) return textWords.some(function (w) { return w.startsWith(queryWord); });
+    var threshold = queryWord.length <= 5 ? 1 : 2;
+    for (var i = 0; i < textWords.length; i++) {
+      var w = textWords[i];
+      // Correspondência por prefixo (sílabas)
+      if (w.startsWith(queryWord) || queryWord.startsWith(w.substring(0, Math.floor(w.length * 0.7)))) return true;
+      // Correspondência fuzzy
+      if (Math.abs(w.length - queryWord.length) <= threshold + 1) {
+        if (levenshtein(queryWord, w) <= threshold) return true;
+        // Substring de 4+ caracteres dentro de palavra maior
+        if (queryWord.length >= 4 && w.includes(queryWord.substring(0, Math.floor(queryWord.length * 0.8)))) return true;
+      }
+    }
+    return false;
+  }
+
+  // Expande a query com sinônimos mapeados
+  function expandQueryTerms(normalizedQuery) {
+    var terms = [normalizedQuery];
+    var words = normalizedQuery.split(/\s+/);
+    words.forEach(function (word) {
+      if (SYNONYMS[word]) {
+        SYNONYMS[word].forEach(function (syn) { terms.push(syn); });
+      }
+      // Verifica prefixos (ex: "automat" encontra "automatizacao")
+      Object.keys(SYNONYMS).forEach(function (key) {
+        if (key.startsWith(word) || word.startsWith(key)) {
+          SYNONYMS[key].forEach(function (syn) { terms.push(syn); });
+        }
+      });
+    });
+    return terms;
+  }
+
+  // Função principal de score inteligente para uma entrada
+  function scoreEntry(entry, query) {
+    var normQuery = normalizeStr(query);
+    var normQ = normalizeStr(entry.question);
+    var normA = normalizeStr(entry.answer);
+    var combined = normQ + ' ' + normA;
+    var score = 0;
+
+    // 1. Correspondência exata da frase completa (máxima pontuação)
+    if (normQ.includes(normQuery)) score += normQ.startsWith(normQuery) ? 100 : 80;
+    else if (combined.includes(normQuery)) score += 50;
+
+    // 2. Correspondência por tokens (cada palavra individualmente)
+    var queryWords = normQuery.split(/\s+/).filter(function (w) { return w.length >= 2; });
+    var combinedWords = combined.split(/\W+/).filter(function (w) { return w.length >= 2; });
+    var matchedWords = 0;
+    queryWords.forEach(function (qw) {
+      if (combined.includes(qw)) {
+        matchedWords++;
+        score += normQ.includes(qw) ? 20 : 8;
+      }
+    });
+    // Bônus se todas as palavras foram encontradas
+    if (queryWords.length > 1 && matchedWords === queryWords.length) score += 30;
+
+    // 3. Correspondência fuzzy por palavra (tolera erros de digitação)
+    queryWords.forEach(function (qw) {
+      if (qw.length >= 3 && !combined.includes(qw)) {
+        if (fuzzyWordMatch(qw, combinedWords)) {
+          score += 15;
+        }
+      }
+    });
+
+    // 4. Expansão por sinônimos
+    var expanded = expandQueryTerms(normQuery);
+    expanded.slice(1).forEach(function (syn) { // slice(1) pula o original
+      if (combined.includes(syn)) score += 12;
+    });
+
+    // 5. Correspondência parcial por sílaba / início de palavra
+    if (score === 0 && normQuery.length >= 3) {
+      combinedWords.forEach(function (w) {
+        if (w.startsWith(normQuery.substring(0, Math.floor(normQuery.length * 0.75)))) score += 10;
+      });
+    }
+
+    return score;
+  }
+
   function getAutocompleteSuggestions(query, allQuestions) {
     if (!query || query.length < 2) return [];
-    var normalized = normalizeStr(query);
     var results = [];
 
     allQuestions.forEach(function (entry) {
-      var normQ = normalizeStr(entry.question);
-      if (normQ.includes(normalized)) {
-        var score = normQ.startsWith(normalized) ? 2 : 1;
-        results.push({ entry: entry, score: score });
-      }
+      var score = scoreEntry(entry, query);
+      if (score > 0) results.push({ entry: entry, score: score });
     });
 
     results.sort(function (a, b) { return b.score - a.score; });
@@ -351,8 +512,8 @@
   }
 
   function performSearch(query) {
-    const items = document.querySelectorAll('.faq-item');
-    const groups = document.querySelectorAll('.faq-group');
+    var items = document.querySelectorAll('.faq-item');
+    var groups = document.querySelectorAll('.faq-group');
 
     clearSearchHighlights();
 
@@ -363,12 +524,12 @@
     }
 
     // Reseta filtro de categoria para "all" durante a busca
-    const catBtns = document.querySelectorAll('.faq-cat-btn');
+    var catBtns = document.querySelectorAll('.faq-cat-btn');
     catBtns.forEach(function (b) {
       b.classList.remove('faq-cat-btn--active');
       b.setAttribute('aria-pressed', 'false');
     });
-    const allBtn = document.querySelector('.faq-cat-btn[data-category="all"]');
+    var allBtn = document.querySelector('.faq-cat-btn[data-category="all"]');
     if (allBtn) {
       allBtn.classList.add('faq-cat-btn--active');
       allBtn.setAttribute('aria-pressed', 'true');
@@ -376,39 +537,70 @@
 
     groups.forEach(function (g) { g.hidden = false; });
 
-    const normalized = query.toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
+    var visibleCount = 0;
 
-    let visibleCount = 0;
-
+    // Calcula score para cada item usando o motor inteligente
+    var scored = [];
     items.forEach(function (item) {
-      const questionEl = item.querySelector('.faq-item__text');
-      const answerEl = item.querySelector('.faq-item__answer p');
+      var questionEl = item.querySelector('.faq-item__text');
+      var answerEl = item.querySelector('.faq-item__answer p');
       if (!questionEl) return;
 
-      const questionText = questionEl.textContent || '';
-      const answerText = answerEl ? (answerEl.textContent || '') : '';
-      const combined = (questionText + ' ' + answerText)
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '');
+      var entry = {
+        question: questionEl.textContent.trim(),
+        answer: answerEl ? answerEl.textContent.trim() : '',
+        item: item
+      };
 
-      if (combined.includes(normalized)) {
-        item.hidden = false;
+      var score = scoreEntry(entry, query);
+      scored.push({ item: item, questionEl: questionEl, answerEl: answerEl, score: score });
+    });
+
+    // Define threshold dinâmico: mostra mesmo scores baixos se não houver nada melhor
+    var maxScore = scored.reduce(function (m, s) { return Math.max(m, s.score); }, 0);
+    // Threshold: pelo menos 20% do melhor score, mínimo 5
+    var threshold = maxScore > 0 ? Math.max(5, maxScore * 0.2) : 0;
+
+    scored.forEach(function (s) {
+      if (s.score >= threshold) {
+        s.item.hidden = false;
         visibleCount++;
-        highlightText(questionEl, query);
-        if (answerEl) highlightText(answerEl, query);
+        highlightText(s.questionEl, query);
+        if (s.answerEl) highlightText(s.answerEl, query);
       } else {
-        item.hidden = true;
+        s.item.hidden = true;
       }
     });
 
     // Oculta grupos sem itens visíveis
     groups.forEach(function (g) {
-      const visibleItems = g.querySelectorAll('.faq-item:not([hidden])');
+      var visibleItems = g.querySelectorAll('.faq-item:not([hidden])');
       g.hidden = visibleItems.length === 0;
     });
+
+    // Se ainda sem resultado, tenta busca ainda mais tolerante (qualquer score > 0)
+    if (visibleCount === 0 && maxScore === 0) {
+      // Fallback: busca por cada sílaba de 3+ chars individualmente
+      var normQ = normalizeStr(query);
+      var syllables = [];
+      for (var i = 0; i <= normQ.length - 3; i++) {
+        syllables.push(normQ.substring(i, i + 3));
+      }
+
+      scored.forEach(function (s) {
+        var combined = normalizeStr(s.questionEl.textContent + ' ' + (s.answerEl ? s.answerEl.textContent : ''));
+        var hit = syllables.some(function (syl) { return combined.includes(syl); });
+        if (hit) {
+          s.item.hidden = false;
+          visibleCount++;
+        }
+      });
+
+      groups.forEach(function (g) {
+        var visibleItems = g.querySelectorAll('.faq-item:not([hidden])');
+        g.hidden = visibleItems.length === 0;
+      });
+    }
 
     setEmptyState(visibleCount === 0);
     updateSearchCount(query, visibleCount);
