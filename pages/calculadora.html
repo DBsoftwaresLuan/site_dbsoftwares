@@ -1272,7 +1272,7 @@
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                 </svg>
               </span>
-              <h3>1. Identificação do Processo</h3>
+              <h3>1. Identifica��ão do Processo</h3>
             </div>
             <div class="form-group">
               <label>Tipo de processo industrial</label>
@@ -2107,6 +2107,63 @@
         >
       </div>
     </footer>
+
+    <!-- ── Modal de Captura de Lead (Calcular Viabilidade) ──────── -->
+    <div id="leadModal" class="lead-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle" aria-hidden="true">
+      <div class="lead-modal">
+        <button class="lead-modal__close" id="leadModalClose" type="button" aria-label="Fechar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+
+        <div class="lead-modal__header">
+          <div class="lead-modal__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="4" y="2" width="16" height="20" rx="2"/>
+              <line x1="8" y1="6" x2="16" y2="6"/>
+              <line x1="8" y1="10" x2="16" y2="10"/>
+              <line x1="8" y1="14" x2="12" y2="14"/>
+            </svg>
+          </div>
+          <h2 class="lead-modal__title" id="leadModalTitle">Seu resultado está quase pronto!</h2>
+          <p class="lead-modal__subtitle">Deixe seus dados para receber o diagnóstico de viabilidade e entrar em contato com um especialista DB Softwares.</p>
+        </div>
+
+        <form id="leadForm" class="lead-modal__form" novalidate>
+          <div class="lead-modal__row">
+            <div class="lead-modal__field">
+              <label for="leadNome" class="lead-modal__label">NOME <span class="lead-modal__required">*</span></label>
+              <input type="text" id="leadNome" name="nome" class="lead-modal__input" placeholder="Seu nome" required autocomplete="name" />
+            </div>
+            <div class="lead-modal__field">
+              <label for="leadEmail" class="lead-modal__label">E-MAIL <span class="lead-modal__required">*</span></label>
+              <input type="email" id="leadEmail" name="email" class="lead-modal__input" placeholder="seu@email.com.br" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="lead-modal__field">
+            <label for="leadTelefone" class="lead-modal__label">TELEFONE / WHATSAPP</label>
+            <input type="tel" id="leadTelefone" name="telefone" class="lead-modal__input" placeholder="(xx) 9xxxx-xxxx" autocomplete="tel" />
+          </div>
+          <div class="lead-modal__field">
+            <label for="leadMensagem" class="lead-modal__label">MENSAGEM</label>
+            <textarea id="leadMensagem" name="mensagem" class="lead-modal__textarea" placeholder="Como podemos ajudar você?" rows="3"></textarea>
+          </div>
+          <p id="leadFormError" class="lead-modal__error" aria-live="polite" style="display:none;"></p>
+          <div class="lead-modal__actions">
+            <p class="lead-modal__legal">Ao enviar, você concorda com nossa <a href="/pages/politica/politica.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+            <button type="submit" class="lead-modal__btn" id="leadSubmitBtn">
+              <span class="lead-modal__btn-text">Enviar</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- ── Cookie Consent Banner ───────────────────────────────── -->
     <div

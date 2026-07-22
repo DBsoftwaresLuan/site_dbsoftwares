@@ -1,6 +1,108 @@
 // calculadora.js - DB Softwares (Administrativo + Industrial)
 
 // ============================================
+// MODAL DE CAPTURA DE LEAD
+// ============================================
+const LEAD_STORAGE_KEY = 'db_lead_enviado';
+
+function leadJaEnviado() {
+    return localStorage.getItem(LEAD_STORAGE_KEY) === '1';
+}
+
+function marcarLeadEnviado() {
+    localStorage.setItem(LEAD_STORAGE_KEY, '1');
+}
+
+function abrirLeadModal(onConfirm) {
+    const overlay = document.getElementById('leadModal');
+    overlay.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+
+    // Foco no primeiro campo
+    setTimeout(() => {
+        const firstInput = overlay.querySelector('input');
+        if (firstInput) firstInput.focus();
+    }, 100);
+
+    // Guardar callback para quando o lead for confirmado
+    overlay._onConfirm = onConfirm;
+}
+
+function fecharLeadModal() {
+    const overlay = document.getElementById('leadModal');
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    overlay._onConfirm = null;
+
+    // Limpar campos e erro
+    document.getElementById('leadForm').reset();
+    const errorEl = document.getElementById('leadFormError');
+    errorEl.style.display = 'none';
+    document.querySelectorAll('.lead-modal__input.is-invalid, .lead-modal__textarea.is-invalid')
+        .forEach(el => el.classList.remove('is-invalid'));
+}
+
+// Inicializar eventos do modal após DOM carregado
+document.addEventListener('DOMContentLoaded', function () {
+    const overlay = document.getElementById('leadModal');
+    const closeBtn = document.getElementById('leadModalClose');
+    const leadForm = document.getElementById('leadForm');
+
+    // Fechar ao clicar no X
+    closeBtn.addEventListener('click', fecharLeadModal);
+
+    // Fechar ao clicar fora do modal
+    overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) fecharLeadModal();
+    });
+
+    // Fechar com Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) fecharLeadModal();
+    });
+
+    // Submit do formulário de lead
+    leadForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById('leadNome').value.trim();
+        const email = document.getElementById('leadEmail').value.trim();
+        const errorEl = document.getElementById('leadFormError');
+
+        // Limpar estado anterior
+        document.querySelectorAll('.lead-modal__input.is-invalid')
+            .forEach(el => el.classList.remove('is-invalid'));
+        errorEl.style.display = 'none';
+
+        // Validar campos obrigatórios
+        let temErro = false;
+        if (!nome) {
+            document.getElementById('leadNome').classList.add('is-invalid');
+            temErro = true;
+        }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('leadEmail').classList.add('is-invalid');
+            temErro = true;
+        }
+        if (temErro) {
+            errorEl.textContent = 'Por favor, preencha Nome e E-mail corretamente.';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        // Marcar lead como enviado e fechar modal
+        marcarLeadEnviado();
+        const onConfirm = overlay._onConfirm;
+        fecharLeadModal();
+
+        // Executar a ação original (calcular viabilidade)
+        if (typeof onConfirm === 'function') onConfirm();
+    });
+});
+
+// ============================================
 // CONFIGURAÇÕES DOS ENDPOINTS
 // ============================================
 const API_URL_ADMIN = 'https://calculadora-externa.dbsoftwares.cloud/api/calcular';
@@ -279,11 +381,8 @@ ${template.proximo}
     resultadoArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-async function handleSubmitAdmin(event) {
-    event.preventDefault();
+async function executarCalculoAdmin() {
     const dados = coletarDadosAdmin();
-    const erros = validarDadosAdmin(dados);
-    if (erros.length) return exibirErro('Campos obrigatórios:\n- ' + erros.join('\n- '));
     limparResultado();
     setLoading(document.getElementById('btnCalcularAdmin'), true);
     try {
@@ -297,6 +396,19 @@ async function handleSubmitAdmin(event) {
         exibirErro('Erro ao calcular viabilidade administrativa: ' + err.message);
     } finally {
         setLoading(document.getElementById('btnCalcularAdmin'), false);
+    }
+}
+
+async function handleSubmitAdmin(event) {
+    event.preventDefault();
+    const dados = coletarDadosAdmin();
+    const erros = validarDadosAdmin(dados);
+    if (erros.length) return exibirErro('Campos obrigatórios:\n- ' + erros.join('\n- '));
+
+    if (leadJaEnviado()) {
+        executarCalculoAdmin();
+    } else {
+        abrirLeadModal(executarCalculoAdmin);
     }
 }
 formAdmin.addEventListener('submit', handleSubmitAdmin);
@@ -382,11 +494,8 @@ ${template.proximo}
     resultadoArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-async function handleSubmitIndustrial(event) {
-    event.preventDefault();
+async function executarCalculoIndustrial() {
     const dados = coletarDadosIndustrial();
-    const erros = validarDadosIndustrial(dados);
-    if (erros.length) return exibirErro('Campos industriais obrigatórios:\n- ' + erros.join('\n- '));
     limparResultado();
     setLoading(document.getElementById('btnCalcularIndustrial'), true);
     try {
@@ -400,6 +509,19 @@ async function handleSubmitIndustrial(event) {
         exibirErro('Erro ao calcular vulnerabilidade industrial: ' + err.message);
     } finally {
         setLoading(document.getElementById('btnCalcularIndustrial'), false);
+    }
+}
+
+async function handleSubmitIndustrial(event) {
+    event.preventDefault();
+    const dados = coletarDadosIndustrial();
+    const erros = validarDadosIndustrial(dados);
+    if (erros.length) return exibirErro('Campos industriais obrigatórios:\n- ' + erros.join('\n- '));
+
+    if (leadJaEnviado()) {
+        executarCalculoIndustrial();
+    } else {
+        abrirLeadModal(executarCalculoIndustrial);
     }
 }
 formIndustrial.addEventListener('submit', handleSubmitIndustrial);
