@@ -855,6 +855,9 @@ body {
 .form-row.form-row--3 {
     grid-template-columns: 1fr 1fr 1fr;
 }
+.form-row.form-row--3 .form-group > label:first-child {
+    min-height: 2.5em;
+}
 .form-row .form-group { margin-bottom: 0; }
 
 .radio-group { margin-bottom: 28px; }
