@@ -1,10 +1,5 @@
 User-agent: *
 Allow: /
 
-# Bloquear arquivos desnecessários para indexação
-Disallow: /styles/
-Disallow: /scripts/
-Disallow: /assets/fonts/
-
 # Sitemap
 Sitemap: https://dbsoftwares.com.br/sitemap.xml

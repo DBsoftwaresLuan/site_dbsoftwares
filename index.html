@@ -18,16 +18,17 @@
   <meta property="og:title" content="DB Softwares | Governança Técnica e Previsibilidade Operacional">
   <meta property="og:description" content="Estruturamos governança técnica para a execução de processos críticos. DB Board, DB Hyper e DB NOC — tecnologia que não pode falhar.">
   <meta property="og:url" content="https://dbsoftwares.com.br/">
-  <meta property="og:image" content="https://dbsoftwares.com.br/assets/images/og-home.png">
+  <meta property="og:image" content="https://dbsoftwares.com.br/assets/images/og-default.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DB Softwares — Governança Técnica e Previsibilidade Operacional">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DB Softwares | Governança Técnica e Previsibilidade Operacional">
   <meta name="twitter:description" content="Estruturamos governança técnica para a execução de processos críticos. DB Board, DB Hyper e DB NOC — tecnologia que não pode falhar.">
-  <meta name="twitter:image" content="https://dbsoftwares.com.br/assets/images/og-home.png">
+  <meta name="twitter:image" content="https://dbsoftwares.com.br/assets/images/og-default.png">
 
   <!-- Schema.org — Organization + WebSite -->
   <script type="application/ld+json">
@@ -38,13 +39,34 @@
         "@type": "Organization",
         "@id": "https://dbsoftwares.com.br/#organization",
         "name": "DB Softwares",
+        "legalName": "DB Softwares",
         "url": "https://dbsoftwares.com.br",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://dbsoftwares.com.br/assets/images/logo-icon.png"
+          "url": "https://dbsoftwares.com.br/assets/images/logo-icon.png",
+          "width": 512,
+          "height": 512
         },
+        "image": "https://dbsoftwares.com.br/assets/images/og-default.png",
         "description": "Empresa de tecnologia especializada em governança técnica, automação de processos industriais e administrativos com produtos próprios: DB Board, DB Hyper, DB NOC e DB Agente.",
-        "sameAs": [],
+        "email": "Danilo@dbsoftwares.com.br",
+        "sameAs": [
+          "https://www.linkedin.com/company/db-softwares"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Emanuel Kant, 60 — Capão Raso",
+          "addressLocality": "Curitiba",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "Danilo@dbsoftwares.com.br",
+          "contactType": "customer support",
+          "areaServed": "BR",
+          "availableLanguage": ["Portuguese"]
+        },
         "areaServed": "BR",
         "knowsAbout": ["Governança Técnica", "Automação de Processos", "RPA", "Inteligência Artificial", "Observabilidade Operacional", "Sustentação de TI"]
       },
@@ -60,6 +82,18 @@
           "target": "https://dbsoftwares.com.br/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://dbsoftwares.com.br/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://dbsoftwares.com.br/"
+          }
+        ]
       }
     ]
   }
@@ -373,9 +407,9 @@
         </span>
       </div>
       <p class="slide-kicker">Automação com Agentes de IA · 24/7</p>
-      <h1 class="slide-title">
+      <h2 class="slide-title">
         Suas regras,<br>executadas com<br><em>precisão absoluta.</em>
-      </h1>
+      </h2>
       <p class="slide-body">
         O DB Hyper combina automação avançada e Agentes de IA para executar
         processos de ponta a ponta.
@@ -409,9 +443,9 @@
         </span>
       </div>
       <p class="slide-kicker">Observabilidade · Dados Reais · Decisão</p>
-      <h1 class="slide-title">
+      <h2 class="slide-title">
         Visibilidade total.<br>Decisão baseada<br><em>em dados reais.</em>
-      </h1>
+      </h2>
       <p class="slide-body">
         O DB Board centraliza indicadores, interpreta desvios e entrega
         uma visão estratégica completa sobre toda a sua execução automatizada.
@@ -445,9 +479,9 @@
         </span>
       </div>
       <p class="slide-kicker">Monitoramento Proativo · SLA Garantido</p>
-      <h1 class="slide-title">
+      <h2 class="slide-title">
         Processo crítico?
-      </h1>
+      </h2>
       <p class="slide-body">
         O DB NOC monitora seus fluxos em tempo real, detecta falhas antes que
         impactem a operação e responde com velocidade cirúrgica para zero surpresas.
