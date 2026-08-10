@@ -96,8 +96,11 @@
   // Mapa de sinônimos / ideias relacionadas
   // Chave: termo que o usuário pode digitar → expansão para busca
   var SYNONYMS = {
-    'robo': ['automacao', 'automatizacao', 'rpa', 'bot', 'hyperautomacao'],
     'robo': ['automacao', 'rpa', 'bot'],
+    'parceiro': ['parceria', 'db partner', 'revenda', 'comissao', 'indicacao'],
+    'parceria': ['parceiro', 'db partner', 'revenda', 'comissao'],
+    'comissao': ['parceiro', 'parceria', 'receita', 'ganhar dinheiro'],
+    'revenda': ['parceiro', 'parceria', 'db partner'],
     'bot': ['automacao', 'rpa', 'hyperautomacao'],
     'automatizar': ['automacao', 'hyperautomacao', 'rpa'],
     'automatizacao': ['automacao', 'hyperautomacao'],
@@ -402,7 +405,7 @@
     items[selectedSuggestionIndex].setAttribute('aria-selected', 'true');
   }
 
-  // ── Busca em Tempo Real ───────────────────────────────────────
+  // ── Busca em Tempo Real ────────────────��──────────────────────
   function initSearch() {
     var input = document.getElementById('faqSearchInput');
     var clearBtn = document.getElementById('faqSearchClear');
