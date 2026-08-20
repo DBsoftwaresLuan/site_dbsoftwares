@@ -1,0 +1,50 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/quem-somos",
+      "destination": "/pages/sobre.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-board",
+      "destination": "/pages/produtos/db-board.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-noc",
+      "destination": "/pages/produtos/db-noc.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-hyperautomacao",
+      "destination": "/pages/produtos/db-hyper.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-hyperautomação",
+      "destination": "/pages/produtos/db-hyper.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-adm",
+      "destination": "/pages/atuacao.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-industria",
+      "destination": "/pages/atuacao.html",
+      "permanent": true
+    },
+    {
+      "source": "/db-agronegocio",
+      "destination": "/pages/cases/case-sisdev.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/perfis-de-servico_sem-tabela-de-compartivos-de-perfils.html",
+      "destination": "/pages/perfis-de-servico.html",
+      "permanent": true
+    }
+  ]
+}

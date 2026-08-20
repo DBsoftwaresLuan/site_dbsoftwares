@@ -4,100 +4,100 @@
 
   <!-- Página Principal -->
   <url>
-    <loc>https://dbsoftwares.com.br/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Institucional -->
   <url>
-    <loc>https://dbsoftwares.com.br/pages/sobre.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/sobre.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/atuacao.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/atuacao.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/capacidades.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/capacidades.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/perfis-de-servico.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/perfis-de-servico.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/calculadora.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/calculadora.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/db-partner.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/db-partner.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/faq.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/faq.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Produtos -->
   <url>
-    <loc>https://dbsoftwares.com.br/pages/produtos/db-board.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/produtos/db-board.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/produtos/db-hyper.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/produtos/db-hyper.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/produtos/db-noc.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/produtos/db-noc.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Cases de Sucesso -->
   <url>
-    <loc>https://dbsoftwares.com.br/pages/cases/case-nbs.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/cases/case-nbs.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/cases/case-sisdev.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/cases/case-sisdev.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Institucional / Legal -->
   <url>
-    <loc>https://dbsoftwares.com.br/pages/politica/politica.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/politica/politica.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://dbsoftwares.com.br/pages/politica/termos.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <loc>https://www.dbsoftwares.com.br/pages/politica/termos.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
